@@ -1,0 +1,22 @@
+# Source module only; keep these rules when repackaging an extracted module.
+!/.moonignore
+/_build/
+/target/
+/.mooncakes/
+/.moonvcs/
+/.toolchains/
+
+# Repository-only bypass fixture, not an installed CLI command.
+/cmd/bypass-client/
+
+# Build output, diagnostics and local credentials are not release inputs.
+*.zip
+*.log
+*.wasm
+*.exe
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519

@@ -21,6 +21,7 @@ GitHub [运行 #1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/392419
 237 项及重复演示通过；附件已校验归档，见 [CI 验证记录](docs/CI_VALIDATION.md)。这不替代新 rootfs 冷安装验收。
 
 本地交付包与验包方式见 [SUBMISSION.md](docs/SUBMISSION.md)。源码包与实测证据分开保存，不含工具链或预编译发行版。
+Mooncakes 候选包的本地检查、账号确认步骤和未发布边界见 [发布准备](docs/MOONCAKES.md)。
 
 后续工程的实际结果见 [路线图执行记录](docs/ROADMAP_PROGRESS.md)：并发暂存已修复，
 宽 Tree 已取得指令/IO 证据，并新增只读恢复检查；完整掉电恢复和 GC 仍未实现。

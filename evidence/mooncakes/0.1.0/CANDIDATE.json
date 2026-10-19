@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "status": "frozen_candidate_not_a_publication_result",
+  "module": "any07557-wq/moonvcs",
+  "version": "0.1.0",
+  "archive": "any07557-wq-moonvcs-0.1.0.zip",
+  "sha256": "5006035f75de4f963213a92257bafa3a5d2f751bb117c803c49d9c09f21867d3",
+  "bytes": 75212,
+  "members": 33,
+  "expanded_bytes": 265964,
+  "member_digests": "ARCHIVE_MEMBERS.sha256",
+  "previously_recorded_candidate_copied_byte_for_byte": true,
+  "source_root": "vcs",
+  "module_manifest_sha256": "71d31f217ef23658672faa472487fd3477a4067712540c766c4bd7589789f11a",
+  "scope": {
+    "native_core_library_source": true,
+    "native_cli_source_included": true,
+    "rust_host_included": false,
+    "wasm_plugins_included": false,
+    "wit_included": false,
+    "precompiled_cli_included": false,
+    "repository_only_bypass_client_included": false
+  },
+  "content_review": {
+    "all_members_utf8_and_matched_working_source": true,
+    "crc_paths_types_and_expansion_checked": true,
+    "credential_like_pattern_findings": 1,
+    "finding": "policy_integration_wbtest.mbt:164 contains an explicitly harmless test fixture; retained without changing authorized content.",
+    "github_tokens_cloud_keys_private_key_bodies_or_authorization_values_detected": false,
+    "limits": "Pattern scanning and context inspection are not complete DLP or proof that every sensitive value is absent."
+  },
+  "conditional_publication_authorization": {
+    "maintainer_confirmed": true,
+    "requires_independent_local_source_commit": true,
+    "requires_project_verification_and_final_identity_content_checks": true,
+    "version_or_content_substitution_forbidden": true,
+    "github_push_or_release_upload_authorized": false,
+    "post_publication_fresh_registry_consumer_required": true
+  },
+  "note": "This immutable candidate retains its freeze-time README, including not-yet-published wording. Later publication status belongs in the external release report, not in a silently replaced 0.1.0 archive."
+}

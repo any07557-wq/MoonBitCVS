@@ -54,7 +54,7 @@ artifact 不是长期备份、签名或当前 rootfs 安装验收。超时/取�
 只有完整 job 实际成功才可以宣称 GitHub CI 跑通；不从本地测试或 YAML 解析结果推断。
 
 本轮不自动推送、修改分支保护、上传 Release、发布 Mooncakes 或代写个人申报书。
-Mooncakes 的 namespace/账号归属与发布仍需单独确认。
+维护者已确认 Mooncakes 用户名 `any07557-wq`；本地候选包与后续认证/发布边界见 [MOONCAKES.md](MOONCAKES.md)，尚未发布。
 
 ## 本地复核
 
