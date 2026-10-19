@@ -1,0 +1,7 @@
+import {
+  "moonvcs/core",
+  "moonbitlang/core/env",
+  "moonbitlang/async",
+}
+
+pkgtype(kind: "executable")

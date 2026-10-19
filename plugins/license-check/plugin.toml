@@ -1,0 +1,6 @@
+name = "license-check"
+version = "0.1.0"
+abi_version = "1"
+hooks = ["on-commit", "on-receive"]
+requested_capabilities = ["staged_content.list", "staged_content.read", "diagnostic.emit"]
+module_digest = "sha256:444639aeeac8c19b143dc438dc36c27e45f98881d3b9f0e2555c5ce45ff7375a"

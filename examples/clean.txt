@@ -1,0 +1,1 @@
+MoonVCS policy plugins receive only explicitly authorized candidate content.

@@ -1,0 +1,6 @@
+name = "restricted-plugin"
+version = "0.1.0"
+abi_version = "1"
+hooks = ["on-commit"]
+requested_capabilities = ["staged_content.read"]
+module_digest = "sha256:3d83dd0450ceb8a3bd4abf108f1760cc224349916025f2d0689b411f834f0df0"

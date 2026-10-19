@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="570" viewBox="0 0 1080 570" role="img" aria-labelledby="title desc">
+  <title id="title">MoonVCS implemented system</title>
+  <desc id="desc">MoonBit owns the native core, policy engine, lazy storage and receiver. Rust Wasmtime hosts import-free MoonBit policies. Remote transport is a filesystem and stdio prototype.</desc>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#54657a"/></marker></defs>
+  <rect width="1080" height="570" rx="18" fill="#0d1525"/>
+  <g font-family="sans-serif" fill="#edf4ff">
+    <text x="32" y="43" font-size="25" font-weight="bold">MoonVCS</text>
+    <text x="185" y="42" font-size="16" fill="#a7bad1">MoonBit Core + Wasm policies + lazy history</text>
+    <rect x="32" y="80" width="290" height="115" rx="12" fill="#123b46" stroke="#4bd6cc"/>
+    <text x="52" y="110" font-size="19" font-weight="bold">MoonBit native CLI / Core</text>
+    <text x="52" y="138" font-size="15">Blob / Tree / Commit / Ref</text>
+    <text x="52" y="163" font-size="15">Stage + CommitCandidate</text>
+    <rect x="385" y="80" width="285" height="115" rx="12" fill="#123b46" stroke="#4bd6cc"/>
+    <text x="405" y="110" font-size="19" font-weight="bold">MoonBit Policy Engine</text>
+    <text x="405" y="138" font-size="15">Required identity / version / digest</text>
+    <text x="405" y="163" font-size="15">Accept / Warning / Reject / Error</text>
+    <rect x="733" y="80" width="315" height="115" rx="12" fill="#47341e" stroke="#efbd68"/>
+    <text x="753" y="110" font-size="19" font-weight="bold">Rust + Wasmtime Host</text>
+    <text x="753" y="138" font-size="15">Grants, input filtering, empty Linker</text>
+    <text x="753" y="163" font-size="15">Fuel / epoch / memory / output caps</text>
+    <rect x="733" y="245" width="315" height="105" rx="12" fill="#123b46" stroke="#4bd6cc"/>
+    <text x="753" y="276" font-size="19" font-weight="bold">MoonBit Wasm Components</text>
+    <text x="753" y="304" font-size="15">Secret Scanner + License Checker</text>
+    <text x="753" y="328" font-size="15">WIT v1 evaluate; no ambient imports</text>
+    <rect x="32" y="245" width="290" height="105" rx="12" fill="#123b46" stroke="#4bd6cc"/>
+    <text x="52" y="276" font-size="19" font-weight="bold">MoonBit LazyObjectStore</text>
+    <text x="52" y="304" font-size="15">Local / PromisedRemote / Unknown</text>
+    <text x="52" y="328" font-size="15">SHA-256 typed canonical objects</text>
+    <rect x="385" y="245" width="285" height="105" rx="12" fill="#24334d" stroke="#8b9cb9"/>
+    <text x="405" y="276" font-size="19" font-weight="bold">Filesystem remote store</text>
+    <text x="405" y="304" font-size="15">Verified demand fetch + local cache</text>
+    <text x="405" y="328" font-size="15">Not Git protocol / not HTTP</text>
+    <rect x="32" y="400" width="1016" height="96" rx="12" fill="#252a46" stroke="#aa9bdb"/>
+    <text x="52" y="431" font-size="19" font-weight="bold">Independent MoonBit receive process</text>
+    <text x="52" y="459" font-size="15">Quarantine → complete graph → server-owned on-receive Wasm policies → policy / old-Ref recheck → Ref CAS</text>
+    <text x="32" y="538" font-size="14" fill="#a7bad1">Prototype boundary: trusted server filesystem/admin; no authentication, TLS, ACL or OS privilege separation.</text>
+  </g>
+  <g fill="none" stroke="#8dabc7" stroke-width="2" marker-end="url(#a)">
+    <path d="M322 135 H385"/><path d="M670 135 H733"/><path d="M890 195 V245"/>
+    <path d="M177 195 V245"/><path d="M322 295 H385"/><path d="M528 400 V350"/>
+    <path d="M1015 400 V370 H1058 V136 H1048" stroke-dasharray="6 5"/>
+  </g>
+</svg>

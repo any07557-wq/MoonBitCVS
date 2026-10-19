@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="440" viewBox="0 0 1080 440" role="img" aria-labelledby="title desc">
+  <title id="title">Capability-secure Wasm request boundary</title>
+  <desc id="desc">Untrusted manifest requests are intersected with independently approved capabilities and host support. Missing requests are denied before instantiation. Guest receives only filtered data, with no WASI or host callbacks.</desc>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#9eb4cb"/></marker></defs>
+  <rect width="1080" height="440" rx="18" fill="#0d1525"/>
+  <g font-family="sans-serif" fill="#edf4ff">
+    <text x="30" y="43" font-size="24" font-weight="bold">A manifest is a request, never a grant</text>
+    <rect x="30" y="82" width="290" height="77" rx="10" fill="#302746" stroke="#ac99d6"/>
+    <text x="49" y="111" font-size="17">Untrusted manifest + module</text><text x="49" y="138" font-size="14">requested capabilities; pinned digest</text>
+    <rect x="30" y="197" width="290" height="100" rx="10" fill="#24334d" stroke="#8b9cb9"/>
+    <text x="49" y="228" font-size="17">Trusted policy authority</text><text x="49" y="254" font-size="14">per-plugin grants ∩ global ceiling</text><text x="49" y="279" font-size="14">∩ Host available capabilities</text>
+    <rect x="380" y="98" width="290" height="173" rx="10" fill="#47341e" stroke="#efbd68"/>
+    <text x="400" y="129" font-size="18" font-weight="bold">Trusted Wasmtime Host</text>
+    <text x="400" y="159" font-size="15">Identity / ABI / hook / digest checks</text>
+    <text x="400" y="188" font-size="15">Filter metadata / paths / bytes</text>
+    <text x="400" y="217" font-size="15">Fuel + epoch + memory + output</text>
+    <text x="400" y="246" font-size="15">Empty Linker; zero allowed imports</text>
+    <rect x="730" y="98" width="320" height="173" rx="10" fill="#123b46" stroke="#4bd6cc" stroke-dasharray="7 5"/>
+    <text x="750" y="130" font-size="18" font-weight="bold">Untrusted MoonBit Wasm guest</text>
+    <text x="750" y="163" font-size="15">Receives only authorized request data</text>
+    <text x="750" y="192" font-size="15">Returns bounded PolicyResult</text>
+    <text x="750" y="221" font-size="15">No FS / network / environment / shell</text>
+    <text x="750" y="249" font-size="15">No arbitrary Ref mutation</text>
+    <rect x="380" y="320" width="670" height="64" rx="10" fill="#4b2535" stroke="#ec839d"/>
+    <text x="400" y="347" font-size="16">CapabilityDenied: missing grant or unsupported request, BEFORE instantiation</text>
+    <text x="400" y="370" font-size="14">repository.secrets.read is not a callback. No real HOME / SSH resource is used.</text>
+    <text x="30" y="418" font-size="14" fill="#a7bad1">The native Host/admin are trusted. Wasm budgets do not constitute a complete OS/RSS sandbox.</text>
+  </g>
+  <g fill="none" stroke="#9eb4cb" stroke-width="2" marker-end="url(#a)">
+    <path d="M320 120 H380"/><path d="M320 247 H350 V200 H380"/><path d="M670 180 H730"/><path d="M525 271 V320"/>
+  </g>
+</svg>

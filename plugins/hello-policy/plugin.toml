@@ -1,0 +1,6 @@
+name = "hello-policy"
+version = "0.1.0"
+abi_version = "1"
+hooks = ["on-commit"]
+requested_capabilities = ["commit_metadata.read", "diagnostic.emit"]
+module_digest = "sha256:8b6eb6b86ee378033088a252d856e6e902f5ff256c0d6dd7e608fca9c2fe6d4a"

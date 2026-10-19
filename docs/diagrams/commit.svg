@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="390" viewBox="0 0 1080 390" role="img" aria-labelledby="title desc">
+  <title id="title">Actual local Commit lifecycle</title>
+  <desc id="desc">Stage blobs and candidate trees can exist before validation. Required Wasm policies and additional validators must pass before the Commit is stored. Ref CAS may leave an approved unreferenced Commit on failure.</desc>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#9eb4cb"/></marker></defs>
+  <rect width="1080" height="390" rx="18" fill="#0d1525"/>
+  <g font-family="sans-serif" fill="#edf4ff">
+    <text x="30" y="42" font-size="24" font-weight="bold">Commit is a policy-gated publication</text>
+    <g fill="#123b46" stroke="#4bd6cc"><rect x="30" y="85" width="145" height="75" rx="10"/><rect x="210" y="85" width="145" height="75" rx="10"/><rect x="390" y="85" width="180" height="75" rx="10"/></g>
+    <text x="50" y="116" font-size="17">Working files</text><text x="50" y="141" font-size="14">exact file bytes</text>
+    <text x="230" y="116" font-size="17">Stage / index</text><text x="230" y="141" font-size="14">verified Blob IDs</text>
+    <text x="409" y="116" font-size="17">CommitCandidate</text><text x="409" y="141" font-size="14">complete snapshot</text>
+    <rect x="620" y="75" width="220" height="95" rx="10" fill="#47341e" stroke="#efbd68"/>
+    <text x="640" y="109" font-size="17">Required Wasm policies</text><text x="640" y="137" font-size="14">+ additional validator</text>
+    <rect x="620" y="225" width="220" height="77" rx="10" fill="#4b2535" stroke="#ec839d"/>
+    <text x="640" y="255" font-size="17">Reject / Error</text><text x="640" y="281" font-size="14">HEAD + stage preserved</text>
+    <rect x="890" y="75" width="160" height="95" rx="10" fill="#193e36" stroke="#7dcfa4"/>
+    <text x="908" y="109" font-size="17">Pass / Warning</text><text x="908" y="137" font-size="14">recheck config</text>
+    <rect x="890" y="225" width="160" height="77" rx="10" fill="#193e36" stroke="#7dcfa4"/>
+    <text x="908" y="253" font-size="17">Store Commit</text><text x="908" y="280" font-size="14">then Ref CAS</text>
+    <text x="30" y="343" font-size="14" fill="#a7bad1">Blobs/Trees may already exist before approval. No rejected Commit is written.</text>
+    <text x="30" y="367" font-size="14" fill="#a7bad1">CAS failure can leave an approved unreferenced Commit. Atomic visibility is not a full crash-recovery journal.</text>
+  </g>
+  <g fill="none" stroke="#9eb4cb" stroke-width="2" marker-end="url(#a)">
+    <path d="M175 123 H210"/><path d="M355 123 H390"/><path d="M570 123 H620"/>
+    <path d="M840 123 H890"/><path d="M730 170 V225"/><path d="M970 170 V225"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+name = "adversarial-fixture"
+version = "0.1.0"
+abi_version = "1"
+hooks = ["on-commit", "on-receive"]
+requested_capabilities = ["commit_metadata.read", "diagnostic.emit"]
+module_digest = "sha256:d12bcf043b33e1ec15a0c98630c7819761d6ff8bad18d0bab8b02a1ff36698c6"

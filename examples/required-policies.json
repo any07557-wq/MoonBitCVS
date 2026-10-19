@@ -1,0 +1,26 @@
+{
+  "schema": 2,
+  "host": "/path/to/moonvcs/target/bin/moonvcs-policy-host",
+  "required": [
+    {
+      "name": "secret-scanner",
+      "version": "0.2.0",
+      "module_digest": "sha256:3743537dad366b6af66d0b36d27eb77f47bee2b4669475e2d4a7b0fca5023cf2",
+      "component": "/path/to/moonvcs/target/components/secret-scanner.component.wasm",
+      "manifest": "/path/to/moonvcs/target/components/secret-scanner.plugin.toml",
+      "granted_capabilities": ["staged_content.read", "diagnostic.emit"]
+    }
+  ],
+  "allowed_capabilities": ["staged_content.read", "diagnostic.emit"],
+  "limits": {
+    "fuel": 50000000,
+    "timeout_ms": 1000,
+    "max_memory_bytes": 33554432,
+    "max_input_bytes": 1048576,
+    "max_output_bytes": 65536,
+    "max_log_bytes": 16384
+  },
+  "custom_rules": [
+    {"id": "company-demo", "literal": "COMPANY_DEMO_CREDENTIAL="}
+  ]
+}

@@ -1,0 +1,8 @@
+// wit-bindgen calls MoonBit runtime allocation helpers from inline Wasm.
+// They are supplied by the wasm linker; suppress only the unbound-call check.
+warnings = "-invalid_inline_wasm"
+
+import {
+  "moonbitlang/core/json",
+  "moonbitlang/core/encoding/utf8",
+}

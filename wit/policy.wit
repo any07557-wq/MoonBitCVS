@@ -1,0 +1,53 @@
+package moonvcs:policy@0.1.0;
+
+interface evaluator {
+  enum hook {
+    on-commit,
+    on-receive,
+  }
+
+  enum severity {
+    info,
+    warning,
+    error,
+  }
+
+  record staged-file {
+    path: string,
+    content: list<u8>,
+  }
+
+  record policy-request {
+    hook: hook,
+    policy-version: string,
+    commit-message: string,
+    parent-id: option<string>,
+    tree-id: option<string>,
+    files: list<staged-file>,
+    granted-capabilities: list<string>,
+  }
+
+  record diagnostic {
+    code: string,
+    severity: severity,
+    message: string,
+    path: option<string>,
+  }
+
+  variant decision {
+    pass,
+    reject,
+    error(string),
+  }
+
+  record policy-result {
+    decision: decision,
+    diagnostics: list<diagnostic>,
+  }
+
+  evaluate: func(request: policy-request) -> policy-result;
+}
+
+world policy-plugin {
+  export evaluator;
+}

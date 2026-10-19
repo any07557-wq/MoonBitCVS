@@ -1,0 +1,6 @@
+name = "secret-scanner"
+version = "0.2.0"
+abi_version = "1"
+hooks = ["on-commit", "on-receive"]
+requested_capabilities = ["staged_content.read", "diagnostic.emit"]
+module_digest = "sha256:3743537dad366b6af66d0b36d27eb77f47bee2b4669475e2d4a7b0fca5023cf2"

@@ -1,0 +1,15 @@
+import {
+  "gmlewis/sha256",
+  "moonbitlang/core/debug",
+  "moonbitlang/core/encoding/utf8",
+  "moonbitlang/core/env",
+  "moonbitlang/core/json",
+  "moonbitlang/async",
+  "moonbitlang/async/fs",
+  "moonbitlang/async/os_error",
+  "moonbitlang/async/process",
+  "moonbitlang/async/io",
+  "moonbitlang/async/stdio",
+}
+
+// MoonVCS domain model and content-addressed core.

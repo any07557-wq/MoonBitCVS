@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="470" viewBox="0 0 1080 470" role="img" aria-labelledby="title desc">
+  <title id="title">Lazy object lookup with explicit fetch authority</title>
+  <desc id="desc">A local hit is verified. Unknown objects never probe a remote. A promised remote miss checks offline mode, fetches from the configured filesystem remote, verifies type and SHA-256, atomically caches, registers edges and returns.</desc>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#9eb4cb"/></marker></defs>
+  <rect width="1080" height="470" rx="18" fill="#0d1525"/>
+  <g font-family="sans-serif" fill="#edf4ff">
+    <text x="30" y="43" font-size="24" font-weight="bold">Data on demand, not arbitrary missing-ID fetch</text>
+    <rect x="30" y="88" width="190" height="70" rx="10" fill="#123b46" stroke="#4bd6cc"/>
+    <text x="50" y="117" font-size="18">get(ObjectId)</text><text x="50" y="142" font-size="14">MoonBit LazyObjectStore</text>
+    <rect x="285" y="78" width="260" height="85" rx="10" fill="#123b46" stroke="#4bd6cc"/>
+    <text x="305" y="108" font-size="18">Local?</text><text x="305" y="136" font-size="14">Yes: verify + return cached object</text>
+    <rect x="285" y="215" width="260" height="95" rx="10" fill="#24334d" stroke="#8b9cb9"/>
+    <text x="305" y="245" font-size="18">Validated promise?</text><text x="305" y="273" font-size="14">Pinned Ref or verified source edge</text><text x="305" y="297" font-size="14">Expected type + selected remote</text>
+    <rect x="30" y="215" width="190" height="95" rx="10" fill="#4b2535" stroke="#ec839d"/>
+    <text x="50" y="247" font-size="18">UnknownObject</text><text x="50" y="276" font-size="14">No remote probe</text>
+    <rect x="625" y="78" width="405" height="85" rx="10" fill="#4b2535" stroke="#ec839d"/>
+    <text x="645" y="109" font-size="18">Offline + uncached promise?</text><text x="645" y="137" font-size="14">ObjectUnavailableOffline; no fetch</text>
+    <rect x="625" y="215" width="405" height="95" rx="10" fill="#24334d" stroke="#8b9cb9"/>
+    <text x="645" y="246" font-size="18">Online: filesystem RemoteObjectStore</text><text x="645" y="274" font-size="14">Read bounded bytes; errors are not all corruption</text>
+    <rect x="285" y="365" width="745" height="60" rx="10" fill="#193e36" stroke="#7dcfa4"/>
+    <text x="305" y="391" font-size="17">Type + canonical encoding + SHA-256 → atomic cache install → record edges → return</text>
+    <text x="305" y="414" font-size="13">Cache hits still verify integrity/provenance; zero transfers does not guarantee constant-time reads.</text>
+    <text x="30" y="452" font-size="14" fill="#a7bad1">Clone materializes HEAD checkout only. Parent hashes discover historical commits incrementally; no full ancestor catalog.</text>
+  </g>
+  <g fill="none" stroke="#9eb4cb" stroke-width="2" marker-end="url(#a)">
+    <path d="M220 121 H285"/><path d="M415 163 V215"/><path d="M285 263 H220"/>
+    <path d="M545 263 H625"/><path d="M575 263 V121 H625"/><path d="M827 310 V365"/>
+  </g>
+</svg>
