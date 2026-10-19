@@ -20,7 +20,7 @@ import toolchain_archives
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ('README.md', 'ARCHITECTURE.md', 'SECURITY.md', 'ROADMAP.md', 'DEMO.md',
-          'TESTING.md', 'INSTALL.md', 'LICENSE', '.gitignore', 'BRANCH_SWITCH.md', 'docs', 'examples',
+          'TESTING.md', 'INSTALL.md', 'LICENSE', '.gitignore', '.github', 'BRANCH_SWITCH.md', 'docs', 'examples',
           'scripts', 'tests', 'vcs', 'plugins', 'wit', 'host')
 IMAGE_DIGEST = 'sha256:5f29c3b4cb8ad8c6f10df979595582dd67dd146ffebc70718e24ff2e5b4a194d'
 

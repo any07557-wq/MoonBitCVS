@@ -1,5 +1,9 @@
 # MoonVCS Status
 
+CI configuration: pinned tools + existing full verify.sh entry, 6 new guards
+(237 tests in the current entry). Local-only commit requested; no push or GitHub
+run is claimed. See [CI.md](CI.md) and [CI_VALIDATION.md](CI_VALIDATION.md).
+
 Last host regression with branch/switch closeout: 225 tests, 2026-10-18 (Asia/Shanghai).
 Branch/switch status: local prototype acceptance passed, not production acceptance.
 The 2026-10-19 delivery entry adds 6 archive/reproduction guards (231 total).

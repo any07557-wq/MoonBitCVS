@@ -131,6 +131,7 @@ python3 "$MOONVCS_ROOT/tests/toolchain_archive_audit.py"
 python3 "$MOONVCS_ROOT/tests/diff_audit.py"
 python3 "$MOONVCS_ROOT/tests/branch_switch_audit.py"
 python3 "$MOONVCS_ROOT/tests/submission_audit.py"
+python3 "$MOONVCS_ROOT/tests/ci_audit.py"
 "$MOONVCS_ROOT/scripts/test-hackathon.sh" --built
 printf '%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n' \
   "$MOONVCS_PASS_OUTPUT" \

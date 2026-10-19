@@ -5,7 +5,7 @@ MOONVCS_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 [[ "$#" -eq 0 ]] || { echo 'Usage: scripts/package-submission.sh' >&2; exit 1; }
 MOONVCS_SOURCE_ITEMS=(
   README.md ARCHITECTURE.md SECURITY.md ROADMAP.md DEMO.md TESTING.md INSTALL.md
-  LICENSE .gitignore docs examples scripts tests vcs plugins wit host
+  LICENSE .gitignore .github docs examples scripts tests vcs plugins wit host
   BRANCH_SWITCH.md
 )
 for MOONVCS_ITEM in "${MOONVCS_SOURCE_ITEMS[@]}"; do

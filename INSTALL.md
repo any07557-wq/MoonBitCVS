@@ -22,7 +22,9 @@
 当前交付入口新增 6 项归档/复现防护，共 231 项；在另一目录解包后使用已安装工具和全局缓存重建，
 仍不等于冷安装。具体包的完整运行结果见包旁 REPRODUCTION.json，方法见 [SUBMISSION.md](docs/SUBMISSION.md)。
 
-当前没有发布安装包、容器镜像或托管仓库下载地址。先取得项目源码，不要复制文档中不存在的发布链接。
+公开源码见 [GitHub 仓库](https://github.com/any07557-wq/MoonBit_Program)，尚未发布预编译安装包或容器镜像。
+GitHub Actions 的固定工具准备与边界见 [CI.md](docs/CI.md)；本轮不推送，远端运行未验证。
+CI 轮在 231 项交付快照基础上增加 6 项防护，当前完整入口为 237 项；旧归档和冷安装结论不自动扩大。
 当前机器的版本、系统和插件摘要见 target/reports/phase7-environment.json；
 源码侧固定要求见 scripts/build-component.sh、host/Cargo.lock 和各插件 plugin.toml。
 

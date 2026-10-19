@@ -1,0 +1,77 @@
+name: MoonVCS CI
+
+"on":
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Linux / pinned tools / full verification
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    env:
+      RUSTUP_TOOLCHAIN: 1.99.1
+      CARGO_BUILD_JOBS: "2"
+    steps:
+      - name: Check out source without stored credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install system prerequisites
+        run: |
+          mkdir -p target/ci
+          printf 'MOON_HOME=%s\n' "$RUNNER_TEMP/moonvcs-moon" >> "$GITHUB_ENV"
+          printf 'MOONVCS_MOON=%s\n' "$RUNNER_TEMP/moonvcs-moon/bin/moon" >> "$GITHUB_ENV"
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends build-essential pkg-config libssl-dev ca-certificates python3
+
+      - name: Install checksum-pinned MoonBit
+        run: |
+          python3 scripts/ci_install_moon.py --directory "$MOON_HOME" --report target/ci/moon-install.json 2>&1 | tee target/ci/moon-install.log
+          printf '%s\n' "$MOON_HOME/bin" >> "$GITHUB_PATH"
+
+      - name: Install pinned Rust and Wasm tools
+        run: |
+          rustup toolchain install "$RUSTUP_TOOLCHAIN" --profile minimal --component rustfmt
+          cargo install --locked wit-bindgen-cli --version 0.63.0
+          cargo install --locked wasm-tools --version 1.262.0
+
+      - name: Prepare core bundles and Mooncakes registry
+        run: |
+          "$MOONVCS_MOON" version --all
+          "$MOONVCS_MOON" -C "$MOON_HOME/lib/core" bundle --warn-list -a --all
+          "$MOONVCS_MOON" -C "$MOON_HOME/lib/core" bundle --warn-list -a --target wasm-gc --quiet
+          "$MOONVCS_MOON" -C vcs update
+
+      - name: Run checks, builds, full tests and repeat smoke
+        run: ./scripts/verify.sh 2>&1 | tee target/ci/verification.log
+
+      - name: Preserve selected reports, including failures
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: moonvcs-ci-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            target/ci/*.json
+            target/ci/*.log
+            target/reports/phase7-verify.json
+            target/reports/phase7-regression.log
+            target/reports/phase7-environment.json
+            target/reports/phase7-environment.log
+            target/reports/phase7-repeat-smoke.log

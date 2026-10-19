@@ -15,7 +15,7 @@ mkdir "$MOONVCS_CLEAN_WORK/source"
 tar -C "$MOONVCS_ROOT" --exclude=_build --exclude=target --exclude=.mooncakes \
   --exclude=__pycache__ --exclude=.toolchains -cf - \
   README.md ARCHITECTURE.md SECURITY.md ROADMAP.md DEMO.md TESTING.md INSTALL.md \
-  LICENSE .gitignore BRANCH_SWITCH.md docs examples scripts tests vcs plugins wit host |
+  LICENSE .gitignore .github BRANCH_SWITCH.md docs examples scripts tests vcs plugins wit host |
   tar -C "$MOONVCS_CLEAN_WORK/source" -xf -
 [[ ! -e "$MOONVCS_CLEAN_WORK/source/target" ]]
 [[ ! -e "$MOONVCS_CLEAN_WORK/source/host/target" ]]
