@@ -38,7 +38,8 @@ MOONVCS_MOON="$HOME/.moon/bin/moon" ./scripts/test.sh
 2026-10-19 交付复现另加入 6 项防护回归，当时入口共 231 项，不把旧 225 项当作此版本的验证。
 每份源码包的实际完整结果和摘要由包旁 REPRODUCTION.json/REPRODUCTION.md 给出；只有 status=passed 才算通过。
 CI 轮另加 6 项归档安装/工作流防护，当前入口共 237 项；本地与 GitHub 运行结论必须分开，
-见 [CI 说明](docs/CI.md)与[本地验证记录](docs/CI_VALIDATION.md)。本轮仅本地提交、不推送，不宣称 GitHub 已通过。
+见 [CI 说明](docs/CI.md)与[CI 验证记录](docs/CI_VALIDATION.md)。提交 `6d96157` 的 GitHub 运行 #1 实际成功，
+原始附件摘要与 GitHub 元数据一致，独立核对 237 项及三阶段退出 0；本次只核验归档，未在本机重跑完整测试。
 
 ## 分项执行
 

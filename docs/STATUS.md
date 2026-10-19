@@ -1,8 +1,11 @@
 # MoonVCS Status
 
 CI configuration: pinned tools + existing full verify.sh entry, 6 new guards
-(237 tests in the current entry). Local-only commit requested; no push or GitHub
-run is claimed. See [CI.md](CI.md) and [CI_VALIDATION.md](CI_VALIDATION.md).
+(237 tests in the current entry). GitHub run #1 on commit `6d96157` succeeded;
+the original artifact digest, all three exit-zero stages and 237 unique tests
+have been checked and preserved locally. This evidence update does not rerun
+tests, push changes or claim a new rootfs acceptance. See [CI.md](CI.md) and
+[CI_VALIDATION.md](CI_VALIDATION.md).
 
 Last host regression with branch/switch closeout: 225 tests, 2026-10-18 (Asia/Shanghai).
 Branch/switch status: local prototype acceptance passed, not production acceptance.

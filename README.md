@@ -17,7 +17,8 @@ switch 要求 index/跟踪文件干净，无未跟踪碰撞，且目标对象已
 [竞品差异](docs/COMPARISON.md) · [安全边界](SECURITY.md) · [路线图](ROADMAP.md)
 
 [GitHub Actions 配置](.github/workflows/ci.yml)已接入固定工具、构建和完整验证，说明见 [CI.md](docs/CI.md)。
-本轮仅本地提交、不推送；尚未验证 GitHub 运行，不把配置存在写成 CI 已通过。
+GitHub [运行 #1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39241926009) 对提交 `6d96157` 实际成功，
+237 项及重复演示通过；附件已校验归档，见 [CI 验证记录](docs/CI_VALIDATION.md)。这不替代新 rootfs 冷安装验收。
 
 本地交付包与验包方式见 [SUBMISSION.md](docs/SUBMISSION.md)。源码包与实测证据分开保存，不含工具链或预编译发行版。
 
@@ -90,7 +91,7 @@ Git Hook 也可以调用沙箱程序；我们没有证明这种组合只能在 M
 | Lazy History | 文件系统 partial clone，只取 HEAD checkout；旧 Commit 按需获取、校验、缓存、离线错误分类 |
 | Remote Policy | 本地文件系统/stdio receive、required policies、Quarantine、图校验和 Ref CAS；经 receive 入口的未扫描候选仍被拒绝，不防同账户直接改服务器文件 |
 | 暂存与恢复检查 | 跨进程 add 事务锁、关键目录同步；recover --check 只读检查锁/临时对象/Quarantine，不自动清理或重放 |
-| 测试 | branch/switch 的 225 项验收与交付轮 231 项记录分别保留；CI 再加 6 项后完整入口为 237 项；本地验证见 CI_VALIDATION，GitHub 运行未验证，149 项冷安装仍是历史版本 |
+| 测试 | branch/switch 的 225 项验收与交付轮 231 项记录分别保留；提交 6d96157 的 GitHub CI 237 项通过，报告已核验归档；149 项冷安装仍是历史版本 |
 
 安全模型和规模上限不是无限的，见下方限制及 [SECURITY.md](SECURITY.md)。
 
@@ -207,7 +208,8 @@ MOONVCS_MOON="$HOME/.moon/bin/moon" ./scripts/verify.sh --clean-build --benchmar
 该 225 项属于 2026-10-18 收尾源码快照。交付复现另加 6 项归档/摘要/失败保留防护，接入统一入口后共 231 项；
 打包不等于验证，具体源码包的清洁解包重建结果见包旁 `REPRODUCTION.json` 与 `REPRODUCTION.md`。
 复现方式与已安装工具/缓存复用边界见 [交付说明](docs/SUBMISSION.md)。
-随后 CI 轮新增 6 项工作流/安装防护，当前入口为 237 项；[本地记录](docs/CI_VALIDATION.md)不替代尚未运行的 GitHub Actions。
+随后 CI 轮新增 6 项工作流/安装防护，当前入口为 237 项；提交 `6d96157` 的 GitHub 运行与原始附件已独立核对，
+见 [CI 验证记录](docs/CI_VALIDATION.md)，与此前本地结果分开记录。
 
 阶段 7 正式基准：每档 20 个真实策略提交、3 轮；这里仅报告本地部分克隆和 Commit，
 不是 Git 对比：

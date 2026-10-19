@@ -1,9 +1,83 @@
-# CI 接入：本地验证记录
+# CI 验证记录
+
+## GitHub Actions：运行与附件已核验归档（2026-10-19）
+
+已通过 GitHub REST API 核对本次运行，**运行状态为 completed，结论为 success**：
+
+| 项目 | 实际记录 |
+|---|---|
+| 运行 | [MoonVCS CI #1 / attempt 1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39241926009) |
+| 提交 | [`6d9615736b9b60bc58e1ae3f0cf49bf340231d84`](https://github.com/any07557-wq/MoonBitCVS/commit/6d9615736b9b60bc58e1ae3f0cf49bf340231d84)，CI 被测源码提交；后续文档归档提交不改变此绑定 |
+| 触发 / 分支 | push / main |
+| 工作流 | `.github/workflows/ci.yml`，MoonVCS CI |
+| 开始 / 最后更新 | 2026-10-19 11:04:03 / 11:18:46 UTC（北京时间 19:04:03 / 19:18:46） |
+| 唯一报告附件 | `moonvcs-ci-39241926009-1`，artifact ID `12182476716`，32,666 字节 |
+| ZIP 实测 SHA-256（与 GitHub 元数据一致） | `dc991ef6e100d275fe4fec1a5439ba35a47419a775589fe7223bfbca5be2ed6e` |
+| 附件过期 | 2026-11-02 11:18:43 UTC（北京时间 **11 月 2 日 19:18:43**），14 天保留期 |
+| 报告实际结果 | **237 项通过**；regression、environment、repeat-smoke 三阶段退出码均为 0 |
+| 本次归档核验 | 2026-10-19 12:02:34 UTC（北京时间 20:02:34），未在本机重新执行完整测试 |
+
+原 origin 使用 `MoonBit_Program`；GitHub API 返回的当前仓库名称及规范运行链接为
+`any07557-wq/MoonBitCVS`。本次未修改 origin，也未推送、触发工作流或更改远端配置。
+
+已保存的证据位于 [`evidence/ci/39241926009-attempt-1/`](../evidence/ci/39241926009-attempt-1/)：
+
+- [`moonvcs-ci-39241926009-1.zip`](../evidence/ci/39241926009-attempt-1/moonvcs-ci-39241926009-1.zip)：原始附件，未重新打包。
+- `extracted/ci/` 与 `extracted/reports/`：8 份报告，共 144,855 字节；每份均核对与 ZIP 成员字节一致。
+- `run.json`：此前下载的原始运行响应；`artifact-metadata.json`：成功返回的附件列表字段摘录。
+- [`validation.json`](../evidence/ci/39241926009-attempt-1/validation.json)：本次核对结果、计数和未验证边界。
+- [`privacy-review.json`](../evidence/ci/39241926009-attempt-1/privacy-review.json)：新增附件独立隐私检查的范围、发现和限制。
+- `SHA256SUMS`：原 ZIP、8 份报告、运行/附件元数据及本次核对/隐私检查结果的完整摘要清单，不包含清单自身。
+
+首次匿名 API 下载实际遇到 HTTP 403 `API rate limit exceeded`，当时只保存了运行元数据，未把失败当成功。
+随后维护者用浏览器下载并提供本地附件路径，本次从其旁的原始 ZIP 复制归档；未修改用户下载目录。
+本机没有 `unzip` 命令，改用 Python 标准库 `zipfile`：先核对 ZIP 大小、SHA-256、CRC、路径、
+文件类型和解压预算，再解包；没有执行附件中的内容。没有再次请求网络下载。
+`artifact-metadata.json` 末尾的 false/阻塞说明保留首次核对时的历史状态，当前状态以 `validation.json` 为准。
+
+`phase7-verify.json` 记录从 11:09:56 UTC 开始，regression 497 秒、environment 0 秒（整秒计数）、
+repeat-smoke 29 秒，三阶段记录合计 526 秒，全部退出 0；这不是新的性能基准。
+从 `phase7-regression.log` 独立核对：86 native + 26 Rust + 19 Wasm + 106 Python = **237**；
+10 组 Python suite 分别为 9、6、4、7、1、7、20、40、6、6，均为 OK。
+重复构建时第二次运行的同一批 19 项 Wasm 测试不重复计数；双轮四场景 demo 与额外两次 receive smoke 均成功，另列而不增加总数。
+
+安装报告显示固定 MoonBit 两份官方版本 URL 归档均核对原锁文件摘要；环境报告中的所有工具版本查询成功，
+MoonBit/Rust/Wasm 工具与固定版本一致。Cargo.lock、WIT、moon.mod 三份源码摘要与运行提交中的 Git 对象逐项匹配。
+安装器报告自身仍是 `installed_not_tested`，其中完整验证相关 false 标记只表示安装步骤未运行测试，未修改原报告；
+完整通过依据是后续 `phase7-verify.json`、原始日志和 GitHub 的 success 结论，而非安装器标记。
+
+从仓库根目录复核保存内容（只读、不联网、不重跑项目测试）：
+
+~~~bash
+(cd evidence/ci/39241926009-attempt-1 && sha256sum -c SHA256SUMS)
+~~~
+
+此目录不在被忽略的 `target/` 中，GitHub 附件到期不影响本地归档。
+**截至本次归档核验时（2026-10-19 12:02:34 UTC）**，这些证据尚未提交、推送或创建异地备份；
+`validation.json` 中相应布尔值也仅记录这一时间点，不表示后续提交状态。
+随后在新增附件隐私检查后单独本地提交本组文档和证据；本地提交不等于已推送或建立异地备份。
+未保存完整 job 控制台日志，只有工作流选定上传的报告。
+
+### 新增附件的独立隐私检查
+
+2026-10-19 12:17:48 UTC，针对原 ZIP 的全部 8 份 UTF-8 文本成员，以及 `run.json`、
+`artifact-metadata.json`、`validation.json`、`SHA256SUMS` 四份旁文件另做检查，未沿用此前源码包的检查结论。
+已逐份确认解包内容与 ZIP 成员一致；检查 GitHub/cloud token、私钥块、认证头、凭据赋值、
+URL 内嵌凭据/签名参数、JWT、SSH/凭据路径、个人 Windows/HOME 路径和完整模拟 token，未发现这些匹配。
+另检查了邮箱、IP、外链主机和策略诊断：唯一邮箱为仓库已有的公开 GitHub noreply 提交地址，
+外链限 GitHub API/仓库/头像和官方 MoonBit 下载域；其余路径是 GitHub runner 与 `/tmp` 测试目录。
+保留这些公开身份、工具版本、对象摘要和临时路径；无需为本次公开归档修改原报告或重新打包 ZIP。
+检查是规则扫描和上下文核对，不是完整 DLP、第三方安全审计或“绝无敏感信息”的证明；
+本轮不运行项目完整测试，也不扩大生产安全保证。
+
+GitHub 的成功结论只绑定上述提交和运行，不扩大到新 rootfs 冷安装、三档性能基准或生产安全保证。
+
+## 历史：CI 接入时的本地验证
 
 日期：2026-10-19，Asia/Shanghai。起点为本地 Git 导入提交 560408e。
 维护者明确要求 **仅本地独立提交，暂不推送**；本轮没有 push、workflow_dispatch 或远端配置变更。
 
-## 结论与未验证项
+### 结论与未验证项
 
 - 最终 workflow 的 actionlint 1.7.12 校验退出 0；只校验语法/表达式，不包含 ShellCheck/Pyflakes。
 - CI 安装器使用原固定摘要的本地 CAS，在新前缀实际安装 MoonBit；版本查询与 core bundle 完成。
@@ -17,7 +91,7 @@
 MoonBit 来自校验后的本地归档，而不是本轮重新下载官方 URL。
 workflow 则在新 runner 下载固定 MoonBit、安装 Rust/Wasm 工具并初始化 registry；网络可用性和平台差异仍要在首次推送后确认。
 
-## 实际失败、修复与重跑
+### 实际失败、修复与重跑
 
 本轮原始文件保留于 `target/reports/ci-setup.RXW29u/`；旧 rootfs、交付与阶段 7 历史日志未覆盖。
 
@@ -37,7 +111,7 @@ workflow 本来就包含 Rust 安装步骤；首次本地失败是准备不完�
 两个源码副本、初稿错误、失败报告与最终结果均保留，重跑不覆盖失败。
 6 项专项独立重跑、单个测试内的多个 fixture、重复组件构建与演示不重复计数。
 
-## 最终执行与版本绑定
+### 最终执行与版本绑定
 
 源码副本：`target/ci-local.20TEy4/source/`；没有复制旧项目 target/_build/.mooncakes。
 通过 `.toolchains` 链接复用已安装 Rust 工具与全局 registry 缓存，Cargo target 固定为新副本 host/target。
@@ -73,15 +147,19 @@ benchmark 与额外 clean-build 参数没有请求；普通 CI 验证不冒充�
 actionlint 来自官方 v1.7.12 linux_amd64 归档，运行前核对公开摘要
 `8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8`；未做 attestation/作者签名验证。
 
-## 后续核对与原型边界
+### 后续核对与原型边界
 
 ~~~bash
 sha256sum -c target/reports/ci-setup.RXW29u/tested-source.sha256
 sha256sum -c target/reports/ci-setup.RXW29u/evidence.sha256
 ~~~
 
+以上为接入时的历史核对命令。旧 `evidence.sha256` 包含当时的本文；
+本次补记 GitHub 结果后，应使用提交 `6d9615736b9b60bc58e1ae3f0cf49bf340231d84` 中的原文核对该项，
+不要为匹配当前文档而改写旧清单。可执行代码与旧运行日志未改动。
+
 target 日志是被 Git 忽略的本机产物，不会随本轮提交自动上传。
-将来维护者推送此提交并获得 GitHub 的实际完整成功后，才能更新“GitHub CI 已通过”的状态。
+接入时尚无 GitHub 实际成功；后续的运行核对与附件状态见本文开头，不改写本节历史结论。
 本轮没有发布 Mooncakes、Release、申报书、改变分支保护或更新旧交付归档。
 225/231 项与历史 149 项安装结果保持各自版本边界；认证/ACL/TLS/OS 权限分离、Host/JIT 总内存、
 GC/自动恢复、Partial Clone inspection 来源依赖等原有限制均未解决，也没有清理任何恢复来源。

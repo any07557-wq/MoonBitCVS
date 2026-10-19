@@ -1,8 +1,9 @@
 # GitHub Actions：检查、构建与完整验证
 
 配置：[.github/workflows/ci.yml](../.github/workflows/ci.yml)，名称 MoonVCS CI。
-**配置存在不等于 GitHub 已通过。** 本轮按维护者要求仅本地提交，不推送，GitHub 运行未验证。
-本地实际记录另见 [CI_VALIDATION.md](CI_VALIDATION.md)，不能用它替代 Actions 的绿色结果。
+**配置存在不等于 GitHub 已通过。** 接入时按维护者要求仅本地提交，不推送；
+后续已核对运行 #1 为 success，并将维护者下载的原始附件归档：ZIP 摘要匹配，237 项通过，三阶段退出码均为 0。
+实际运行链接、提交、到期时间及历史本地结果见 [CI_VALIDATION.md](CI_VALIDATION.md)。
 
 ## 触发与范围
 
@@ -41,12 +42,15 @@ GITHUB_TOKEN 仅 contents:read，checkout 不持久化凭据，不使用 secrets
 不会上传整个 target、工具链、registry、对象库、恢复现场或用户配置。
 checkout/准备阶段过早失败时报告可能不全，先看失败步骤的 job 日志；缺报告不能当通过。
 artifact 不是长期备份、签名或当前 rootfs 安装验收。超时/取消也不能解释为已完成验证。
+本次附件已另存 `evidence/ci/39241926009-attempt-1/`，不依赖 GitHub 的 14 天保留期；
+原包、解包报告、核对记录及 SHA256SUMS 一并保存；截至本次归档核验时（2026-10-19 12:02:34 UTC）
+尚未提交/推送或建立异地备份。后续另做了新增附件隐私检查并形成本地归档提交，不代表已推送。
 
-## 何时能看到公开验证结果
+## 公开验证结果与历史触发边界
 
-本地提交尚未推送时，公开仓库不会出现本次 workflow 或新运行。
-维护者以后自行推送此提交，或另行授权推送后，查看
-[仓库 Actions](https://github.com/any07557-wq/MoonBit_Program/actions) 中对应提交的 MoonVCS CI。
+接入时仅本地提交，没有代维护者推送或触发运行。后续公开运行已由 GitHub 记录，见
+[本次 MoonVCS CI #1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39241926009)。
+本次只核验并本地归档证据，没有推送或触发新运行。
 只有完整 job 实际成功才可以宣称 GitHub CI 跑通；不从本地测试或 YAML 解析结果推断。
 
 本轮不自动推送、修改分支保护、上传 Release、发布 Mooncakes 或代写个人申报书。

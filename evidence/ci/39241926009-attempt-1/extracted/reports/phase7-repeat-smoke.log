@@ -1,0 +1,100 @@
+Repeat receive smoke: 1 of 2
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.wFzycy/server/.moonvcs
+Initialized trusted server on-receive policy
+Scenario A: safe client commit, server independently accepts
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.wFzycy/client/.moonvcs
+Policy passed
+Commit created
+Committed 0db91b7afb5231510ab1178dbc38edb1288850656fa83bbc46d4b26a9d6006bf
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"0db91b7afb5231510ab1178dbc38edb1288850656fa83bbc46d4b26a9d6006bf","checked_commits":1,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+Scenario B: local scanner rejects harmless simulated secret
+Commit rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario C: standalone bypass program creates unchecked objects without updating client HEAD
+Unscanned candidate 861cc3b7912340b62a7b3dbcc614f4b416df51bc49bea01263aa591de634d5f2
+Push rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario D: two prepared clients use the same old Ref; stale second publish cannot overwrite
+Unscanned candidate 54eea9e244c9ad4b69a092125ad8ca44213e7f93243b4c32a65286da8cde763d
+Unscanned candidate 65ff3dd0e20edd56b81b2db37022c64ab332cded7725fbb5248564a4d46937fb
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"54eea9e244c9ad4b69a092125ad8ca44213e7f93243b4c32a65286da8cde763d","checked_commits":2,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+RefConflict: expected old Ref changed; refresh and retry
+Unscanned candidate 3e0227d6a95fe86e1f930e9a598a0de4a0b726bf6f42c6432c596956fd1b9023
+Unscanned candidate 154b6fede8cf6f7b162e971d61c9ec2a5943dd63e05b275c4ec88c71f1b2969a
+Concurrent server processes: exits 11 and 0 (one accept, one conflict)
+commit 154b6fede8cf6f7b162e971d61c9ec2a5943dd63e05b275c4ec88c71f1b2969a
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-b
+
+commit 54eea9e244c9ad4b69a092125ad8ca44213e7f93243b4c32a65286da8cde763d
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-a
+
+commit 0db91b7afb5231510ab1178dbc38edb1288850656fa83bbc46d4b26a9d6006bf
+Author: MoonVCS User
+Date:   1792408693581
+
+    safe initial
+
+Measured published objects: initial=3 final=9; rejected candidate=861cc3b7912340b62a7b3dbcc614f4b416df51bc49bea01263aa591de634d5f2 never published
+MoonVCS phase-6 remote policy receive tests passed
+Repeat receive smoke: 2 of 2
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.yRwCVZ/server/.moonvcs
+Initialized trusted server on-receive policy
+Scenario A: safe client commit, server independently accepts
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.yRwCVZ/client/.moonvcs
+Policy passed
+Commit created
+Committed fb38dd1096b7d1bdff130cb74b46b41207fd87e6016e6e9a9347266ec7789da4
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"fb38dd1096b7d1bdff130cb74b46b41207fd87e6016e6e9a9347266ec7789da4","checked_commits":1,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+Scenario B: local scanner rejects harmless simulated secret
+Commit rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario C: standalone bypass program creates unchecked objects without updating client HEAD
+Unscanned candidate 98bdae572fccd7930893cd993bc2b978456dd34d6848a75a788e0b50b72182c3
+Push rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario D: two prepared clients use the same old Ref; stale second publish cannot overwrite
+Unscanned candidate 0a9daa0e769ced7602fb4a0897b4eb5a21ebcf2d18af487fc7f00ec627f53941
+Unscanned candidate 35ec4cbb50939ada2eb7937ba28fd92ed9a4eb89c6ef777da9776ba193d808a3
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"0a9daa0e769ced7602fb4a0897b4eb5a21ebcf2d18af487fc7f00ec627f53941","checked_commits":2,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+RefConflict: expected old Ref changed; refresh and retry
+Unscanned candidate ee2356fb29b6b9feb777e13847d9550dd0b407c9dca7da3ccde1bf71a91c4e18
+Unscanned candidate 72a6913360a9ba1185aaceee7165efd2161a09ecaaa798873c4c033e8aeb850f
+Concurrent server processes: exits 0 and 11 (one accept, one conflict)
+commit ee2356fb29b6b9feb777e13847d9550dd0b407c9dca7da3ccde1bf71a91c4e18
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-a
+
+commit 0a9daa0e769ced7602fb4a0897b4eb5a21ebcf2d18af487fc7f00ec627f53941
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-a
+
+commit fb38dd1096b7d1bdff130cb74b46b41207fd87e6016e6e9a9347266ec7789da4
+Author: MoonVCS User
+Date:   1792408708251
+
+    safe initial
+
+Measured published objects: initial=3 final=7; rejected candidate=98bdae572fccd7930893cd993bc2b978456dd34d6848a75a788e0b50b72182c3 never published
+MoonVCS phase-6 remote policy receive tests passed
