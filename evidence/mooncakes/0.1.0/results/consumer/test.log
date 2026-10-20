@@ -1,0 +1,2 @@
+Warning: Main package `publication-smoke/registry-consumer` uses blackbox-only test inputs (`_test.mbt` files) in package directory "/home/user/MoonBit_Program/target/reports/mooncakes-release.4J7nF4/registry-consumer". Main packages will stop generating blackbox tests in a future release. Move public behavior into a non-main package and keep the main package as an entrypoint.
+Total tests: 2, passed: 2, failed: 0.

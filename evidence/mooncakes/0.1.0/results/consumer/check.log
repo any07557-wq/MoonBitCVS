@@ -1,0 +1,6 @@
+Downloading gmlewis/base64@0.16.13
+Downloading gmlewis/sha256@0.18.0
+Downloading moonbitlang/async@0.20.2
+Downloading any07557-wq/moonvcs@0.1.0
+Warning: Main package `publication-smoke/registry-consumer` uses blackbox-only test inputs (`_test.mbt` files) in package directory "/home/user/MoonBit_Program/target/reports/mooncakes-release.4J7nF4/registry-consumer". Main packages will stop generating blackbox tests in a future release. Move public behavior into a non-main package and keep the main package as an entrypoint.
+Finished. moon: ran 24 tasks, now up to date

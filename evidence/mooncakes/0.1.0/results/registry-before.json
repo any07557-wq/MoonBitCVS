@@ -1,0 +1,1 @@
+{"version":1,"status":"failure","result":null,"messages":[{"level":"error","message":"registry module request failed at https://mooncakes.io/api/v0/manifest/any07557-wq/moonvcs@0.1.0: HTTP status client error (404 Not Found) for url (https://mooncakes.io/api/v0/manifest/any07557-wq/moonvcs@0.1.0)"}]}

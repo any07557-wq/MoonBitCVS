@@ -1,0 +1,29 @@
+[
+  {
+    "build": "publication-package-build",
+    "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+    "bytes": 22,
+    "files": 0,
+    "contents_equal": false,
+    "byte_exact": false,
+    "published": false
+  },
+  {
+    "build": "publication-package-build-clean",
+    "sha256": "98b37a18bbe5e900142d504c87ff50d8738bf861482a1b715edc4b9a3465e5e9",
+    "bytes": 75212,
+    "files": 33,
+    "contents_equal": true,
+    "byte_exact": false,
+    "published": false
+  },
+  {
+    "build": "publication-package-build-ordered",
+    "sha256": "5006035f75de4f963213a92257bafa3a5d2f751bb117c803c49d9c09f21867d3",
+    "bytes": 75212,
+    "files": 33,
+    "contents_equal": true,
+    "byte_exact": true,
+    "published": true
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "authorized": true,
+  "module": "any07557-wq/moonvcs",
+  "version": "0.1.0",
+  "sha256": "5006035f75de4f963213a92257bafa3a5d2f751bb117c803c49d9c09f21867d3",
+  "source_commit": "d5d824211b06b276323dc5c8c27914b76e08ff15",
+  "project_verification_passed": true,
+  "project_unique_tests": 237,
+  "project_verification_exit": 0,
+  "account_username": "any07557-wq",
+  "server_dry_run_accepted": true,
+  "server_dry_run_status": 202,
+  "dry_run_cli_exit_retained": 255,
+  "version_absent_before_publish": true,
+  "registry_before_http_status": 404,
+  "isolated_publication_directory": "/tmp/moonvcs-publish-order.AUkuwa",
+  "official_repack_equals_frozen_zip_byte_for_byte": true,
+  "version_or_content_substitution_allowed": false,
+  "retry_actual_publish_without_registry_inspection_allowed": false,
+  "github_push_or_release_upload_allowed": false,
+  "note": "Explicit user authorization is conditional on these checked gates; the known CLI 202/255 mismatch is not rewritten as a zero exit."
+}

@@ -1,0 +1,13 @@
+Running moon check ...
+Finished. moon: ran 26 tasks, now up to date
+Check passed
+validating packaged zip: [opaque value omitted]
+extracting packaged zip to [opaque value omitted]
+running moon check on extracted package
+Running moon check ...
+Using cached moonbitlang/async@0.20.2
+Using cached gmlewis/sha256@0.18.0
+Using cached gmlewis/base64@0.16.13
+Finished. moon: ran 26 tasks, now up to date
+Check passed
+Server status: 200 OK

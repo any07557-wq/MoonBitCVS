@@ -1,0 +1,14 @@
+Running moon check ...
+Finished. moon: ran 26 tasks, now up to date
+Check passed
+validating packaged zip: [opaque value omitted]
+extracting packaged zip to [opaque value omitted]
+running moon check on extracted package
+Running moon check ...
+Using cached gmlewis/base64@0.16.13
+Using cached gmlewis/sha256@0.18.0
+Using cached moonbitlang/async@0.20.2
+Finished. moon: ran 26 tasks, now up to date
+Check passed
+Server status: 202 Accepted, detail: Dry run completed successfully. No changes were made. The dry-run was made for package any07557-wq/moonvcs version 0.1.0.
+Error: `moon publish` failed

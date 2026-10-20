@@ -1,0 +1,9 @@
+Local documentation/evidence audit, 2026-10-20; exit 1 before manifest generation.
+Traceback (most recent call last):
+  File "/home/user/MoonBit_Program/target/reports/mooncakes-release.4J7nF4/audit_closeout.py", line 25, in <module>
+    assert (path.parent / local).exists(), (filename, local)
+AssertionError: ('docs/MOONCAKES_RELEASE.md', '../evidence/mooncakes/0.1.0/results/SHA256SUMS')
+
+The referenced SHA256SUMS was scheduled to be generated later in this audit.
+The final check defers only this forward reference, generates the manifest,
+then confirms its existence. No package/source or published contents changed.

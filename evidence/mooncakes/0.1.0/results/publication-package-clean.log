@@ -1,0 +1,40 @@
+Running moon check ...
+Using cached gmlewis/base64@0.16.13
+Using cached gmlewis/sha256@0.18.0
+Using cached moonbitlang/async@0.20.2
+Finished. moon: ran 26 tasks, now up to date
+Check passed
+.moonignore
+LICENSE
+README.md
+audit_wbtest.mbt
+boundary_wbtest.mbt
+checkout.mbt
+checkout_wbtest.mbt
+cli.mbt
+clone.mbt
+cmd/main/main.mbt
+cmd/main/moon.pkg
+core_wbtest.mbt
+diff.mbt
+diff_wbtest.mbt
+encoding.mbt
+extensions.mbt
+lazy_store.mbt
+lazy_store_wbtest.mbt
+lazy_validation_wbtest.mbt
+model.mbt
+moon.mod
+moon.pkg
+policy_engine.mbt
+policy_integration_wbtest.mbt
+receive.mbt
+receive_protocol.mbt
+receive_wbtest.mbt
+recovery.mbt
+repository.mbt
+security_integration_wbtest.mbt
+staging_wbtest.mbt
+store.mbt
+test_helpers_wbtest.mbt
+Package to /home/user/MoonBit_Program/target/reports/mooncakes-release.4J7nF4/publication-package-build-clean/publish/any07557-wq-moonvcs-0.1.0.zip

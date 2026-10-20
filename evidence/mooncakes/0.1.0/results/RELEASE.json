@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "status": "published_and_registry_consumer_passed",
+  "verified_at_utc": "2026-10-20T04:44:16.301859+00:00",
+  "module": "any07557-wq/moonvcs",
+  "version": "0.1.0",
+  "source_commit": "d5d824211b06b276323dc5c8c27914b76e08ff15",
+  "sha256": "5006035f75de4f963213a92257bafa3a5d2f751bb117c803c49d9c09f21867d3",
+  "archive_bytes": 75212,
+  "files": 33,
+  "expanded_bytes": 265964,
+  "source_binding": {
+    "tracked_files_matched_after_test": 235,
+    "git_archive_sha256": "801f02700f40d945ef21140dedb74f494e648fd11c7ea740e94c5e5743782d93",
+    "published_source_unchanged": true
+  },
+  "full_project": {
+    "exit": 0,
+    "unique_tests": 237,
+    "native": 86,
+    "rust": 26,
+    "wasm": 19,
+    "python": 106,
+    "stages": [
+      {
+        "stage": "regression",
+        "seconds": 398,
+        "exit": 0,
+        "log": "phase7-regression.log"
+      },
+      {
+        "stage": "environment",
+        "seconds": 0,
+        "exit": 0,
+        "log": "phase7-environment.log"
+      },
+      {
+        "stage": "repeat-smoke",
+        "seconds": 8,
+        "exit": 0,
+        "log": "phase7-repeat-smoke.log"
+      }
+    ],
+    "source_clean_export": true,
+    "installed_tools_and_dependency_cache_reused": true,
+    "new_rootfs_or_github_ci": false,
+    "benchmark_requested": false
+  },
+  "publication": {
+    "actual_publish_invocations": 1,
+    "cli_exit": 0,
+    "server_status_reported": 200,
+    "created_at_utc": "2026-10-19T13:19:34.449542+00:00",
+    "account": "any07557-wq",
+    "dry_run_cli_exit": 255,
+    "dry_run_server_status": 202,
+    "version_before_publish_http_status": 404,
+    "version_or_content_replaced": false,
+    "approval_service_interruption_before_download": "Previous review quota failure prevented execution; resumed download only, not publication."
+  },
+  "registry_consumer": {
+    "exit": 0,
+    "tests_passed": 2,
+    "test_failures": 0,
+    "commands_exited_zero": [
+      "update",
+      "check --target native --deny-warn",
+      "test --target native --deny-warn",
+      "run . --target native"
+    ],
+    "initial_registry_and_package_cache_empty": true,
+    "credentials_present": false,
+    "whoami": "Not logged in",
+    "installed_tools_and_standard_library_reused": true,
+    "moon_work_or_local_module_override": false,
+    "direct_download_and_registry_cache_equal_frozen_zip": true,
+    "installed_files_equal_archive": 33,
+    "registry_index_checksum_matches": true,
+    "expected_empty_blob_id": "3f2f7192ae4599c2d0886683b3b2833896f695ed1a83af663117e49a894deaa7",
+    "warning_retained": "Main package blackbox-only test inputs are deprecated in a future release.",
+    "all_published_whitebox_integration_tests_run_standalone": false
+  },
+  "scope": "Native core library source only, with native CLI source; no Rust Host, Wasm plugins, WIT, runtime configuration or precompiled CLI.",
+  "immutable_package_readme_keeps_freeze_time_not_published_wording": true,
+  "github_push_or_release_upload_performed": false,
+  "security_or_performance_boundaries_changed": false
+}

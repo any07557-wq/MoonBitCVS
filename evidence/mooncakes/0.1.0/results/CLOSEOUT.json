@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-20T04:45:41.537828+00:00",
+  "git_diff_check_exit": 0,
+  "relative_document_links_exist": true,
+  "published_core_host_plugins_and_wit_unchanged_from_frozen_commit": true,
+  "text_evidence_and_documents_scanned": 41,
+  "credential_pattern_findings": 0,
+  "scan_limits": "Not complete DLP.",
+  "full_regression_rerun_for_documentation_only_closeout": false,
+  "github_push_or_release_upload_performed": false,
+  "initial_audit_failure_retained": "closeout-first-attempt.log: the first check tested the not-yet-generated SHA256SUMS link. Deferred that single forward reference until after generation; no package change."
+}

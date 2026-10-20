@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-10-19T13:19:32.296998+00:00",
+  "finished_utc": "2026-10-19T13:19:35.733677+00:00",
+  "cwd": "/tmp/moonvcs-publish-order.AUkuwa",
+  "command": [
+    "moon",
+    "publish",
+    "--target-dir",
+    "/home/user/MoonBit_Program/target/reports/mooncakes-release.4J7nF4/publish-final-build"
+  ],
+  "cli_exit": 0,
+  "timed_out": false,
+  "actual_publish": true,
+  "server_statuses_reported_by_cli": [
+    200
+  ],
+  "server_reported_dry_run_success": false,
+  "raw_cli_output_preserved": false,
+  "sanitized_log": "publish-once.log"
+}

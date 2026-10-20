@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "checked_at_utc": "2026-10-19T12:52:22Z",
+  "status": "server_dry_run_accepted_cli_nonzero_not_published",
+  "module": "any07557-wq/moonvcs",
+  "version": "0.1.0",
+  "login": {
+    "credentials_file_present": true,
+    "whoami_exit": 0,
+    "whoami_username": "any07557-wq",
+    "whoami_proves_remote_token_validity_alone": false,
+    "login_performed_by_agent": false,
+    "credential_body_or_token_disclosed": false
+  },
+  "attempts": [
+    {"target_directory": "build", "dry_run": true, "frozen": true, "cli_exit": 255, "initial_network_classification_reliable": false},
+    {"target_directory": "network-build", "dry_run": true, "frozen": true, "cli_exit": 255, "initial_network_classification_reliable": false},
+    {"target_directory": "diagnostic-build", "dry_run": true, "frozen": true, "cli_exit": 255, "raw_output_not_retained": true},
+    {"target_directory": "sanitized-diagnostic-build", "dry_run": true, "frozen": true, "cli_exit": 255, "diagnosis": "Fresh unpacked module requires installing dependencies, prohibited by frozen mode."},
+    {"target_directory": "normal-build", "dry_run": true, "frozen": false, "cli_exit": 255, "server_reported_http_status": 202, "server_reported_dry_run_success": true, "server_reported_no_changes": true}
+  ],
+  "server_observation": {
+    "source": "Captured CLI output; a sanitized observation, not a raw HTTP capture.",
+    "message": "Server status: 202 Accepted, detail: Dry run completed successfully. No changes were made. The dry-run was made for package any07557-wq/moonvcs version 0.1.0.",
+    "cli_exit": 255,
+    "backend_http_status_handling_root_cause_confirmed": false,
+    "cli_or_installed_backend_modified": false
+  },
+  "registry_view": {
+    "command": "moon view any07557-wq/moonvcs@0.1.0 --json",
+    "cli_exit": 255,
+    "reported_http_status": 404,
+    "version_visible_at_check_time": false,
+    "name_or_version_reserved": false
+  },
+  "candidate_binding": {
+    "archive": "normal-build/publish/any07557-wq-moonvcs-0.1.0.zip",
+    "archive_sha256": "5006035f75de4f963213a92257bafa3a5d2f751bb117c803c49d9c09f21867d3",
+    "archive_files": 33,
+    "archive_matched_current_source": true,
+    "manifest_sha256_before_and_after": "71d31f217ef23658672faa472487fd3477a4067712540c766c4bd7589789f11a",
+    "module_version_and_dependency_declarations_changed": false,
+    "observed_dependency_versions": {"moonbitlang/async": "0.20.2", "gmlewis/sha256": "0.18.0", "gmlewis/base64": "0.16.13"}
+  },
+  "diagnostic_correction": "An early broad 'failed to resolve' classifier also matched dependency-graph errors; it is not evidence of a network root cause. The later sanitized diagnostic explicitly identifies frozen dependency installation.",
+  "privacy": "Raw CLI output was not printed or stored. Only sanitized excerpts and structured observations are retained; no credentials content or token fingerprint is recorded.",
+  "safety": {
+    "real_publish_command_executed": false,
+    "new_commit_or_push_performed": false,
+    "full_test_suite_rerun": false,
+    "remote_install_acceptance_performed": false,
+    "server_preflight_is_not_a_zero_transfer_guarantee": true
+  },
+  "official_moon_source_commit_checked": "748b63c25261be2ec38b2cc70884d5894a456360"
+}

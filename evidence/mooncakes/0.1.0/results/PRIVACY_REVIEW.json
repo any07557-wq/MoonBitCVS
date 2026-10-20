@@ -1,0 +1,18 @@
+{
+  "reviewed_at_utc": "2026-10-20T04:44:16.301859+00:00",
+  "selected_new_text_files_scanned": 28,
+  "rules": [
+    "github_token",
+    "cloud_key",
+    "private_key_header",
+    "authorization_value",
+    "url_credentials",
+    "long_credential_assignment",
+    "personal_windows_path"
+  ],
+  "high_confidence_findings": [],
+  "context_review": "Regression/smoke diagnostics, temporary paths, public metadata and sanitized authentication outputs reviewed. No complete simulated credentials are present in diagnostics.",
+  "credential_files_or_token_fingerprints_read_or_copied": false,
+  "raw_authenticated_cli_output_saved": false,
+  "limits": "Pattern scanning and context review are not complete DLP or proof of absence of all sensitive information."
+}

@@ -29,6 +29,34 @@ CI 轮在 231 项交付快照基础上增加 6 项防护，当前完整入口为
 当前机器的版本、系统和插件摘要见 target/reports/phase7-environment.json；
 源码侧固定要求见 scripts/build-component.sh、host/Cargo.lock 和各插件 plugin.toml。
 
+发布候选源码 `d5d8242` 已在无旧项目构建产物的导出副本中重建，完整入口 237 项通过；
+使用已安装工具与缓存，不是新 rootfs 验收。
+
+## Mooncakes：仅安装原生核心库
+
+`any07557-wq/moonvcs@0.1.0` 已正式发布。它只提供 native 核心库源码（附 CLI 源码），
+不包含完整 Rust Host、Wasm 插件、运行配置或预编译 CLI。
+使用完整 MoonVCS 请继续按下方源码构建流程；不要把 `moon add` 当作完整 CLI 安装。
+
+在自己的 native MoonBit consumer 中声明固定模块版本：
+
+~~~moonbit
+// moon.mod 的依赖项
+import {
+  "any07557-wq/moonvcs@0.1.0",
+}
+~~~
+
+在 moon.pkg 中导入 `"any07557-wq/moonvcs" @vcs`，然后运行
+`moon update`、`moon check --target native`。
+可直接复制 [验收 consumer](evidence/mooncakes/0.1.0/results/consumer/) 到新目录运行其示例和测试；
+需要 native C 工具和 registry 网络。包内完整 white-box 集成测试依赖仓库运行产物，
+不声称仅安装依赖即可运行全部集成测试。
+
+2026-10-20 用无凭据、空 registry 缓存的新 consumer 实测下载/导入通过，2 项测试与示例均退出 0；
+下载包、registry 缓存与冻结 ZIP 摘要相同。包内 README 保留冻结时的“Not published yet”，
+最新状态、完整 SHA-256 和实际命令见 [发布记录](docs/MOONCAKES_RELEASE.md)。
+
 ## 固定工具链
 
 | 工具 | 本项目验证的版本 |

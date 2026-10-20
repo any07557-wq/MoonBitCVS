@@ -53,8 +53,10 @@ artifact 不是长期备份、签名或当前 rootfs 安装验收。超时/取�
 本次只核验并本地归档证据，没有推送或触发新运行。
 只有完整 job 实际成功才可以宣称 GitHub CI 跑通；不从本地测试或 YAML 解析结果推断。
 
-本轮不自动推送、修改分支保护、上传 Release、发布 Mooncakes 或代写个人申报书。
-维护者已确认 Mooncakes 用户名 `any07557-wq`；本地候选包与后续认证/发布边界见 [MOONCAKES.md](MOONCAKES.md)，尚未发布。
+CI 归档轮没有自动推送、修改分支保护、上传 Release、发布 Mooncakes 或代写个人申报书。
+后续经维护者单独授权，`any07557-wq/moonvcs@0.1.0` 原生核心库已发布；
+冻结提交 `d5d8242` 的 237 项本地验证与新 registry consumer 验收见 [发布记录](MOONCAKES_RELEASE.md)。
+这些不是新的 GitHub CI 结果；旧运行仍只绑定 `6d96157`，本次仍未推送或上传 Release。
 
 ## 本地复核
 

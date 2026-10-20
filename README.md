@@ -21,7 +21,10 @@ GitHub [运行 #1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/392419
 237 项及重复演示通过；附件已校验归档，见 [CI 验证记录](docs/CI_VALIDATION.md)。这不替代新 rootfs 冷安装验收。
 
 本地交付包与验包方式见 [SUBMISSION.md](docs/SUBMISSION.md)。源码包与实测证据分开保存，不含工具链或预编译发行版。
-Mooncakes 候选包的本地检查、账号确认步骤和未发布边界见 [发布准备](docs/MOONCAKES.md)。
+Mooncakes 已发布 [any07557-wq/moonvcs@0.1.0](https://mooncakes.io/docs/any07557-wq/moonvcs)：
+**仅原生核心库源码**，不含完整 Rust Host、Wasm 插件或预编译 CLI。
+冻结源码 `d5d8242` 完整验证 237 项通过；新 registry consumer 的 2 项测试和示例运行另列，
+下载 ZIP 与冻结包逐字节一致。见 [发布记录与证据](docs/MOONCAKES_RELEASE.md)；本次没有推送 GitHub 或新 CI 运行。
 
 后续工程的实际结果见 [路线图执行记录](docs/ROADMAP_PROGRESS.md)：并发暂存已修复，
 宽 Tree 已取得指令/IO 证据，并新增只读恢复检查；完整掉电恢复和 GC 仍未实现。

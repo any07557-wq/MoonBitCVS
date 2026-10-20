@@ -1,5 +1,15 @@
 # MoonVCS Status
 
+Mooncakes `any07557-wq/moonvcs@0.1.0` was published on 2026-10-19
+13:19:34 UTC (server 200 / CLI 0). Frozen source commit `d5d8242` passed
+the full 237-test verify entry in a source-clean export using installed tools
+and dependency caches. On 2026-10-20 a credential-free, empty-registry consumer
+downloaded the release, passed native check and 2 external import tests, and ran
+the README example. Registry ZIP/cache bytes and all 33 installed files match
+the frozen candidate. This is **native core library source only**, not the full
+Rust Host, Wasm plugin or precompiled CLI distribution. No GitHub push, new CI
+run or new rootfs acceptance was performed. See [release evidence](MOONCAKES_RELEASE.md).
+
 CI configuration: pinned tools + existing full verify.sh entry, 6 new guards
 (237 tests in the current entry). GitHub run #1 on commit `6d96157` succeeded;
 the original artifact digest, all three exit-zero stages and 237 unique tests
@@ -7,7 +17,8 @@ have been checked and preserved locally. This evidence update does not rerun
 tests, push changes or claim a new rootfs acceptance. See [CI.md](CI.md) and
 [CI_VALIDATION.md](CI_VALIDATION.md).
 
-Last host regression with branch/switch closeout: 225 tests, 2026-10-18 (Asia/Shanghai).
+Last full host regression: 237 tests on frozen publication commit `d5d8242`, 2026-10-19.
+Historical branch/switch closeout regression: 225 tests, 2026-10-18 (Asia/Shanghai).
 Branch/switch status: local prototype acceptance passed, not production acceptance.
 The 2026-10-19 delivery entry adds 6 archive/reproduction guards (231 total).
 Actual unpack/rebuild status is attached to each immutable source archive in

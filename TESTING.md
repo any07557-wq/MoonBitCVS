@@ -41,6 +41,13 @@ CI 轮另加 6 项归档安装/工作流防护，当前入口共 237 项；本�
 见 [CI 说明](docs/CI.md)与[CI 验证记录](docs/CI_VALIDATION.md)。提交 `6d96157` 的 GitHub 运行 #1 实际成功，
 原始附件摘要与 GitHub 元数据一致，独立核对 237 项及三阶段退出 0；本次只核验归档，未在本机重跑完整测试。
 
+后续 Mooncakes 发布轮已独立重建并验证冻结源码 `d5d824211b06b276323dc5c8c27914b76e08ff15`：
+2026-10-19 `scripts/verify.sh` 的 regression/environment/repeat-smoke 均退出 0，去重 **237 项通过**，
+双轮四场景演示及额外两轮 receive smoke 通过。复用固定已安装工具与缓存，不是新 CI/冷 rootfs。
+2026-10-20 新 registry consumer 实际下载 0.1.0，另有 **2 项**外部导入测试和 README 示例通过，
+不并入 237 项，也不替代完整仓库集成测试；main 包测试布局的未来兼容性警告保留在日志中。
+源码提交、包/安装内容摘要和全部日志见 [发布验收](docs/MOONCAKES_RELEASE.md)。
+
 ## 分项执行
 
 ~~~bash
