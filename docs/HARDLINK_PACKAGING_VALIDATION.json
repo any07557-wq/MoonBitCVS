@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "scope": "local_hardlink_packaging_regression_not_a_new_final_delivery",
+  "status": "passed",
+  "exit": 0,
+  "started_utc": "2026-10-20T07:00:06.512772+00:00",
+  "finished_utc": "2026-10-20T07:07:01.359593+00:00",
+  "baseline_commit": "ec287d1464e88a1e005a79f10822077b98d6bf51",
+  "test_counts": {"native": 86, "rust": 26, "wasm": 19, "python": 119, "total": 250, "submission_suite": 19},
+  "python_suites": [9, 6, 4, 7, 1, 7, 20, 40, 19, 6],
+  "stages": {"environment": 0, "regression": 0},
+  "regression_seconds": 412.98312358600015,
+  "source_unchanged_after_build": true,
+  "package": "target/releases/submission.AkD9Zq",
+  "archives": {
+    "MoonVCS-source.tar.gz": "f95a79f399a83f5a0d0e99ccd18b3d3f487bf7b977cf10033b708638ebfadff2",
+    "MoonVCS-evidence.tar.gz": "f0c56969c9866af1dd849d9e6133896a84dda7d3deaea013b29e1c997b906e3e"
+  },
+  "files": {
+    "scripts/submission_evidence.py": "a7cdb721056c7655f58b2d6dad3d3948f2355c7f2b7aaec6f961004c014de923",
+    "scripts/package-submission.sh": "6d61cc3455f18f03f064cff7560251217d6f9abe25f21c649e0da2bd63436ab8",
+    "tests/submission_audit.py": "949e1d738d6a7e70eedababd626f42b9552f651eebc6530efbfac7c65598e441"
+  },
+  "raw_report": "target/reports/hardlink-fix.x81cL9/reproduction/report.json",
+  "raw_report_sha256": "4cf222d525c07c44da1a3f0c4077189d0e6e71e2c83102f6b1cd1a274a7ed300",
+  "raw_regression_log_sha256": "9582709a102df1b2392ba5680cf0488466dba594a240e5db91a009d8be683afd",
+  "ec287d1_outer_package_sha256": "f813601e20694d8bc8a0eda76a25d99aed86b81678b5ee5075ec2b6c60040507",
+  "ec287d1_delivery_checksums_passed": true,
+  "validation_document_written_after_test_package": true,
+  "new_final_delivery_frozen": false,
+  "github_actions_verified": false,
+  "cold_install_verified": false
+}

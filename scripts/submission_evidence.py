@@ -29,15 +29,20 @@ def durable_path(name, directory=False):
 def regular_file(root, name):
     path = root
     parts = PurePosixPath(name).parts
+    if not parts or str(PurePosixPath(name)) != name or PurePosixPath(name).is_absolute() or '..' in parts:
+        raise ValueError('noncanonical evidence path: ' + name)
     for index, part in enumerate(parts):
         path = path / part
         try:
-            mode = path.lstat().st_mode
+            info = path.lstat()
+            mode = info.st_mode
         except FileNotFoundError as error:
             raise ValueError('missing reviewed evidence: ' + name) from error
         if (stat.S_ISLNK(mode) or (index < len(parts) - 1 and not stat.S_ISDIR(mode))
                 or (index == len(parts) - 1 and not stat.S_ISREG(mode))):
             raise ValueError('evidence links/special files are forbidden: ' + name)
+        if index == len(parts) - 1 and info.st_nlink != 1:
+            raise ValueError('hard-linked evidence/manifest is forbidden: ' + name)
     return path
 
 
@@ -86,9 +91,13 @@ def verify_extracted(root):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument('--check-file', action='append', default=[],
+                        help='also preflight an explicitly selected historical report (not added to stdout)')
     args = parser.parse_args()
     try:
         names = selected_files(args.root)
+        for name in args.check_file:
+            regular_file(args.root, name)
     except (ValueError, OSError, UnicodeError) as error:
         print('Durable evidence validation failed: ' + str(error), file=sys.stderr)
         return 1

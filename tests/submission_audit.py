@@ -5,6 +5,9 @@ import importlib.util
 import io
 import json
 from pathlib import Path
+import re
+import shlex
+import shutil
 import subprocess
 import sys
 import tarfile
@@ -212,6 +215,102 @@ class SubmissionAudit(unittest.TestCase):
         result = subprocess.run(command, capture_output=True, text=True)
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(result.stdout, '')
+
+    def packager_fixture(self):
+        """Run the actual packager against owned source/report placeholders only.
+
+        Read its prerequisite lists rather than copying private workspace reports.
+        The real shell still checks every prerequisite and runs real tar/sha256sum.
+        """
+        script = (ROOT / 'scripts/package-submission.sh').read_text()
+        def words(value):
+            return shlex.split(value.replace('\\\n', ' '))
+        for variable in ('MOONVCS_SOURCE_ITEMS', 'MOONVCS_EVIDENCE_ITEMS'):
+            block = re.search(variable + r'=\((.*?)\n\)', script, re.S)[1]
+            for name in words(block):
+                path = self.root / name
+                if variable == 'MOONVCS_SOURCE_ITEMS' and '.' not in path.name and name != 'LICENSE':
+                    path.mkdir(parents=True, exist_ok=True)
+                else:
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_text('owned packaging fixture\n')
+        for match in re.finditer(r'for MOONVCS_NAME in \\\n(.*?); do\n(.*?)\ndone', script, re.S):
+            names, body = match.groups()
+            if 'Missing ' not in body:
+                continue
+            template = re.search(r'MOONVCS_ITEM="([^"]+)"', body)[1]
+            for name in words(names):
+                path = self.root / template.replace('$MOONVCS_NAME', name)
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text('owned historical report fixture\n')
+        for name in ('package-submission.sh', 'submission_evidence.py'):
+            shutil.copyfile(ROOT / 'scripts' / name, self.root / 'scripts' / name)
+        return ['bash', str(self.root / 'scripts/package-submission.sh')]
+
+    def packaged_roundtrip(self, command, helper, records):
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        packages = list((self.root / 'target/releases').iterdir())
+        self.assertEqual(len(packages), 1)
+        package = packages[0]
+        reproduction.package_digests(package)
+        for name in reproduction.ARCHIVES:
+            with tarfile.open(package / name) as stream:
+                self.assertFalse(any(member.islnk() or member.issym() for member in stream))
+            destination = self.root / ('unpacked-' + name)
+            reproduction.extract_archive(package / name, destination, source='source' in name)
+            if 'evidence' in name:
+                self.assertEqual(set(helper.selected_files(destination)), set(records) | {helper.MANIFEST})
+                for path, data in records.items():
+                    self.assertEqual((destination / path).read_bytes(), data)
+
+    def test_real_packager_normal_files_roundtrip_with_reproducer(self):
+        helper, _, records = self.durable()
+        self.packaged_roundtrip(self.packager_fixture(), helper, records)
+
+    def assert_hardlink_preflight_failure(self, manifest_link=False):
+        helper, manifest, records = self.durable()
+        command = self.packager_fixture()
+        name = helper.MANIFEST if manifest_link else next(iter(records))
+        (self.root / 'unlisted-hardlink').hardlink_to(self.root / name)
+        with self.assertRaisesRegex(ValueError, re.escape(name)):
+            helper.selected_files(self.root)
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('hard-linked', result.stderr)
+        self.assertIn(name, result.stderr)
+        self.assertEqual(result.stdout, '')
+        self.assertFalse((self.root / 'target/releases').exists())
+
+    def test_real_packager_rejects_hardlinked_evidence_before_output(self):
+        self.assert_hardlink_preflight_failure()
+
+    def test_real_packager_rejects_hardlinked_manifest_before_output(self):
+        self.assert_hardlink_preflight_failure(manifest_link=True)
+
+    def test_real_packager_rejects_hardlinked_historical_report_before_output(self):
+        self.durable()
+        command = self.packager_fixture()
+        name = 'target/reports/phase7-verify.json'
+        (self.root / 'unlisted-hardlink').hardlink_to(self.root / name)
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('hard-linked', result.stderr)
+        self.assertIn(name, result.stderr)
+        self.assertEqual(result.stdout, '')
+        self.assertFalse((self.root / 'target/releases').exists())
+
+    def test_real_packager_accepts_identical_independent_files(self):
+        helper, manifest, records = self.durable()
+        for name in records:
+            records[name] = b'identical but independent fixture'
+            (self.root / name).write_bytes(records[name])
+        manifest.write_text(''.join(hashlib.sha256(data).hexdigest() + '  ' + name + '\n'
+                                    for name, data in sorted(records.items())))
+        paths = [self.root / name for name in records]
+        self.assertNotEqual(paths[0].stat().st_ino, paths[1].stat().st_ino)
+        self.assertTrue(all(path.stat().st_nlink == 1 for path in paths))
+        self.packaged_roundtrip(self.packager_fixture(), helper, records)
 
 
 if __name__ == '__main__':

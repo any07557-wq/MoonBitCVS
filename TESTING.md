@@ -31,12 +31,12 @@ MOONVCS_MOON="$HOME/.moon/bin/moon" ./scripts/test.sh
 | 工具归档来源/完整性及 Registry 续期 | 7 | tests/toolchain_archive_audit.py |
 | Diff 独立 CLI | 20 | tests/diff_audit.py |
 | Branch/Switch CLI 保护、故障、帮助与人工恢复演练 | 40 | tests/branch_switch_audit.py |
-| 交付包/复现输入及持久化证据防护 | 14 | tests/submission_audit.py |
+| 交付包/复现输入及持久化证据防护 | 19 | tests/submission_audit.py |
 | CI 配置/归档安装防护 | 6 | tests/ci_audit.py |
-| 合计 | 245 | 不含另列 CLI smoke / 演示；后加 8 项已由 CI #3 验证，不属于 CI #2 |
+| 合计 | 250 | 不含另列 CLI smoke / 演示；最新 5 项硬链接回归不属于 CI #3 的 245 项 |
 
 另外，scripts/test-hackathon.sh 会准备 8 次真实策略提交，并连续运行两轮四个最终场景，
-测试状态不残留、不把第二次运行当首次 clone。它已接入统一入口，但不把这 8 次场景执行加到 237 中。
+测试状态不残留、不把第二次运行当首次 clone。它已接入统一入口，但不把这 8 次场景执行加入单元/审计总数。
 
 2026-10-18 收尾已实际重跑当时的 225 项完整入口，退出 0；最终源码/CLI 摘要、原始命令、失败演练及成功结果见
 [独立验收](docs/BRANCH_SWITCH_ACCEPTANCE.md)。177 项本机、149 项冷安装与此前 223 项各保留原版本边界。
@@ -57,6 +57,10 @@ CI #2 归档后，打包遗漏修复增加 8 项持久化证据防护，submissi
 入口合计 245。新增范围包括显式清单选择、损坏/缺失、路径/命名空间、链接、预算、
 CLI 全量检查后输出、分离解包和旧 target-only 兼容；实际复现结果另见
 [打包修复验证](docs/PACKAGING_EVIDENCE_VALIDATION.md)，不改写历史 CI 的 237 项。
+
+后续硬链接修复新增 5 项真实打包/解包回归，submission suite 为 19 项、当前入口为 250 项。
+覆盖普通文件、等内容独立文件、硬链接附件/清单/历史报告的早期拒绝；
+本轮实际命令、完整回归及旧冻结包保留情况见 [硬链接验收](docs/HARDLINK_PACKAGING.md)。
 
 ## 分项执行
 

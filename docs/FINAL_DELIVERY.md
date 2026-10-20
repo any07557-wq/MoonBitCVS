@@ -47,8 +47,9 @@
   [Mooncakes 发布记录](MOONCAKES_RELEASE.md)。
 - 远端仍为文件系统/stdio 原型，没有认证、ACL、TLS、OS 权限分离。
   Host/JIT 总内存、恢复/GC、缺失 VCS 命令与性能边界继续保留，见 [Known Limitations](KNOWN_LIMITATIONS.md)。
-- 普通硬链接证据输入是尚待加固的打包边界；本次冻结前独立核对当前实际输入及归档，
+- 对本契约绑定的旧 `ec287d1` 包，普通硬链接证据输入是当时尚待加固的打包边界；冻结前独立核对实际输入及归档，
   不以此声称打包器已实现通用硬链接防护。
+  后续源码的拒绝输入修复另见 [HARDLINK_PACKAGING.md](HARDLINK_PACKAGING.md)，不回写或替换旧包。
 - 本流程只生成本地包与本地提交，不自动 push、创建标签/Release、重复发布 Mooncakes 或提交赛事表单。
 
 ## 尚需本人完成的赛事材料

@@ -106,7 +106,11 @@ for MOONVCS_NAME in \
 done
 # Reviewed durable records are selected file-by-file and hash checked. Do not
 # replace this with tar evidence/ or a recursive directory glob.
-MOONVCS_DURABLE_LIST="$(python3 "$MOONVCS_ROOT/scripts/submission_evidence.py" --root "$MOONVCS_ROOT")"
+MOONVCS_PREFLIGHT_ARGS=(--root "$MOONVCS_ROOT")
+for MOONVCS_ITEM in "${MOONVCS_EVIDENCE_ITEMS[@]}"; do
+  MOONVCS_PREFLIGHT_ARGS+=(--check-file "$MOONVCS_ITEM")
+done
+MOONVCS_DURABLE_LIST="$(python3 "$MOONVCS_ROOT/scripts/submission_evidence.py" "${MOONVCS_PREFLIGHT_ARGS[@]}")"
 while IFS= read -r MOONVCS_ITEM; do
   MOONVCS_EVIDENCE_ITEMS+=("$MOONVCS_ITEM")
 done <<< "$MOONVCS_DURABLE_LIST"
