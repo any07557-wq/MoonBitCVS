@@ -1,5 +1,9 @@
 # 测试、性能与证据
 
+最新 GitHub [CI #2](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39373597127)
+在 `58bade3` 上 237 项通过，三阶段退出 0；本轮只对新附件进行独立核验，未为归档重跑测试。
+证据见 [CI_VALIDATION.md](docs/CI_VALIDATION.md)；不将随后代码修改纳入这个成功结论。
+
 ## 一条命令回归
 
 已有 [固定工具链](INSTALL.md) 后，从根目录执行：

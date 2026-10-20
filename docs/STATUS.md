@@ -1,5 +1,11 @@
 # MoonVCS Status
 
+Latest GitHub CI: run [#2](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39373597127)
+on exact commit `58bade3725f17e71e47ae4eee1d765ed730e762f` passed 237 unique tests
+and all three verify stages. Its new ZIP and reports are independently checked
+and archived in `evidence/ci/39373597127-attempt-1/`. Later packaging changes
+are not covered by that run. See [CI_VALIDATION.md](CI_VALIDATION.md).
+
 Mooncakes `any07557-wq/moonvcs@0.1.0` was published on 2026-10-19
 13:19:34 UTC (server 200 / CLI 0). Frozen source commit `d5d8242` passed
 the full 237-test verify entry in a source-clean export using installed tools

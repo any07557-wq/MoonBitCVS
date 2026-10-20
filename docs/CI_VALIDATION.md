@@ -1,5 +1,47 @@
 # CI 验证记录
 
+## 最新：运行 #2 与附件已核验归档（2026-10-20）
+
+[MoonVCS CI #2 / attempt 1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39373597127)
+在提交 **`58bade3725f17e71e47ae4eee1d765ed730e762f`** 上实际成功，触发为 push / main。
+本轮旧的匿名 API 查询返回 403（限流）；改读 GitHub 公开运行页，确认完整提交链接、Success、
+总耗时 9 分 23 秒、job 9 分 19 秒和唯一附件的名称/ID/摘要。
+页面触发时间为 2026-10-20 05:11:54 UTC（北京时间 13:11:54）。
+没有把网页观察伪装成完整 REST API 响应，也没有沿用 #1 的成功推断 #2。
+
+| 项目 | 实际结果 |
+|---|---|
+| 附件 | `moonvcs-ci-39373597127-1`，ID `12242429705` |
+| ZIP 实测字节 | **32,637**；网页显示 31.9 KB，未获取 API 的精确大小字段 |
+| ZIP SHA-256 | `6a8e5cdef96b013f72c1d80a4730b1a1d76fc88b012948cde39a959931e9568d`，与 GitHub 页面一致 |
+| 解包 | 8 个 UTF-8 报告，合计 144,850 字节；CRC、路径、文件类型、预算与逐成员字节校验通过 |
+| 完整测试 | **237 项通过**，86 native + 26 Rust + 19 Wasm + 106 Python，重复 Wasm 输出不再计数 |
+| verify | 05:16:13 UTC 开始；regression 286 秒 / environment 0 秒 / repeat-smoke 14 秒，全部退出 0 |
+| 额外 smoke | 双轮四场景演示与两次 receive smoke 通过，不增加测试计数 |
+| 保留期限 | 工作流配置 14 天；本次未取得 API 精确 expires_at，不虚构到期时间 |
+
+官方匿名附件链接实际返回 404。随后通过公开 [nightly.link 附件转发](https://nightly.link/)
+下载原 ZIP，仅在匹配**独立从 GitHub 页面取得的摘要**后才解包使用。
+该服务不是 GitHub 官方服务；本轮没有登录、授权/安装 GitHub App、读取本地凭据或保存临时签名跳转 URL。
+这条获取路径及之前的 403/404 均保留于 acquisition.json；未隐藏失败或重新打包原 ZIP。
+
+证据目录：[`evidence/ci/39373597127-attempt-1/`](../evidence/ci/39373597127-attempt-1/)。
+run-observation.json 保存公开页面的语义字段，不保存带实时订阅字段的原始 HTML；
+artifact-metadata.json 保存官方页面观察，validation.json 记录独立计数、完整性与未验证项，
+privacy-review.json 是对**本次新增附件**另做的检查，SHA256SUMS 绑定原 ZIP、解包文件及旁文件。
+没有保存完整 job 控制台日志。安装报告的 installed_not_tested 仍只是安装步骤状态，不改写为验证通过。
+已把源码 Cargo.lock/WIT/moon.mod 的摘要与 `58bade3` 对应 Git 对象核对，工具归档与版本查询也通过。
+规则扫描未发现其覆盖的凭据值、签名 URL、个人目录或完整模拟密钥；保留 runner、/tmp、工具版本及对象摘要。
+这不是完整 DLP、第三方审计、新 rootfs 或性能基准。
+
+~~~bash
+(cd evidence/ci/39373597127-attempt-1 && sha256sum -c SHA256SUMS)
+~~~
+
+本次归档没有重跑项目测试、重复发布 Mooncakes 或上传 Release。
+**截至归档核验时，后续打包修复尚未实施，也不属于本轮 CI 被测范围。**
+归档后的文档/代码提交应分别注明自己的本地验证和是否又运行了 CI，不改绑本轮成功。
+
 ## GitHub Actions：运行与附件已核验归档（2026-10-19）
 
 已通过 GitHub REST API 核对本次运行，**运行状态为 completed，结论为 success**：

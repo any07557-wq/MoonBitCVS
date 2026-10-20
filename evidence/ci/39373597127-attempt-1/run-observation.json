@@ -1,0 +1,17 @@
+{
+  "source": "Public GitHub run HTML, semantic fields only; not a REST API response.",
+  "observed_at_utc": "2026-10-20T05:38:08.407377+00:00",
+  "run_id": 39373597127,
+  "attempt": 1,
+  "run_number": 2,
+  "url": "https://github.com/any07557-wq/MoonBitCVS/actions/runs/39373597127",
+  "commit": "58bade3725f17e71e47ae4eee1d765ed730e762f",
+  "branch": "main",
+  "event": "push",
+  "conclusion": "success",
+  "total_duration_display": "9m 23s",
+  "trigger_time_display_utc": "2026-10-20T05:11:54Z",
+  "job_duration_display": "9m 19s",
+  "artifact_count": 1,
+  "raw_html_not_in_public_archive": true
+}

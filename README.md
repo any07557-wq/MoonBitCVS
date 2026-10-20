@@ -17,8 +17,9 @@ switch 要求 index/跟踪文件干净，无未跟踪碰撞，且目标对象已
 [竞品差异](docs/COMPARISON.md) · [安全边界](SECURITY.md) · [路线图](ROADMAP.md)
 
 [GitHub Actions 配置](.github/workflows/ci.yml)已接入固定工具、构建和完整验证，说明见 [CI.md](docs/CI.md)。
-GitHub [运行 #1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39241926009) 对提交 `6d96157` 实际成功，
-237 项及重复演示通过；附件已校验归档，见 [CI 验证记录](docs/CI_VALIDATION.md)。这不替代新 rootfs 冷安装验收。
+GitHub [运行 #2](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39373597127) 对提交 `58bade3` 实际成功，
+237 项及重复演示通过；新旧附件分别校验归档，见 [CI 验证记录](docs/CI_VALIDATION.md)。
+成功只绑定各自被测提交，不替代后续修改或新 rootfs 冷安装验收。
 
 本地交付包与验包方式见 [SUBMISSION.md](docs/SUBMISSION.md)。源码包与实测证据分开保存，不含工具链或预编译发行版。
 Mooncakes 已发布 [any07557-wq/moonvcs@0.1.0](https://mooncakes.io/docs/any07557-wq/moonvcs)：
