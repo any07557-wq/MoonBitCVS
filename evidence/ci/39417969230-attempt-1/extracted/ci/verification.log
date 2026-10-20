@@ -1,0 +1,1323 @@
+Phase 7: regression
+Finished. moon: ran 7 tasks, now up to date
+Total tests: 8, passed: 8, failed: 0.
+Finished. moon: ran 3 tasks, now up to date
+built secret-scanner.component.wasm (sha256:3743537dad366b6af66d0b36d27eb77f47bee2b4669475e2d4a7b0fca5023cf2)
+Finished. moon: ran 7 tasks, now up to date
+Total tests: 3, passed: 3, failed: 0.
+Finished. moon: ran 3 tasks, now up to date
+built hello-policy.component.wasm (sha256:8b6eb6b86ee378033088a252d856e6e902f5ff256c0d6dd7e608fca9c2fe6d4a)
+Finished. moon: ran 7 tasks, now up to date
+Total tests: 2, passed: 2, failed: 0.
+Finished. moon: ran 3 tasks, now up to date
+built adversarial-fixture.component.wasm (sha256:d12bcf043b33e1ec15a0c98630c7819761d6ff8bad18d0bab8b02a1ff36698c6)
+Finished. moon: ran 7 tasks, now up to date
+Total tests: 4, passed: 4, failed: 0.
+Finished. moon: ran 3 tasks, now up to date
+built license-check.component.wasm (sha256:444639aeeac8c19b143dc438dc36c27e45f98881d3b9f0e2555c5ce45ff7375a)
+Finished. moon: ran 7 tasks, now up to date
+Total tests: 2, passed: 2, failed: 0.
+Finished. moon: ran 3 tasks, now up to date
+built restricted-plugin.component.wasm (sha256:3d83dd0450ceb8a3bd4abf108f1760cc224349916025f2d0689b411f834f0df0)
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded async-trait v0.1.92
+  Downloaded arbitrary v1.5.0
+  Downloaded block-buffer v0.10.4
+  Downloaded cranelift-srcgen v0.136.3
+  Downloaded dirs-sys-next v0.1.2
+  Downloaded addr2line v0.26.1
+  Downloaded crypto-common v0.1.7
+  Downloaded directories-next v2.0.0
+  Downloaded bitflags v2.13.2
+  Downloaded zstd v0.13.3
+  Downloaded cranelift-entity v0.136.3
+  Downloaded cranelift-native v0.136.3
+  Downloaded crc32fast v1.5.2
+  Downloaded debugid v0.8.0
+  Downloaded either v1.19.0
+  Downloaded target-lexicon v0.13.5
+  Downloaded toml_datetime v1.1.2+spec-1.1.0
+  Downloaded zstd-safe v7.3.0
+  Downloaded base64 v0.22.1
+  Downloaded cranelift-frontend v0.136.3
+  Downloaded cranelift-isle v0.136.3
+  Downloaded digest v0.10.7
+  Downloaded futures-channel v0.3.34
+  Downloaded regalloc2 v0.15.2
+  Downloaded wasmtime-internal-cranelift v49.0.3
+  Downloaded pin-project-lite v0.2.17
+  Downloaded embedded-io v0.4.0
+  Downloaded generic-array v0.14.7
+  Downloaded itertools v0.14.0
+  Downloaded equivalent v1.0.3
+  Downloaded find-msvc-tools v0.1.14
+  Downloaded futures v0.3.34
+  Downloaded futures-sink v0.3.34
+  Downloaded hashbrown v0.16.1
+  Downloaded postcard v1.1.3
+  Downloaded rustc-hash v2.1.3
+  Downloaded toml_parser v1.1.5+spec-1.1.0
+  Downloaded embedded-io v0.6.1
+  Downloaded futures-task v0.3.34
+  Downloaded memfd v0.6.6
+  Downloaded pkg-config v0.3.34
+  Downloaded serde_spanned v1.1.2
+  Downloaded wasmtime-internal-jit-icache-coherence v49.0.3
+  Downloaded wasmtime-internal-unwinder v49.0.3
+  Downloaded cranelift-codegen-shared v0.136.3
+  Downloaded ittapi v0.4.0
+  Downloaded futures-core v0.3.34
+  Downloaded sha2 v0.10.9
+  Downloaded slab v0.4.12
+  Downloaded wasm-metadata v0.258.3
+  Downloaded fxprof-processed-profile v0.8.1
+  Downloaded thiserror v2.0.21
+  Downloaded wasmtime-internal-component-util v49.0.3
+  Downloaded wasmtime-internal-versioned-export-macros v49.0.3
+  Downloaded cpufeatures v0.2.17
+  Downloaded cranelift-control v0.136.3
+  Downloaded futures-io v0.3.34
+  Downloaded pulley-macros v49.0.3
+  Downloaded cobs v0.3.0
+  Downloaded toml_writer v1.1.3+spec-1.1.0
+  Downloaded smallvec v1.16.3
+  Downloaded wasmtime-internal-jit-debug v49.0.3
+  Downloaded cfg-if v1.0.5
+  Downloaded cranelift-assembler-x64 v0.136.3
+  Downloaded cranelift-bitset v0.136.3
+  Downloaded ittapi-sys v0.4.0
+  Downloaded jobserver v0.1.35
+  Downloaded toml_datetime v0.7.5+spec-1.1.0
+  Downloaded thiserror-impl v2.0.21
+  Downloaded wasmtime-internal-cache v49.0.3
+  Downloaded wasmtime-internal-wit-bindgen v49.0.3
+  Downloaded cranelift-bforest v0.136.3
+  Downloaded toml v0.9.12+spec-1.1.0
+  Downloaded unicode-ident v1.0.27
+  Downloaded wasm-compose v0.258.3
+  Downloaded wasmprinter v0.258.3
+  Downloaded wasmtime-internal-core v49.0.3
+  Downloaded wasmtime-internal-fiber v49.0.3
+  Downloaded cranelift-assembler-x64-meta v0.136.3
+  Downloaded pulley-interpreter v49.0.3
+  Downloaded toml v1.1.8+spec-1.1.0
+  Downloaded uuid v1.28.0
+  Downloaded wasm-encoder v0.258.3
+  Downloaded cranelift-codegen-meta v0.136.3
+  Downloaded libm v0.2.16
+  Downloaded typenum v1.20.1
+  Downloaded cc v1.8.0
+  Downloaded serde_json v1.0.154
+  Downloaded winnow v0.7.15
+  Downloaded futures-util v0.3.34
+  Downloaded wit-parser v0.258.3
+  Downloaded zstd-sys v2.1.2+zstd.1.5.7
+  Downloaded wasmtime-internal-component-macro v49.0.3
+  Downloaded wasmparser v0.258.3
+  Downloaded syn v3.0.9
+  Downloaded gimli v0.33.0
+  Downloaded wasmtime-environ v49.0.3
+  Downloaded wit-component v0.258.3
+  Downloaded rustix v1.1.5
+  Downloaded encoding_rs v0.8.42
+  Downloaded libc v0.2.191
+  Downloaded wasmtime v49.0.3
+  Downloaded cranelift-codegen v0.136.3
+   Compiling proc-macro2 v1.0.107
+   Compiling serde_core v1.0.229
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling foldhash v0.2.0
+   Compiling syn v3.0.9
+   Compiling libc v0.2.191
+   Compiling serde v1.0.229
+   Compiling equivalent v1.0.3
+   Compiling hashbrown v0.17.1
+   Compiling libm v0.2.16
+   Compiling syn v2.0.119
+   Compiling serde_derive v1.0.229
+   Compiling log v0.4.34
+   Compiling jobserver v0.1.35
+   Compiling shlex v2.0.1
+   Compiling anyhow v1.0.104
+   Compiling find-msvc-tools v0.1.14
+   Compiling cc v1.8.0
+   Compiling cfg-if v1.0.5
+   Compiling indexmap v2.14.2
+   Compiling bitflags v2.13.2
+   Compiling version_check v0.9.5
+   Compiling leb128fmt v0.1.0
+   Compiling wasmtime-internal-core v49.0.3
+   Compiling memchr v2.8.3
+   Compiling generic-array v0.14.7
+   Compiling typenum v1.20.1
+   Compiling thiserror v2.0.21
+   Compiling cranelift-srcgen v0.136.3
+   Compiling cranelift-assembler-x64-meta v0.136.3
+   Compiling cranelift-bitset v0.136.3
+   Compiling thiserror-impl v2.0.21
+   Compiling heck v0.5.0
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling pulley-macros v49.0.3
+   Compiling smallvec v1.16.3
+   Compiling semver v1.0.28
+   Compiling zmij v1.0.23
+   Compiling allocator-api2 v0.2.21
+   Compiling hashbrown v0.16.1
+   Compiling fnv v1.0.7
+   Compiling target-lexicon v0.13.5
+   Compiling gimli v0.33.0
+   Compiling bumpalo v3.20.3
+   Compiling wasmparser v0.258.3
+   Compiling digest v0.10.7
+   Compiling cobs v0.3.0
+   Compiling cranelift-entity v0.136.3
+   Compiling wasmtime-internal-versioned-export-macros v49.0.3
+   Compiling cpufeatures v0.2.17
+   Compiling crc32fast v1.5.2
+   Compiling cranelift-isle v0.136.3
+   Compiling serde_json v1.0.154
+   Compiling sha2 v0.10.9
+   Compiling cranelift-bforest v0.136.3
+   Compiling postcard v1.1.3
+   Compiling pulley-interpreter v49.0.3
+   Compiling itoa v1.0.18
+   Compiling cranelift-codegen-shared v0.136.3
+   Compiling cranelift-codegen-meta v0.136.3
+   Compiling cranelift-assembler-x64 v0.136.3
+   Compiling pkg-config v0.3.34
+   Compiling rustix v1.1.5
+   Compiling cpp_demangle v0.5.1
+   Compiling rustc-hash v2.1.3
+   Compiling cranelift-codegen v0.136.3
+   Compiling zstd-sys v2.1.2+zstd.1.5.7
+   Compiling object v0.40.0
+   Compiling wasm-encoder v0.258.3
+   Compiling crossbeam-utils v0.8.23
+   Compiling termcolor v1.4.1
+   Compiling linux-raw-sys v0.12.1
+   Compiling wasmtime-internal-component-util v49.0.3
+   Compiling arbitrary v1.5.0
+   Compiling cranelift-control v0.136.3
+   Compiling wasmprinter v0.258.3
+   Compiling regalloc2 v0.15.2
+   Compiling id-arena v2.3.0
+   Compiling crossbeam-epoch v0.9.21
+   Compiling rustversion v1.0.23
+   Compiling rustc-demangle v0.1.28
+   Compiling wasmtime-environ v49.0.3
+   Compiling winnow v1.0.4
+   Compiling crossbeam-deque v0.8.8
+   Compiling zstd-safe v7.3.0
+   Compiling toml_parser v1.1.5+spec-1.1.0
+   Compiling wasm-metadata v0.258.3
+   Compiling wit-parser v0.258.3
+   Compiling wasm-encoder v0.262.0
+   Compiling ittapi-sys v0.4.0
+   Compiling serde_spanned v1.1.2
+   Compiling futures-sink v0.3.34
+   Compiling unicode-width v0.2.2
+   Compiling either v1.19.0
+   Compiling futures-core v0.3.34
+   Compiling toml_writer v1.1.3+spec-1.1.0
+   Compiling rayon-core v1.13.0
+   Compiling wasmtime-internal-unwinder v49.0.3
+   Compiling getrandom v0.4.3
+   Compiling futures-channel v0.3.34
+   Compiling wast v262.0.0
+   Compiling encoding_rs v0.8.42
+   Compiling wit-component v0.258.3
+   Compiling wasmtime-internal-fiber v49.0.3
+   Compiling wasmtime-internal-jit-debug v49.0.3
+   Compiling dirs-sys-next v0.1.2
+   Compiling toml_datetime v1.1.2+spec-1.1.0
+   Compiling slab v0.4.12
+   Compiling pin-project-lite v0.2.17
+   Compiling futures-io v0.3.34
+   Compiling fixedbitset v0.4.2
+   Compiling wasmtime-internal-cache v49.0.3
+   Compiling wasmtime-internal-component-macro v49.0.3
+   Compiling futures-task v0.3.34
+   Compiling uuid v1.28.0
+   Compiling wasmtime-internal-cranelift v49.0.3
+   Compiling futures-util v0.3.34
+   Compiling debugid v0.8.0
+   Compiling petgraph v0.6.5
+   Compiling toml v1.1.8+spec-1.1.0
+   Compiling directories-next v2.0.0
+   Compiling wasmtime-internal-wit-bindgen v49.0.3
+   Compiling zstd v0.13.3
+   Compiling wat v1.262.0
+   Compiling itertools v0.14.0
+   Compiling cranelift-frontend v0.136.3
+   Compiling cranelift-native v0.136.3
+   Compiling wasmtime v49.0.3
+   Compiling simdutf8 v0.1.5
+   Compiling scopeguard v1.2.0
+   Compiling base64 v0.22.1
+   Compiling once_cell v1.21.4
+   Compiling fastrand v2.5.0
+   Compiling multiversion_no_op v1.0.0
+   Compiling core_detect v1.0.0
+   Compiling tempfile v3.27.0
+   Compiling wasm-compose v0.258.3
+   Compiling ittapi v0.4.0
+   Compiling rayon v1.12.0
+   Compiling futures v0.3.34
+   Compiling fxprof-processed-profile v0.8.1
+   Compiling memfd v0.6.6
+   Compiling addr2line v0.26.1
+   Compiling wasmtime-internal-jit-icache-coherence v49.0.3
+   Compiling async-trait v0.1.92
+   Compiling toml_datetime v0.7.5+spec-1.1.0
+   Compiling winnow v0.7.15
+   Compiling toml v0.9.12+spec-1.1.0
+   Compiling moonvcs-policy-host v0.1.0 (/home/runner/work/MoonBitCVS/MoonBitCVS/host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 40s
+     Running unittests src/main.rs (host/target/debug/deps/moonvcs_policy_host-217fe8d7e026c881)
+
+running 26 tests
+test security_tests::input_size_is_enforced_before_execution_even_for_filtered_data ... ok
+test security_tests::list_only_gets_paths_but_no_bytes_and_no_injected_config ... ok
+test security_tests::imports_audit_and_empty_linker_independently_deny_ambient_access ... ok
+test security_tests::malicious_diagnostics_need_permission_and_obey_log_and_serialized_output_limits ... ok
+test security_tests::manifest_abi_hook_digest_and_unknown_fields_fail_closed ... ok
+test security_tests::metadata_requires_an_explicit_requested_and_granted_capability ... ok
+test security_tests::multiple_memories_cannot_multiply_the_configured_linear_memory_cap ... ok
+test security_tests::no_read_or_list_receives_no_files ... ok
+test security_tests::noncanonical_reserved_traversal_and_duplicate_paths_are_denied ... ok
+test security_tests::overrequested_supported_capability_is_actually_denied ... ok
+test security_tests::malformed_canonical_return_is_a_controlled_call_error ... ok
+test security_tests::epoch_interrupts_component_initializer_before_evaluate ... ok
+test security_tests::repository_secrets_is_unavailable_even_if_a_config_accidentally_grants_it ... ok
+test security_tests::requested_intersection_does_not_inherit_unrequested_grants ... ok
+test security_tests::fuel_and_epoch_independently_interrupt_real_moonbit_infinite_loop ... ok
+test tests::grants_only_requested_supported_and_allowed_capabilities ... ok
+test tests::malformed_transport_errors_do_not_echo_candidate_bytes ... ok
+test tests::records_memory_growth_denied_by_store_limit ... ok
+test tests::rejects_capability_missing_from_repository_grant ... ok
+test tests::rejects_capability_not_implemented_by_host ... ok
+test tests::rejects_parent_directory_escape ... ok
+test tests::required_plugin_is_bound_to_name_version_and_digest ... ok
+test tests::transport_uses_supplied_binary_bytes_and_rejects_metadata_spoofing ... ok
+test security_tests::real_restricted_moonbit_plugin_observes_only_authorized_request_data ... ok
+test security_tests::trap_and_memory_exhaustion_are_controlled_errors ... ok
+test security_tests::real_components_have_no_imports_and_license_supports_warning_and_reject ... ok
+
+test result: ok. 26 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.30s
+
+   Compiling moonvcs-policy-host v0.1.0 (/home/runner/work/MoonBitCVS/MoonBitCVS/host)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.23s
+Finished. moon: no work to do
+Total tests: 8, passed: 8, failed: 0.
+Finished. moon: no work to do
+built secret-scanner.component.wasm (sha256:3743537dad366b6af66d0b36d27eb77f47bee2b4669475e2d4a7b0fca5023cf2)
+Finished. moon: no work to do
+Total tests: 3, passed: 3, failed: 0.
+Finished. moon: no work to do
+built hello-policy.component.wasm (sha256:8b6eb6b86ee378033088a252d856e6e902f5ff256c0d6dd7e608fca9c2fe6d4a)
+Finished. moon: no work to do
+Total tests: 2, passed: 2, failed: 0.
+Finished. moon: no work to do
+built adversarial-fixture.component.wasm (sha256:d12bcf043b33e1ec15a0c98630c7819761d6ff8bad18d0bab8b02a1ff36698c6)
+Finished. moon: no work to do
+Total tests: 4, passed: 4, failed: 0.
+Finished. moon: no work to do
+built license-check.component.wasm (sha256:444639aeeac8c19b143dc438dc36c27e45f98881d3b9f0e2555c5ce45ff7375a)
+Finished. moon: no work to do
+Total tests: 2, passed: 2, failed: 0.
+Finished. moon: no work to do
+built restricted-plugin.component.wasm (sha256:3d83dd0450ceb8a3bd4abf108f1760cc224349916025f2d0689b411f834f0df0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s
+built required-policy runtime and pinned default configuration
+Finished. moon: ran 32 tasks, now up to date
+Downloading moonbitlang/async@0.20.2
+Downloading gmlewis/sha256@0.18.0
+Downloading gmlewis/base64@0.16.13
+Finished. moon: ran 28 tasks, now up to date
+Policy: license-check
+File: <candidate> | Rule: license.optional-notice | Severity: warning
+Reason: optional NOTICE file is absent
+Policy: license-check
+File: <candidate> | Rule: license.optional-notice | Severity: warning
+Reason: optional NOTICE file is absent
+Total tests: 86, passed: 86, failed: 0.
+Finished. moon: ran 66 tasks, now up to date
+built target/bin/moonvcs
+Policy passed
+Commit created
+Committed a8f0838511dfeed14ce3c3c3699f1e84843e18c88c13cf6d86e528615df2e137
+clean
+commit a8f0838511dfeed14ce3c3c3699f1e84843e18c88c13cf6d86e528615df2e137
+Author: Integration Test
+Date:   1792497697454
+
+    initial
+MoonVCS phase-2 unit and CLI integration tests passed
+Initialized empty MoonVCS repository in /tmp/moonvcs-policy-e2e.TiSxL2/.moonvcs
+Commit rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Policy: secret-scanner
+File: nested/access.env | Rule: secret.access-token | Severity: error
+Reason: suspicious credential
+Policy passed
+Commit created
+Committed 5f6d5c11d12e7286ebd42e22eb1fb31b564fde8fa8351389c648e057ff22b7fb
+MoonVCS real Wasm policy CLI tests passed
+Initialized empty MoonVCS repository in /tmp/moonvcs-security.czjHX0/repository/.moonvcs
+Commit rejected
+Policy: secret-scanner
+File: main.mbt | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Policy: license-check
+File: main.mbt | Rule: license.header | Severity: error
+Reason: required SPDX header is absent
+Policy: license-check
+File: <candidate> | Rule: license.missing | Severity: error
+Reason: nonempty root LICENSE must be present in the candidate
+Policy: license-check
+File: <candidate> | Rule: license.optional-notice | Severity: warning
+Reason: optional NOTICE file is absent
+Policy passed
+Commit created
+Committed 3960f1b55cc7037c7d6a50162f364c2b91b5b0410c23ed1a248ec87282cd62a9
+{"reason":"staged symlinks are forbidden","status":"error"}
+{"reason":"CapabilityDenied: component imports are forbidden (including WASI, filesystem and network)","status":"error"}
+MoonVCS phase-4 security demo passed (only temporary mock resources used)
+Initialized empty MoonVCS repository in /tmp/moonvcs-lazy-e2e.5cp8mN/remote/.moonvcs
+Prepared 20 real policy-gated commits
+Prepared 40 real policy-gated commits
+Prepared 60 real policy-gated commits
+Prepared 80 real policy-gated commits
+[Fetch] Local Cache Miss 59324acb6f1828df5a78977e4c754e5f22c418d7a08892c80f988a6dcc694296
+[Fetch] Remote Fetch 59324acb6f1828df5a78977e4c754e5f22c418d7a08892c80f988a6dcc694296
+[Fetch] Hash Verified 59324acb6f1828df5a78977e4c754e5f22c418d7a08892c80f988a6dcc694296 bytes=188
+[Fetch] Cached 59324acb6f1828df5a78977e4c754e5f22c418d7a08892c80f988a6dcc694296
+[Fetch] Local Cache Miss 246b11e665c86153fa73b7ce9db0712719008d47d68c1d9f4fb4417d3c03ece9
+[Fetch] Remote Fetch 246b11e665c86153fa73b7ce9db0712719008d47d68c1d9f4fb4417d3c03ece9
+[Fetch] Hash Verified 246b11e665c86153fa73b7ce9db0712719008d47d68c1d9f4fb4417d3c03ece9 bytes=255
+[Fetch] Cached 246b11e665c86153fa73b7ce9db0712719008d47d68c1d9f4fb4417d3c03ece9
+[Fetch] Local Cache Miss c9e9b6f4f95c14a14feb8af4d99291b28d32c5361052133b8d18974d01e61aa9
+[Fetch] Remote Fetch c9e9b6f4f95c14a14feb8af4d99291b28d32c5361052133b8d18974d01e61aa9
+[Fetch] Hash Verified c9e9b6f4f95c14a14feb8af4d99291b28d32c5361052133b8d18974d01e61aa9 bytes=41
+[Fetch] Cached c9e9b6f4f95c14a14feb8af4d99291b28d32c5361052133b8d18974d01e61aa9
+[Fetch] Local Cache Miss 18c25b89124785917a11204e2070877c0b0476ee7e418a050ec8d86a78c7d8f8
+[Fetch] Remote Fetch 18c25b89124785917a11204e2070877c0b0476ee7e418a050ec8d86a78c7d8f8
+[Fetch] Hash Verified 18c25b89124785917a11204e2070877c0b0476ee7e418a050ec8d86a78c7d8f8 bytes=29
+[Fetch] Cached 18c25b89124785917a11204e2070877c0b0476ee7e418a050ec8d86a78c7d8f8
+[Fetch] Local Cache Miss b1cab47cb12dbe912af51c1e06d790be3c28a9ca052840cd7a814fe3b60978aa
+[Fetch] Remote Fetch b1cab47cb12dbe912af51c1e06d790be3c28a9ca052840cd7a814fe3b60978aa
+[Fetch] Hash Verified b1cab47cb12dbe912af51c1e06d790be3c28a9ca052840cd7a814fe3b60978aa bytes=182
+[Fetch] Cached b1cab47cb12dbe912af51c1e06d790be3c28a9ca052840cd7a814fe3b60978aa
+[Fetch] Local Cache Miss 3f2f7192ae4599c2d0886683b3b2833896f695ed1a83af663117e49a894deaa7
+[Fetch] Remote Fetch 3f2f7192ae4599c2d0886683b3b2833896f695ed1a83af663117e49a894deaa7
+[Fetch] Hash Verified 3f2f7192ae4599c2d0886683b3b2833896f695ed1a83af663117e49a894deaa7 bytes=18
+[Fetch] Cached 3f2f7192ae4599c2d0886683b3b2833896f695ed1a83af663117e49a894deaa7
+[Fetch] Local Cache Miss 2e30902518df146210ea719cd4fd3a5891cd92e1ac12af88e783019cac3bf5aa
+[Fetch] Remote Fetch 2e30902518df146210ea719cd4fd3a5891cd92e1ac12af88e783019cac3bf5aa
+[Fetch] Hash Verified 2e30902518df146210ea719cd4fd3a5891cd92e1ac12af88e783019cac3bf5aa bytes=29
+[Fetch] Cached 2e30902518df146210ea719cd4fd3a5891cd92e1ac12af88e783019cac3bf5aa
+Cloned /tmp/moonvcs-lazy-e2e.5cp8mN/clone
+Clone downloaded objects=7 object_bytes=742
+Concurrent Fetch: 8 processes, 1 transfer
+[Fetch] Local Cache Miss 38e9ff2057639348b649a852594be124cdd42e1a9705f0f2800bc79cc8717d91
+[Fetch] Remote Fetch 38e9ff2057639348b649a852594be124cdd42e1a9705f0f2800bc79cc8717d91
+[Fetch] Hash Verified 38e9ff2057639348b649a852594be124cdd42e1a9705f0f2800bc79cc8717d91 bytes=188
+[Fetch] Cached 38e9ff2057639348b649a852594be124cdd42e1a9705f0f2800bc79cc8717d91
+[Fetch] Local Cache Miss 55bc44ac9684b9de0031594592b5545a7ca54b0626d7e27a876f1d87ffbff01e
+[Fetch] Remote Fetch 55bc44ac9684b9de0031594592b5545a7ca54b0626d7e27a876f1d87ffbff01e
+[Fetch] Hash Verified 55bc44ac9684b9de0031594592b5545a7ca54b0626d7e27a876f1d87ffbff01e bytes=188
+[Fetch] Cached 55bc44ac9684b9de0031594592b5545a7ca54b0626d7e27a876f1d87ffbff01e
+[Fetch] Local Cache Miss c9954ed58c0bd0f8af16e43d8d88f1b1aa396160403aa8e59d369797558df658
+[Fetch] Remote Fetch c9954ed58c0bd0f8af16e43d8d88f1b1aa396160403aa8e59d369797558df658
+[Fetch] Hash Verified c9954ed58c0bd0f8af16e43d8d88f1b1aa396160403aa8e59d369797558df658 bytes=188
+[Fetch] Cached c9954ed58c0bd0f8af16e43d8d88f1b1aa396160403aa8e59d369797558df658
+[Fetch] Local Cache Miss f9f4352a59c45656319cfeb7301b956a26b52e89e4643f0e754b56a00337b6b8
+[Fetch] Remote Fetch f9f4352a59c45656319cfeb7301b956a26b52e89e4643f0e754b56a00337b6b8
+[Fetch] Hash Verified f9f4352a59c45656319cfeb7301b956a26b52e89e4643f0e754b56a00337b6b8 bytes=188
+[Fetch] Cached f9f4352a59c45656319cfeb7301b956a26b52e89e4643f0e754b56a00337b6b8
+commit 59324acb6f1828df5a78977e4c754e5f22c418d7a08892c80f988a6dcc694296
+Author: MoonVCS User
+Date:   1792497785473
+
+    history-80
+
+commit 2ea2413766d1a3878cf403f8a3641f9b1137665fdeab3abf049fd2b8921716b1
+Author: MoonVCS User
+Date:   1792497784500
+
+    history-79
+
+commit 38e9ff2057639348b649a852594be124cdd42e1a9705f0f2800bc79cc8717d91
+Author: MoonVCS User
+Date:   1792497783523
+
+    history-78
+
+commit 55bc44ac9684b9de0031594592b5545a7ca54b0626d7e27a876f1d87ffbff01e
+Author: MoonVCS User
+Date:   1792497782554
+
+    history-77
+
+commit c9954ed58c0bd0f8af16e43d8d88f1b1aa396160403aa8e59d369797558df658
+Author: MoonVCS User
+Date:   1792497781578
+
+    history-76
+
+commit f9f4352a59c45656319cfeb7301b956a26b52e89e4643f0e754b56a00337b6b8
+Author: MoonVCS User
+Date:   1792497780614
+
+    history-75
+Offline Cached Read: success without remote access
+ObjectUnavailableOffline: ed9cb542b6760166fbbaaa07925941c91ad5a737cd4e2d69649337061c48da05
+UnknownObject: 0000000000000000000000000000000000000000000000000000000000000000
+[Fetch] Local Cache Miss ed9cb542b6760166fbbaaa07925941c91ad5a737cd4e2d69649337061c48da05
+[Fetch] Remote Fetch ed9cb542b6760166fbbaaa07925941c91ad5a737cd4e2d69649337061c48da05
+RemoteUnavailable: configured promisor cannot be read
+Transfer summary (measured, encoded-object bytes only):
+remote_objects=244 remote_object_bytes=37948
+initial_clone_objects=7 initial_clone_object_bytes=742
+after_history_objects=12 after_history_object_bytes=1682
+repeat_fetches=0 concurrent_processes=8 concurrent_transfers=1
+MoonVCS phase-5 lazy storage CLI tests passed
+Run log: /home/runner/work/MoonBitCVS/MoonBitCVS/target/reports/phase5-run.log
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.Sj1uiV/server/.moonvcs
+Initialized trusted server on-receive policy
+Scenario A: safe client commit, server independently accepts
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.Sj1uiV/client/.moonvcs
+Policy passed
+Commit created
+Committed 2731bdb8dbcfe54856831b6b1d444bf718bbbde090c46ba28e5c2d3ee861e424
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"2731bdb8dbcfe54856831b6b1d444bf718bbbde090c46ba28e5c2d3ee861e424","checked_commits":1,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+Scenario B: local scanner rejects harmless simulated secret
+Commit rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario C: standalone bypass program creates unchecked objects without updating client HEAD
+Unscanned candidate 0105525e332926dc3d4df67c55b7b00284d79d5b9657da91668cfa0a0845167d
+Push rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario D: two prepared clients use the same old Ref; stale second publish cannot overwrite
+Unscanned candidate 49577acb28fefe3f19bc78a71df7e1edbd11d1b991a225c1d9a0be320c7bf6a0
+Unscanned candidate 547114833b9a534b2b1733717c9d1ed1ee193736929ad3ca1757df4d51454c20
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"49577acb28fefe3f19bc78a71df7e1edbd11d1b991a225c1d9a0be320c7bf6a0","checked_commits":2,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+RefConflict: expected old Ref changed; refresh and retry
+Unscanned candidate ec9e6e4c7e12350f7a2d2010444fbbdfa83978b31476477dedeee63e172e5074
+Unscanned candidate 799aee3344d063bca6932137471bef76ec4c6c6793688b499eb7c6314ec59ff9
+Concurrent server processes: exits 11 and 0 (one accept, one conflict)
+commit 799aee3344d063bca6932137471bef76ec4c6c6793688b499eb7c6314ec59ff9
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-b
+
+commit 49577acb28fefe3f19bc78a71df7e1edbd11d1b991a225c1d9a0be320c7bf6a0
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-a
+
+commit 2731bdb8dbcfe54856831b6b1d444bf718bbbde090c46ba28e5c2d3ee861e424
+Author: MoonVCS User
+Date:   1792497786885
+
+    safe initial
+
+Measured published objects: initial=3 final=9; rejected candidate=0105525e332926dc3d4df67c55b7b00284d79d5b9657da91668cfa0a0845167d never published
+MoonVCS phase-6 remote policy receive tests passed
+Run log: /home/runner/work/MoonBitCVS/MoonBitCVS/target/reports/phase6-run.log
+test_all_real_components_still_have_no_imports (__main__.SystemAudit.test_all_real_components_still_have_no_imports) ... ok
+test_deterministic_malformed_protocol_corpus (__main__.SystemAudit.test_deterministic_malformed_protocol_corpus) ... ok
+test_external_object_oracle_and_functional_smoke (__main__.SystemAudit.test_external_object_oracle_and_functional_smoke) ... ok
+test_hash_canonical_missing_parent_and_edge_type_fail_closed (__main__.SystemAudit.test_hash_canonical_missing_parent_and_edge_type_fail_closed) ... ok
+test_native_children_do_not_inherit_simulated_sensitive_environment (__main__.SystemAudit.test_native_children_do_not_inherit_simulated_sensitive_environment) ... ok
+test_paths_and_snapshot_configuration_are_not_authority (__main__.SystemAudit.test_paths_and_snapshot_configuration_are_not_authority) ... ok
+test_quarantine_is_private_until_real_policy_returns (__main__.SystemAudit.test_quarantine_is_private_until_real_policy_returns) ... ok
+test_secret_client_bypass_rejected_without_formal_objects (__main__.SystemAudit.test_secret_client_bypass_rejected_without_formal_objects) ... ok
+test_untrusted_display_fields_cannot_emit_terminal_control_sequences (__main__.SystemAudit.test_untrusted_display_fields_cannot_emit_terminal_control_sequences) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 8.332s
+
+OK
+test_atomic_runtime_install_works_while_old_executable_is_running (__main__.VerificationHarness.test_atomic_runtime_install_works_while_old_executable_is_running) ... ok
+test_failed_regression_is_recorded_and_stops_later_stages (__main__.VerificationHarness.test_failed_regression_is_recorded_and_stops_later_stages) ... ok
+test_first_failed_smoke_cannot_be_hidden_by_second_success (__main__.VerificationHarness.test_first_failed_smoke_cannot_be_hidden_by_second_success) ... ok
+test_requested_benchmark_failure_is_not_reported_as_pass (__main__.VerificationHarness.test_requested_benchmark_failure_is_not_reported_as_pass) ... ok
+test_tool_metadata_resolves_explicit_local_and_path_tools (__main__.VerificationHarness.test_tool_metadata_resolves_explicit_local_and_path_tools) ... ok
+test_unrequested_optional_checks_are_explicit_not_fake_passes (__main__.VerificationHarness.test_unrequested_optional_checks_are_explicit_not_fake_passes) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.284s
+
+OK
+test_barrier_serializes_complete_read_modify_write (__main__.StagingConcurrency.test_barrier_serializes_complete_read_modify_write) ... ok
+test_eight_process_writers_preserve_all_entries (__main__.StagingConcurrency.test_eight_process_writers_preserve_all_entries) ... ok
+test_failed_add_preserves_index_and_releases_lock (__main__.StagingConcurrency.test_failed_add_preserves_index_and_releases_lock) ... ok
+test_process_death_releases_transaction_lock (__main__.StagingConcurrency.test_process_death_releases_transaction_lock) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.647s
+
+OK
+test_active_and_killed_quarantine_are_distinguished_without_publishing (__main__.RecoveryAudit.test_active_and_killed_quarantine_are_distinguished_without_publishing) ... ok
+test_commit_exit_16_can_mean_ref_already_published_without_success_output (__main__.RecoveryAudit.test_commit_exit_16_can_mean_ref_already_published_without_success_output) ... ok
+test_kill_after_index_rename_retains_complete_visible_index (__main__.RecoveryAudit.test_kill_after_index_rename_retains_complete_visible_index) ... ok
+test_kill_before_index_rename_preserves_old_index_and_reports_lock (__main__.RecoveryAudit.test_kill_before_index_rename_preserves_old_index_and_reports_lock) ... ok
+test_normal_add_syncs_object_bucket_and_metadata_directory (__main__.RecoveryAudit.test_normal_add_syncs_object_bucket_and_metadata_directory) ... ok
+test_sync_failure_after_rename_reports_uncertain_publication (__main__.RecoveryAudit.test_sync_failure_after_rename_reports_uncertain_publication) ... ok
+test_unknown_quarantine_and_metadata_symlink_are_preserved (__main__.RecoveryAudit.test_unknown_quarantine_and_metadata_symlink_are_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.515s
+
+OK
+test_one_get_reads_a_verified_wide_tree_once_without_skipping_promises (__main__.LazyReadAudit.test_one_get_reads_a_verified_wide_tree_once_without_skipping_promises) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.293s
+
+OK
+test_local_archive_symlink_is_rejected_without_reading_target (__main__.ToolchainArchiveAudit.test_local_archive_symlink_is_rejected_without_reading_target) ... ok
+test_missing_and_corrupt_local_archives_never_fall_back (__main__.ToolchainArchiveAudit.test_missing_and_corrupt_local_archives_never_fall_back) ... ok
+test_pins_use_official_version_paths_not_latest (__main__.ToolchainArchiveAudit.test_pins_use_official_version_paths_not_latest) ... ok
+test_registry_401_renews_once_and_retries_the_same_digest (__main__.ToolchainArchiveAudit.test_registry_401_renews_once_and_retries_the_same_digest) ... ok
+test_registry_403_does_not_retry_or_change_authorization (__main__.ToolchainArchiveAudit.test_registry_403_does_not_retry_or_change_authorization) ... ok
+test_repeated_registry_401_fails_after_one_renewal (__main__.ToolchainArchiveAudit.test_repeated_registry_401_fails_after_one_renewal) ... ok
+test_valid_local_archive_needs_no_network (__main__.ToolchainArchiveAudit.test_valid_local_archive_needs_no_network) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.005s
+
+OK
+test_binary_add_modify_and_delete (__main__.DiffAudit.test_binary_add_modify_and_delete) ... ok
+test_corrupt_blob_fails_even_when_both_ids_match (__main__.DiffAudit.test_corrupt_blob_fails_even_when_both_ids_match) ... ok
+test_directory_file_replacements_preserve_tracked_semantics (__main__.DiffAudit.test_directory_file_replacements_preserve_tracked_semantics) ... ok
+test_empty_unicode_and_no_newline (__main__.DiffAudit.test_empty_unicode_and_no_newline) ... ok
+test_every_mode_preserves_files_metadata_and_locks (__main__.DiffAudit.test_every_mode_preserves_files_metadata_and_locks) ... ok
+test_fifo_is_rejected_without_blocking (__main__.DiffAudit.test_fifo_is_rejected_without_blocking) ... ok
+test_filters_are_literal_paths_relative_to_cwd (__main__.DiffAudit.test_filters_are_literal_paths_relative_to_cwd) ... ok
+test_head_graph_hash_type_missing_tree_and_unsafe_name (__main__.DiffAudit.test_head_graph_hash_type_missing_tree_and_unsafe_name) ... ok
+test_index_must_identify_blobs_and_cannot_contain_path_conflicts (__main__.DiffAudit.test_index_must_identify_blobs_and_cannot_contain_path_conflicts) ... ok
+test_input_limits_fail_explicitly_before_printing_any_patch (__main__.DiffAudit.test_input_limits_fail_explicitly_before_printing_any_patch) ... ok
+test_metadata_symlinks_are_rejected_without_touching_mock_targets (__main__.DiffAudit.test_metadata_symlinks_are_rejected_without_touching_mock_targets) ... ok
+test_observed_index_and_ref_changes_abort_before_output (__main__.DiffAudit.test_observed_index_and_ref_changes_abort_before_output) ... ok
+test_partial_clone_cache_hit_and_miss_are_strictly_read_only (__main__.DiffAudit.test_partial_clone_cache_hit_and_miss_are_strictly_read_only) ... ok
+test_randomized_unified_hunks_reconstruct_the_working_file (__main__.DiffAudit.test_randomized_unified_hunks_reconstruct_the_working_file) ... ok
+test_symlink_leaf_dangling_and_ancestor_are_rejected (__main__.DiffAudit.test_symlink_leaf_dangling_and_ancestor_are_rejected) ... ok
+test_terminal_controls_in_paths_and_content_are_escaped (__main__.DiffAudit.test_terminal_controls_in_paths_and_content_are_escaped) ... ok
+test_three_views_use_distinct_snapshots (__main__.DiffAudit.test_three_views_use_distinct_snapshots) ... ok
+test_unborn_head_and_untracked_files (__main__.DiffAudit.test_unborn_head_and_untracked_files) ... ok
+test_unknown_flags_and_unsafe_paths_fail (__main__.DiffAudit.test_unknown_flags_and_unsafe_paths_fail) ... ok
+test_unstaged_and_staged_deletion (__main__.DiffAudit.test_unstaged_and_staged_deletion) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 15.388s
+
+OK
+test_add_and_switch_share_the_entire_transaction_lock (__main__.BranchSwitchAudit.test_add_and_switch_share_the_entire_transaction_lock) ... ok
+test_archive_sync_eio_returns_16_even_when_pending_has_moved (__main__.BranchSwitchAudit.test_archive_sync_eio_returns_16_even_when_pending_has_moved) ... ok
+test_branch_lists_unborn_and_refuses_creation_from_it (__main__.BranchSwitchAudit.test_branch_lists_unborn_and_refuses_creation_from_it) ... ok
+test_create_from_current_head_preserves_working_index_and_head (__main__.BranchSwitchAudit.test_create_from_current_head_preserves_working_index_and_head) ... ok
+test_current_branch_is_a_clean_noop_without_an_archive (__main__.BranchSwitchAudit.test_current_branch_is_a_clean_noop_without_an_archive) ... ok
+test_dirty_index_is_refused (__main__.BranchSwitchAudit.test_dirty_index_is_refused) ... ok
+test_dirty_or_deleted_tracked_file_is_refused (__main__.BranchSwitchAudit.test_dirty_or_deleted_tracked_file_is_refused) ... ok
+test_documented_manual_recovery_rebuilds_without_discarding_user_versions (__main__.BranchSwitchAudit.test_documented_manual_recovery_rebuilds_without_discarding_user_versions) ... ok
+test_dry_run_is_read_only_and_lists_precise_actions (__main__.BranchSwitchAudit.test_dry_run_is_read_only_and_lists_precise_actions) ... ok
+test_empty_binary_and_unicode_paths_switch_without_reencoding (__main__.BranchSwitchAudit.test_empty_binary_and_unicode_paths_switch_without_reencoding) ... ok
+test_empty_root_snapshot_is_supported_without_dropping_untracked_files (__main__.BranchSwitchAudit.test_empty_root_snapshot_is_supported_without_dropping_untracked_files) ... ok
+test_exclusive_locks_and_blocked_history_fail_before_worktree_changes (__main__.BranchSwitchAudit.test_exclusive_locks_and_blocked_history_fail_before_worktree_changes) ... ok
+test_existing_ref_prefixes_and_symlinks_are_not_overwritten (__main__.BranchSwitchAudit.test_existing_ref_prefixes_and_symlinks_are_not_overwritten) ... ok
+test_fifo_tracked_file_is_refused_without_opening_it (__main__.BranchSwitchAudit.test_fifo_tracked_file_is_refused_without_opening_it) ... ok
+test_file_directory_transitions_are_refused_before_mutation (__main__.BranchSwitchAudit.test_file_directory_transitions_are_refused_before_mutation) ... ok
+test_file_size_budget_refuses_before_a_transaction_starts (__main__.BranchSwitchAudit.test_file_size_budget_refuses_before_a_transaction_starts) ... ok
+test_hardlinks_and_unchanged_permissions_are_preserved (__main__.BranchSwitchAudit.test_hardlinks_and_unchanged_permissions_are_preserved) ... ok
+test_head_sync_eio_returns_16_with_visible_target_and_preserved_evidence (__main__.BranchSwitchAudit.test_head_sync_eio_returns_16_with_visible_target_and_preserved_evidence) ... ok
+test_help_explains_retained_switch_backups_and_disk_growth (__main__.BranchSwitchAudit.test_help_explains_retained_switch_backups_and_disk_growth) ... ok
+test_invalid_names_and_unimplemented_flags_never_create_refs (__main__.BranchSwitchAudit.test_invalid_names_and_unimplemented_flags_never_create_refs) ... ok
+test_late_old_inode_write_is_kept_in_backup_without_auto_cleanup (__main__.BranchSwitchAudit.test_late_old_inode_write_is_kept_in_backup_without_auto_cleanup) ... ok
+test_malicious_tree_paths_never_materialize_metadata_or_escape (__main__.BranchSwitchAudit.test_malicious_tree_paths_never_materialize_metadata_or_escape) ... ok
+test_missing_corrupt_or_wrong_type_target_objects_fail_closed (__main__.BranchSwitchAudit.test_missing_corrupt_or_wrong_type_target_objects_fail_closed) ... ok
+test_missing_target_blob_does_not_fetch_or_start_a_transaction (__main__.BranchSwitchAudit.test_missing_target_blob_does_not_fetch_or_start_a_transaction) ... ok
+test_new_collision_after_backup_is_not_overwritten (__main__.BranchSwitchAudit.test_new_collision_after_backup_is_not_overwritten) ... ok
+test_pending_transaction_blocks_normal_cli_and_reports_unknown_state (__main__.BranchSwitchAudit.test_pending_transaction_blocks_normal_cli_and_reports_unknown_state) ... ok
+test_prepared_phase_write_error_keeps_manifest_and_original_state (__main__.BranchSwitchAudit.test_prepared_phase_write_error_keeps_manifest_and_original_state) ... ok
+test_sigkill_after_backup_preserves_inode_and_identifies_target (__main__.BranchSwitchAudit.test_sigkill_after_backup_preserves_inode_and_identifies_target) ... ok
+test_sigkill_after_head_publish_does_not_pretend_nothing_changed (__main__.BranchSwitchAudit.test_sigkill_after_head_publish_does_not_pretend_nothing_changed) ... ok
+test_sigkill_after_index_publish_reports_split_metadata (__main__.BranchSwitchAudit.test_sigkill_after_index_publish_reports_split_metadata) ... ok
+test_sigkill_after_preparation_preserves_original_worktree (__main__.BranchSwitchAudit.test_sigkill_after_preparation_preserves_original_worktree) ... ok
+test_switch_round_trip_preserves_refs_untracked_and_backups (__main__.BranchSwitchAudit.test_switch_round_trip_preserves_refs_untracked_and_backups) ... ok
+test_symlink_leaf_dangling_and_target_ancestor_are_refused (__main__.BranchSwitchAudit.test_symlink_leaf_dangling_and_target_ancestor_are_refused) ... ok
+test_target_index_must_fit_the_future_reader_and_recovery_budget (__main__.BranchSwitchAudit.test_target_index_must_fit_the_future_reader_and_recovery_budget) ... ok
+test_target_ref_change_after_preflight_aborts_before_file_writes (__main__.BranchSwitchAudit.test_target_ref_change_after_preflight_aborts_before_file_writes) ... ok
+test_two_branch_creators_cannot_clobber_one_another (__main__.BranchSwitchAudit.test_two_branch_creators_cannot_clobber_one_another) ... ok
+test_unborn_current_branch_can_switch_to_an_existing_clean_snapshot (__main__.BranchSwitchAudit.test_unborn_current_branch_can_switch_to_an_existing_clean_snapshot) ... ok
+test_unknown_or_symlink_pending_entry_is_never_removed_or_followed (__main__.BranchSwitchAudit.test_unknown_or_symlink_pending_entry_is_never_removed_or_followed) ... ok
+test_untracked_file_or_even_empty_directory_blocks_target (__main__.BranchSwitchAudit.test_untracked_file_or_even_empty_directory_blocks_target) ... ok
+test_working_file_change_after_preflight_is_preserved (__main__.BranchSwitchAudit.test_working_file_change_after_preflight_is_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 77.296s
+
+OK
+test_both_fixed_archive_hashes_are_required_and_checked (__main__.SubmissionAudit.test_both_fixed_archive_hashes_are_required_and_checked) ... ok
+test_checksum_paths_duplicates_and_missing_entries_are_rejected (__main__.SubmissionAudit.test_checksum_paths_duplicates_and_missing_entries_are_rejected) ... ok
+test_durable_budgets_bound_manifest_and_file_reads (__main__.SubmissionAudit.test_durable_budgets_bound_manifest_and_file_reads) ... ok
+test_durable_cli_is_wired_into_the_real_packager_and_errors_do_not_emit_partial_lists (__main__.SubmissionAudit.test_durable_cli_is_wired_into_the_real_packager_and_errors_do_not_emit_partial_lists) ... ok
+test_durable_corrupt_and_missing_files_fail_closed (__main__.SubmissionAudit.test_durable_corrupt_and_missing_files_fail_closed) ... ok
+test_durable_evidence_extracts_separately_and_verifies_its_manifest (__main__.SubmissionAudit.test_durable_evidence_extracts_separately_and_verifies_its_manifest) ... ok
+test_durable_extraction_rejects_extra_files_and_missing_manifest (__main__.SubmissionAudit.test_durable_extraction_rejects_extra_files_and_missing_manifest) ... ok
+test_durable_manifest_rejects_duplicates_escapes_unreviewed_namespaces_and_missing_categories (__main__.SubmissionAudit.test_durable_manifest_rejects_duplicates_escapes_unreviewed_namespaces_and_missing_categories) ... ok
+test_durable_selection_includes_reviewed_ci_and_mooncakes_not_neighbor_files (__main__.SubmissionAudit.test_durable_selection_includes_reviewed_ci_and_mooncakes_not_neighbor_files) ... ok
+test_durable_symlink_file_ancestor_and_manifest_are_rejected (__main__.SubmissionAudit.test_durable_symlink_file_ancestor_and_manifest_are_rejected) ... ok
+test_entire_archive_is_validated_before_any_extraction (__main__.SubmissionAudit.test_entire_archive_is_validated_before_any_extraction) ... ok
+test_existing_workdir_is_preserved_and_failure_is_recorded (__main__.SubmissionAudit.test_existing_workdir_is_preserved_and_failure_is_recorded) ... Reproduction report: /tmp/moonvcs-submission-audit-lk52v0eb/fresh/report.json
+ok
+test_links_special_files_and_source_outputs_are_rejected (__main__.SubmissionAudit.test_links_special_files_and_source_outputs_are_rejected) ... ok
+test_real_packager_accepts_identical_independent_files (__main__.SubmissionAudit.test_real_packager_accepts_identical_independent_files) ... ok
+test_real_packager_normal_files_roundtrip_with_reproducer (__main__.SubmissionAudit.test_real_packager_normal_files_roundtrip_with_reproducer) ... ok
+test_real_packager_rejects_hardlinked_evidence_before_output (__main__.SubmissionAudit.test_real_packager_rejects_hardlinked_evidence_before_output) ... ok
+test_real_packager_rejects_hardlinked_historical_report_before_output (__main__.SubmissionAudit.test_real_packager_rejects_hardlinked_historical_report_before_output) ... ok
+test_real_packager_rejects_hardlinked_manifest_before_output (__main__.SubmissionAudit.test_real_packager_rejects_hardlinked_manifest_before_output) ... ok
+test_valid_archives_are_separated_and_extracted_content_is_bound (__main__.SubmissionAudit.test_valid_archives_are_separated_and_extracted_content_is_bound) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.440s
+
+OK
+test_corrupt_archive_fails_before_creating_a_prefix (__main__.CiAudit.test_corrupt_archive_fails_before_creating_a_prefix) ... ok
+test_existing_prefix_is_preserved (__main__.CiAudit.test_existing_prefix_is_preserved) ... ok
+test_install_verifies_archives_sets_permissions_and_does_not_claim_ci_pass (__main__.CiAudit.test_install_verifies_archives_sets_permissions_and_does_not_claim_ci_pass) ... ok
+test_source_delivery_and_clean_build_keep_the_workflow (__main__.CiAudit.test_source_delivery_and_clean_build_keep_the_workflow) ... ok
+test_traversal_in_an_independently_verified_fixture_is_still_refused (__main__.CiAudit.test_traversal_in_an_independently_verified_fixture_is_still_refused) ... ok
+test_workflow_is_read_only_pinned_and_runs_the_real_verifier (__main__.CiAudit.test_workflow_is_read_only_pinned_and_runs_the_real_verifier) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.012s
+
+OK
+test_anonymous_requirement_and_environment_overrides (__main__.PublishedConsumerAudit.test_anonymous_requirement_and_environment_overrides) ... Published consumer: moon-version
+Published consumer: cc-version
+Published consumer: anonymous
+Published consumer: update
+Published consumer: check
+Published consumer: tree
+Published consumer: test
+Published consumer: readme
+Published consumer report: /tmp/moonvcs-consumer-audit-b8jxvki8/acceptance/report.json
+Published consumer: moon-version
+Published consumer: cc-version
+Published consumer: anonymous
+Published consumer report: /tmp/moonvcs-consumer-audit-b8jxvki8/authenticated-fixture/report.json
+ok
+test_cli_failure_returns_nonzero_and_retains_report (__main__.PublishedConsumerAudit.test_cli_failure_returns_nonzero_and_retains_report) ... ok
+test_download_failure_is_recorded_and_stops_before_tests (__main__.PublishedConsumerAudit.test_download_failure_is_recorded_and_stops_before_tests) ... Published consumer: moon-version
+Published consumer: cc-version
+Published consumer: anonymous
+Published consumer: update
+Published consumer: check
+Published consumer report: /tmp/moonvcs-consumer-audit-xi2ge11l/acceptance/report.json
+ok
+test_existing_output_is_preserved_without_reuse (__main__.PublishedConsumerAudit.test_existing_output_is_preserved_without_reuse) ... ok
+test_fixture_keeps_the_two_original_tests_and_readme_code (__main__.PublishedConsumerAudit.test_fixture_keeps_the_two_original_tests_and_readme_code) ... ok
+test_installed_content_and_symlink_overrides_are_rejected (__main__.PublishedConsumerAudit.test_installed_content_and_symlink_overrides_are_rejected) ... Published consumer: moon-version
+Published consumer: cc-version
+Published consumer: anonymous
+Published consumer: update
+Published consumer: check
+Published consumer: tree
+Published consumer: test
+Published consumer: readme
+Published consumer report: /tmp/moonvcs-consumer-audit-ma37pqty/acceptance/report.json
+ok
+test_manual_workflow_is_separate_read_only_pinned_and_archives_only_reports (__main__.PublishedConsumerAudit.test_manual_workflow_is_separate_read_only_pinned_and_archives_only_reports) ... ok
+test_modified_module_cannot_introduce_local_override (__main__.PublishedConsumerAudit.test_modified_module_cannot_introduce_local_override) ... Published consumer report: /tmp/moonvcs-consumer-audit-bu_cdn8o/acceptance/report.json
+ok
+test_nonzero_test_result_is_not_masked (__main__.PublishedConsumerAudit.test_nonzero_test_result_is_not_masked) ... Published consumer: moon-version
+Published consumer: cc-version
+Published consumer: anonymous
+Published consumer: update
+Published consumer: check
+Published consumer: tree
+Published consumer: test
+Published consumer report: /tmp/moonvcs-consumer-audit-nz6o52lu/acceptance/report.json
+ok
+test_owned_success_records_commands_versions_and_separate_scope (__main__.PublishedConsumerAudit.test_owned_success_records_commands_versions_and_separate_scope) ... Published consumer: moon-version
+Published consumer: cc-version
+Published consumer: anonymous
+Published consumer: update
+Published consumer: check
+Published consumer: tree
+Published consumer: test
+Published consumer: readme
+Published consumer report: /tmp/moonvcs-consumer-audit-3jast4va/acceptance/report.json
+ok
+test_registry_hash_mismatch_stops_before_test (__main__.PublishedConsumerAudit.test_registry_hash_mismatch_stops_before_test) ... Published consumer: moon-version
+Published consumer: cc-version
+Published consumer: anonymous
+Published consumer: update
+Published consumer: check
+Published consumer report: /tmp/moonvcs-consumer-audit-p2kjxttd/acceptance/report.json
+ok
+test_surrounding_workspace_and_source_directory_are_rejected (__main__.PublishedConsumerAudit.test_surrounding_workspace_and_source_directory_are_rejected) ... ok
+test_timeout_is_failed_and_evidence_is_retained (__main__.PublishedConsumerAudit.test_timeout_is_failed_and_evidence_is_retained) ... Published consumer: moon-version
+Published consumer report: /tmp/moonvcs-consumer-audit-gp2j9y5o/acceptance/report.json
+ok
+test_wrong_test_count_and_wrong_readme_output_fail (__main__.PublishedConsumerAudit.test_wrong_test_count_and_wrong_readme_output_fail) ... Published consumer: moon-version
+Published consumer: cc-version
+Published consumer: anonymous
+Published consumer: update
+Published consumer: check
+Published consumer: tree
+Published consumer: test
+Published consumer report: /tmp/moonvcs-consumer-audit-ilox7mok/bad-0/report.json
+Published consumer: moon-version
+Published consumer: cc-version
+Published consumer: anonymous
+Published consumer: update
+Published consumer: check
+Published consumer: tree
+Published consumer: test
+Published consumer: readme
+Published consumer report: /tmp/moonvcs-consumer-audit-ilox7mok/bad-1/report.json
+ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 3.761s
+
+OK
+OFF-STAGE PREPARATION | actual CLI commits; no canned objects or scan results
+Prepared workdir: /tmp/moonvcs-stage8-test.ITTVBu/prepared
+Measured dataset: 24 objects / 2544 encoded bytes
+Evidence: /home/runner/work/MoonBitCVS/MoonBitCVS/target/reports/phase8-prepare-in352iuy
+Stage-8 real demo repetition: 1
+
+DEMO 1 | Real MoonBit Wasm Secret Scanner -> Reject -> repair -> Pass
+$ moonvcs init
+Initialized empty MoonVCS repository in /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/secret/.moonvcs
+Write config.env with a harmless simulated API key; value intentionally not echoed.
+$ moonvcs add config.env
+staged config.env ff393c9cfe6b4633426e653fb0b86dfc1e6fb377162c5b5e97a4b373282148c8
+$ moonvcs commit -m 'add config'
+Commit rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Verified: HEAD is still unborn; staged data remains recoverable.
+Replace the fixture with APP_MODE=demo, then re-stage.
+$ moonvcs add config.env
+staged config.env 7770438dc951faa81fe0417a5a0aba6ffbe7c9b839db03a2793f8f22e63822e7
+$ moonvcs commit -m 'add safe config'
+Policy passed
+Commit created
+Committed a59fa312594836923cde3d901af860de827470f1d31b61627f0470072e40fefc
+$ moonvcs log --max-count 1
+commit a59fa312594836923cde3d901af860de827470f1d31b61627f0470072e40fefc
+Author: MoonVCS User
+Date:   1792497920299
+
+    add safe config
+
+DEMO 2 | Same WIT v1, filtered request, actual CapabilityDenied
+$ moonvcs-policy-host --component /home/runner/work/MoonBitCVS/MoonBitCVS/target/components/restricted-plugin.component.wasm --manifest /home/runner/work/MoonBitCVS/MoonBitCVS/plugins/restricted-plugin/plugin.toml --message metadata-must-be-filtered --file allowed.txt --policy /home/runner/work/MoonBitCVS/MoonBitCVS/examples/repository-policy.toml
+{"status":"pass","plugin":"restricted-plugin","plugin_version":"0.1.0","diagnostics":[]}
+Guest verified: staged read only; commit metadata absent; no ambient imports.
+$ moonvcs-policy-host --component /home/runner/work/MoonBitCVS/MoonBitCVS/target/components/restricted-plugin.component.wasm --manifest /home/runner/work/MoonBitCVS/MoonBitCVS/plugins/restricted-plugin/plugin.toml --message metadata-must-be-filtered --file allowed.txt --policy /home/runner/work/MoonBitCVS/MoonBitCVS/examples/repository-policy-deny-content.toml
+{"reason":"CapabilityDenied: requested capability was not granted by the repository","status":"error"}
+$ moonvcs-policy-host --component /home/runner/work/MoonBitCVS/MoonBitCVS/target/components/restricted-plugin.component.wasm --manifest /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/capability/overrequested.toml --policy /home/runner/work/MoonBitCVS/MoonBitCVS/examples/repository-policy.toml --file allowed.txt
+{"reason":"CapabilityDenied: requested capability is not provided by this host","status":"error"}
+Denied before instantiation. repository.secrets.read is NOT an implemented callback.
+
+DEMO 3 | Real partial clone -> lazy history -> verified cache -> offline flag
+Measured remote: 24 objects / 2544 encoded bytes
+$ moonvcs clone /tmp/moonvcs-stage8-test.ITTVBu/prepared/history-remote /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/lazy-clone
+[Fetch] Local Cache Miss 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+[Fetch] Remote Fetch 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+[Fetch] Hash Verified 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30 bytes=189
+[Fetch] Cached 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+[Fetch] Local Cache Miss eb89a8c879c87279a80d2d5f1f7e531315301a2d290e367373d623851bd60b09
+[Fetch] Remote Fetch eb89a8c879c87279a80d2d5f1f7e531315301a2d290e367373d623851bd60b09
+[Fetch] Hash Verified eb89a8c879c87279a80d2d5f1f7e531315301a2d290e367373d623851bd60b09 bytes=102
+[Fetch] Cached eb89a8c879c87279a80d2d5f1f7e531315301a2d290e367373d623851bd60b09
+[Fetch] Local Cache Miss 82a32327e37932fe53cea60946a1e9b82c907c0669118115903f08cbdd4299e7
+[Fetch] Remote Fetch 82a32327e37932fe53cea60946a1e9b82c907c0669118115903f08cbdd4299e7
+[Fetch] Hash Verified 82a32327e37932fe53cea60946a1e9b82c907c0669118115903f08cbdd4299e7 bytes=35
+[Fetch] Cached 82a32327e37932fe53cea60946a1e9b82c907c0669118115903f08cbdd4299e7
+Cloned /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/lazy-clone
+Clone downloaded objects=3 object_bytes=326
+$ moonvcs storage-stats
+{"requests":"3","received_objects":"3","received_bytes":"326","cached_objects":"3"}
+Measured initial cache: 3 objects / 326 encoded bytes
+$ moonvcs log --max-count 4
+[Fetch] Local Cache Miss 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+[Fetch] Remote Fetch 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+[Fetch] Hash Verified 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67 bytes=189
+[Fetch] Cached 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+[Fetch] Local Cache Miss 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+[Fetch] Remote Fetch 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+[Fetch] Hash Verified 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4 bytes=189
+[Fetch] Cached 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+[Fetch] Local Cache Miss 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+[Fetch] Remote Fetch 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+[Fetch] Hash Verified 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904 bytes=189
+[Fetch] Cached 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+commit 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+Author: MoonVCS User
+Date:   1792497918311
+
+    history-008
+
+commit 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+Author: MoonVCS User
+Date:   1792497917346
+
+    history-007
+
+commit 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+Author: MoonVCS User
+Date:   1792497916381
+
+    history-006
+
+commit 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+Author: MoonVCS User
+Date:   1792497915411
+
+    history-005
+$ moonvcs log --max-count 4
+commit 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+Author: MoonVCS User
+Date:   1792497918311
+
+    history-008
+
+commit 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+Author: MoonVCS User
+Date:   1792497917346
+
+    history-007
+
+commit 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+Author: MoonVCS User
+Date:   1792497916381
+
+    history-006
+
+commit 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+Author: MoonVCS User
+Date:   1792497915411
+
+    history-005
+$ moonvcs log --max-count 4 --offline
+commit 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+Author: MoonVCS User
+Date:   1792497918311
+
+    history-008
+
+commit 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+Author: MoonVCS User
+Date:   1792497917346
+
+    history-007
+
+commit 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+Author: MoonVCS User
+Date:   1792497916381
+
+    history-006
+
+commit 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+Author: MoonVCS User
+Date:   1792497915411
+
+    history-005
+$ moonvcs show fe7d19006cb9583c71b2deb04517b58eee7a89c2542793ac7998ac96c1a69a72 --offline
+ObjectUnavailableOffline: fe7d19006cb9583c71b2deb04517b58eee7a89c2542793ac7998ac96c1a69a72
+Measured history cache: 6 objects / 893 encoded bytes; repeat transfers=0
+
+DEMO 4 | Client bypasses local scanning; independent server still rejects
+$ moonvcs init
+Initialized empty MoonVCS repository in /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/remote/client/.moonvcs
+$ moonvcs add safe.txt
+staged safe.txt ea9c85227ef1db2ab6b5e71662d19dd3a782d6bbe8048c02b52475609ce337d4
+$ moonvcs commit -m 'safe baseline'
+Policy passed
+Commit created
+Committed 2e81da35c28de0881d158609f1aebc94060d592b8ec7a1383c7a533623f4f2b1
+$ moonvcs init
+Initialized empty MoonVCS repository in /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/remote/server/.moonvcs
+$ moonvcs receive-init
+Initialized trusted server on-receive policy
+$ moonvcs push /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/remote/server refs/heads/main none
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"2e81da35c28de0881d158609f1aebc94060d592b8ec7a1383c7a533623f4f2b1","checked_commits":1,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+$ moonvcs-bypass-client /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/remote/client /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/remote/unchecked.rx 2e81da35c28de0881d158609f1aebc94060d592b8ec7a1383c7a533623f4f2b1 secret
+Unscanned candidate f9e0bfa455da7b9c5490acb2ca949e553a9c231f9fa716956c270d8e75c1e14d
+$ moonvcs receive /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd/remote/unchecked.rx
+Push rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+$ moonvcs storage-state f9e0bfa455da7b9c5490acb2ca949e553a9c231f9fa716956c270d8e75c1e14d
+Unknown
+Verified: server HEAD/policy unchanged; no rejected formal objects; owned quarantine empty.
+Filesystem/stdio prototype: shared OS account is NOT a production privilege boundary.
+
+Actual command time: 6.17s; narration/build/preparation are separate.
+Demo repositories retained: /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-tr5ksbqd
+Evidence: /home/runner/work/MoonBitCVS/MoonBitCVS/target/reports/phase8-run-6doy47yq
+Stage-8 real demo repetition: 2
+
+DEMO 1 | Real MoonBit Wasm Secret Scanner -> Reject -> repair -> Pass
+$ moonvcs init
+Initialized empty MoonVCS repository in /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/secret/.moonvcs
+Write config.env with a harmless simulated API key; value intentionally not echoed.
+$ moonvcs add config.env
+staged config.env ff393c9cfe6b4633426e653fb0b86dfc1e6fb377162c5b5e97a4b373282148c8
+$ moonvcs commit -m 'add config'
+Commit rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Verified: HEAD is still unborn; staged data remains recoverable.
+Replace the fixture with APP_MODE=demo, then re-stage.
+$ moonvcs add config.env
+staged config.env 7770438dc951faa81fe0417a5a0aba6ffbe7c9b839db03a2793f8f22e63822e7
+$ moonvcs commit -m 'add safe config'
+Policy passed
+Commit created
+Committed ff7b9c7886fb29babfa5fca8fb4505a504f2b496390293e24269742026445640
+$ moonvcs log --max-count 1
+commit ff7b9c7886fb29babfa5fca8fb4505a504f2b496390293e24269742026445640
+Author: MoonVCS User
+Date:   1792497926514
+
+    add safe config
+
+DEMO 2 | Same WIT v1, filtered request, actual CapabilityDenied
+$ moonvcs-policy-host --component /home/runner/work/MoonBitCVS/MoonBitCVS/target/components/restricted-plugin.component.wasm --manifest /home/runner/work/MoonBitCVS/MoonBitCVS/plugins/restricted-plugin/plugin.toml --message metadata-must-be-filtered --file allowed.txt --policy /home/runner/work/MoonBitCVS/MoonBitCVS/examples/repository-policy.toml
+{"status":"pass","plugin":"restricted-plugin","plugin_version":"0.1.0","diagnostics":[]}
+Guest verified: staged read only; commit metadata absent; no ambient imports.
+$ moonvcs-policy-host --component /home/runner/work/MoonBitCVS/MoonBitCVS/target/components/restricted-plugin.component.wasm --manifest /home/runner/work/MoonBitCVS/MoonBitCVS/plugins/restricted-plugin/plugin.toml --message metadata-must-be-filtered --file allowed.txt --policy /home/runner/work/MoonBitCVS/MoonBitCVS/examples/repository-policy-deny-content.toml
+{"reason":"CapabilityDenied: requested capability was not granted by the repository","status":"error"}
+$ moonvcs-policy-host --component /home/runner/work/MoonBitCVS/MoonBitCVS/target/components/restricted-plugin.component.wasm --manifest /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/capability/overrequested.toml --policy /home/runner/work/MoonBitCVS/MoonBitCVS/examples/repository-policy.toml --file allowed.txt
+{"reason":"CapabilityDenied: requested capability is not provided by this host","status":"error"}
+Denied before instantiation. repository.secrets.read is NOT an implemented callback.
+
+DEMO 3 | Real partial clone -> lazy history -> verified cache -> offline flag
+Measured remote: 24 objects / 2544 encoded bytes
+$ moonvcs clone /tmp/moonvcs-stage8-test.ITTVBu/prepared/history-remote /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/lazy-clone
+[Fetch] Local Cache Miss 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+[Fetch] Remote Fetch 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+[Fetch] Hash Verified 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30 bytes=189
+[Fetch] Cached 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+[Fetch] Local Cache Miss eb89a8c879c87279a80d2d5f1f7e531315301a2d290e367373d623851bd60b09
+[Fetch] Remote Fetch eb89a8c879c87279a80d2d5f1f7e531315301a2d290e367373d623851bd60b09
+[Fetch] Hash Verified eb89a8c879c87279a80d2d5f1f7e531315301a2d290e367373d623851bd60b09 bytes=102
+[Fetch] Cached eb89a8c879c87279a80d2d5f1f7e531315301a2d290e367373d623851bd60b09
+[Fetch] Local Cache Miss 82a32327e37932fe53cea60946a1e9b82c907c0669118115903f08cbdd4299e7
+[Fetch] Remote Fetch 82a32327e37932fe53cea60946a1e9b82c907c0669118115903f08cbdd4299e7
+[Fetch] Hash Verified 82a32327e37932fe53cea60946a1e9b82c907c0669118115903f08cbdd4299e7 bytes=35
+[Fetch] Cached 82a32327e37932fe53cea60946a1e9b82c907c0669118115903f08cbdd4299e7
+Cloned /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/lazy-clone
+Clone downloaded objects=3 object_bytes=326
+$ moonvcs storage-stats
+{"requests":"3","received_objects":"3","received_bytes":"326","cached_objects":"3"}
+Measured initial cache: 3 objects / 326 encoded bytes
+$ moonvcs log --max-count 4
+[Fetch] Local Cache Miss 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+[Fetch] Remote Fetch 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+[Fetch] Hash Verified 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67 bytes=189
+[Fetch] Cached 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+[Fetch] Local Cache Miss 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+[Fetch] Remote Fetch 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+[Fetch] Hash Verified 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4 bytes=189
+[Fetch] Cached 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+[Fetch] Local Cache Miss 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+[Fetch] Remote Fetch 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+[Fetch] Hash Verified 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904 bytes=189
+[Fetch] Cached 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+commit 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+Author: MoonVCS User
+Date:   1792497918311
+
+    history-008
+
+commit 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+Author: MoonVCS User
+Date:   1792497917346
+
+    history-007
+
+commit 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+Author: MoonVCS User
+Date:   1792497916381
+
+    history-006
+
+commit 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+Author: MoonVCS User
+Date:   1792497915411
+
+    history-005
+$ moonvcs log --max-count 4
+commit 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+Author: MoonVCS User
+Date:   1792497918311
+
+    history-008
+
+commit 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+Author: MoonVCS User
+Date:   1792497917346
+
+    history-007
+
+commit 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+Author: MoonVCS User
+Date:   1792497916381
+
+    history-006
+
+commit 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+Author: MoonVCS User
+Date:   1792497915411
+
+    history-005
+$ moonvcs log --max-count 4 --offline
+commit 44fd28fb22ab85d5b6e8d8eac4b5ce9f9050b5578108e73b90532c6b73f25d30
+Author: MoonVCS User
+Date:   1792497918311
+
+    history-008
+
+commit 3b52b2fca836e5acf3b9a1f52f6c980a05f42596f5c41a38bcecfd7da39bde67
+Author: MoonVCS User
+Date:   1792497917346
+
+    history-007
+
+commit 6cb7fd6d8e73c856065556576fd78d30bc68c32d2f4147a601a51d300dee59e4
+Author: MoonVCS User
+Date:   1792497916381
+
+    history-006
+
+commit 6f7313eb2b8cd7679da514d55aa11835c58a6f14df6754e4304738340ce48904
+Author: MoonVCS User
+Date:   1792497915411
+
+    history-005
+$ moonvcs show fe7d19006cb9583c71b2deb04517b58eee7a89c2542793ac7998ac96c1a69a72 --offline
+ObjectUnavailableOffline: fe7d19006cb9583c71b2deb04517b58eee7a89c2542793ac7998ac96c1a69a72
+Measured history cache: 6 objects / 893 encoded bytes; repeat transfers=0
+
+DEMO 4 | Client bypasses local scanning; independent server still rejects
+$ moonvcs init
+Initialized empty MoonVCS repository in /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/remote/client/.moonvcs
+$ moonvcs add safe.txt
+staged safe.txt ea9c85227ef1db2ab6b5e71662d19dd3a782d6bbe8048c02b52475609ce337d4
+$ moonvcs commit -m 'safe baseline'
+Policy passed
+Commit created
+Committed e0b5878e98f548e93ad3483d1da1ba76e6ee3e8563341fb7cc7a110cf9d50801
+$ moonvcs init
+Initialized empty MoonVCS repository in /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/remote/server/.moonvcs
+$ moonvcs receive-init
+Initialized trusted server on-receive policy
+$ moonvcs push /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/remote/server refs/heads/main none
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"e0b5878e98f548e93ad3483d1da1ba76e6ee3e8563341fb7cc7a110cf9d50801","checked_commits":1,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+$ moonvcs-bypass-client /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/remote/client /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/remote/unchecked.rx e0b5878e98f548e93ad3483d1da1ba76e6ee3e8563341fb7cc7a110cf9d50801 secret
+Unscanned candidate 25bb50d27a2fd6ee986118f185d6d37d272d06a72e4e43e0f5aecde351d19e47
+$ moonvcs receive /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j/remote/unchecked.rx
+Push rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+$ moonvcs storage-state 25bb50d27a2fd6ee986118f185d6d37d272d06a72e4e43e0f5aecde351d19e47
+Unknown
+Verified: server HEAD/policy unchanged; no rejected formal objects; owned quarantine empty.
+Filesystem/stdio prototype: shared OS account is NOT a production privilege boundary.
+
+Actual command time: 6.18s; narration/build/preparation are separate.
+Demo repositories retained: /tmp/moonvcs-stage8-test.ITTVBu/prepared/runs/run-kd9i469j
+Evidence: /home/runner/work/MoonBitCVS/MoonBitCVS/target/reports/phase8-run-ai5tx6yb
+MoonVCS stage-8 four-demo repeat smoke passed
+{"status":"pass","plugin":"secret-scanner","plugin_version":"0.2.0","diagnostics":[]}
+{"status":"pass","plugin":"hello-policy","plugin_version":"0.1.0","diagnostics":[]}
+{"status":"reject","plugin":"secret-scanner","plugin_version":"0.2.0","diagnostics":[{"plugin":"secret-scanner","rule":"secret.test-token","file":"examples/contains-secret.txt","line":null,"code":"secret.test-token","severity":"error","message":"suspicious credential","path":"examples/contains-secret.txt"}]}
+{"reason":"CapabilityDenied: requested capability was not granted by the repository","status":"error"}
+{"status":"reject","plugin":"hello-policy","plugin_version":"0.1.0","diagnostics":[{"plugin":"hello-policy","rule":"message.forbidden-demo","file":null,"line":null,"code":"message.forbidden-demo","severity":"error","message":"forbidden-demo detected","path":null}]}
+{"reason":"plugin returned an error","status":"error"}
+{"reason":"policy plugin trapped, timed out, or exhausted its resource budget: wasm trap: all fuel consumed by WebAssembly","status":"error"}
+{"reason":"plugin memory growth denied by configured 4194304-byte limit (requested 4849664 bytes)","status":"error"}
+{"reason":"policy plugin trapped, timed out, or exhausted its resource budget: wasm trap: wasm `unreachable` instruction executed","status":"error"}
+{"reason":"policy output exceeds 1024 bytes","status":"error"}
+MoonVCS phases 1–8 tests passed
+Phase 7: environment
+{
+  "schema": 1,
+  "utc": "2026-10-20T12:05:31.822594+00:00",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "logical_cpus": 4,
+  "tools": {
+    "moon": {
+      "exit": 0,
+      "text": "moon 0.1.20261012 (748b63c 2026-10-12) ~/work/_temp/moonvcs-moon/bin/moon\nmoonc v0.10.15+943464bfa (2026-10-12) ~/work/_temp/moonvcs-moon/bin/moonc\nmoonrun 0.1.20261012 (748b63c 2026-10-12) ~/work/_temp/moonvcs-moon/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg"
+    },
+    "rustc": {
+      "exit": 0,
+      "text": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+    },
+    "cargo": {
+      "exit": 0,
+      "text": "cargo 1.99.1 (5f94df478 2026-08-27)"
+    },
+    "wasm_tools": {
+      "exit": 0,
+      "text": "wasm-tools 1.262.0"
+    },
+    "wit_bindgen": {
+      "exit": 0,
+      "text": "wit-bindgen-cli 0.63.0"
+    },
+    "cc": {
+      "exit": 0,
+      "text": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    },
+    "python": {
+      "exit": 0,
+      "text": "Python 3.12.3"
+    }
+  },
+  "files": {
+    "host/Cargo.lock": "2400b9925b2f223fa1efe0b5d44ea665a19df07f27aee013eff301af0f146caf",
+    "wit/policy.wit": "4b3ff703ed44a679ea8b689e0977867505ec602d159d2f57f9c4773bccc8725d",
+    "vcs/moon.mod": "71d31f217ef23658672faa472487fd3477a4067712540c766c4bd7589789f11a",
+    "target/components/adversarial-fixture.component.wasm": "d12bcf043b33e1ec15a0c98630c7819761d6ff8bad18d0bab8b02a1ff36698c6",
+    "target/components/hello-policy.component.wasm": "8b6eb6b86ee378033088a252d856e6e902f5ff256c0d6dd7e608fca9c2fe6d4a",
+    "target/components/infinite-start.component.wasm": "5f228e12bf342d6f253be2d5deebc1b23a119a681d998ada87913ff66f1a6144",
+    "target/components/invalid-result.component.wasm": "f3393224ed48b72925fd57f6ea5baa70ff6b34af0392d77be41d9ed115935ec6",
+    "target/components/license-check.component.wasm": "444639aeeac8c19b143dc438dc36c27e45f98881d3b9f0e2555c5ce45ff7375a",
+    "target/components/restricted-plugin.component.wasm": "3d83dd0450ceb8a3bd4abf108f1760cc224349916025f2d0689b411f834f0df0",
+    "target/components/secret-scanner.component.wasm": "3743537dad366b6af66d0b36d27eb77f47bee2b4669475e2d4a7b0fca5023cf2"
+  },
+  "dependency_advisory_scan": "not performed: no advisory database was consulted; not a no-CVE claim"
+}
+Phase 7: repeat-smoke
+Repeat receive smoke: 1 of 2
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.1JuxPk/server/.moonvcs
+Initialized trusted server on-receive policy
+Scenario A: safe client commit, server independently accepts
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.1JuxPk/client/.moonvcs
+Policy passed
+Commit created
+Committed 9898072dd4a8dc518518139731dbfb5eacb4207d26ef0bb67432707a83f2c536
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"9898072dd4a8dc518518139731dbfb5eacb4207d26ef0bb67432707a83f2c536","checked_commits":1,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+Scenario B: local scanner rejects harmless simulated secret
+Commit rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario C: standalone bypass program creates unchecked objects without updating client HEAD
+Unscanned candidate 05ec1fb4f0d64ee0185b3c653b33987d16e702e6b8df555f77144edf14344779
+Push rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario D: two prepared clients use the same old Ref; stale second publish cannot overwrite
+Unscanned candidate 1cc200eca700ec7db6cdac93005cfbab64c1bffd5f4856db092b3a97f3245ddf
+Unscanned candidate d6e5bcc6e2bfa0f490d23c959ce80f637cb943d8a9d19a0122927184df2fb871
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"1cc200eca700ec7db6cdac93005cfbab64c1bffd5f4856db092b3a97f3245ddf","checked_commits":2,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+RefConflict: expected old Ref changed; refresh and retry
+Unscanned candidate 165cc71ea60e885b7e6d7e195b4bc6df509b1a877b804eef9748620b73dab105
+Unscanned candidate 312f490c680e457d9b0b81be558e3e169244173d0ee896f7c8304d133d44b3a4
+Concurrent server processes: exits 0 and 11 (one accept, one conflict)
+commit 165cc71ea60e885b7e6d7e195b4bc6df509b1a877b804eef9748620b73dab105
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-a
+
+commit 1cc200eca700ec7db6cdac93005cfbab64c1bffd5f4856db092b3a97f3245ddf
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-a
+
+commit 9898072dd4a8dc518518139731dbfb5eacb4207d26ef0bb67432707a83f2c536
+Author: MoonVCS User
+Date:   1792497931859
+
+    safe initial
+
+Measured published objects: initial=3 final=7; rejected candidate=05ec1fb4f0d64ee0185b3c653b33987d16e702e6b8df555f77144edf14344779 never published
+MoonVCS phase-6 remote policy receive tests passed
+Repeat receive smoke: 2 of 2
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.prBmAF/server/.moonvcs
+Initialized trusted server on-receive policy
+Scenario A: safe client commit, server independently accepts
+Initialized empty MoonVCS repository in /tmp/moonvcs-receive-e2e.prBmAF/client/.moonvcs
+Policy passed
+Commit created
+Committed 0f2dfbac0ecc3940c96c71c1a54a17dcec79117d5debdc995265a3b06d6c0492
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"0f2dfbac0ecc3940c96c71c1a54a17dcec79117d5debdc995265a3b06d6c0492","checked_commits":1,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+Scenario B: local scanner rejects harmless simulated secret
+Commit rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario C: standalone bypass program creates unchecked objects without updating client HEAD
+Unscanned candidate 14cd81c1459ae84331f82eca9780ced4d390bf650fd3c9f505f57883c2394020
+Push rejected
+Policy: secret-scanner
+File: config.env | Rule: secret.api-key | Severity: error
+Reason: suspicious credential
+Scenario D: two prepared clients use the same old Ref; stale second publish cannot overwrite
+Unscanned candidate 0353f2bbdda65f08b6554f40ecec401ffe0a6e489977db74dac319e15338d18d
+Unscanned candidate 5b9c3a75cbca2d34a282a21d30df38cde7856d31778ffe06ebc54e2d18deec4d
+Push accepted
+{"status":"accepted","ref":"refs/heads/main","target":"0353f2bbdda65f08b6554f40ecec401ffe0a6e489977db74dac319e15338d18d","checked_commits":2,"promoted_objects":3,"policy_revision":"sha256:4e077f12db70c43886a758db3efa2104e517d5197db305e1559f50df382ed215"}
+RefConflict: expected old Ref changed; refresh and retry
+Unscanned candidate 4729ff7401d8ee7224e397b4e0a080d7f7ae55a91342d6dac8dcf7d6cac9d42d
+Unscanned candidate dd0ffd7deaf4c70f715da22bdd65722e70ee3c5435d15b823ba6df4d3a0e1998
+Concurrent server processes: exits 11 and 0 (one accept, one conflict)
+commit dd0ffd7deaf4c70f715da22bdd65722e70ee3c5435d15b823ba6df4d3a0e1998
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-b
+
+commit 0353f2bbdda65f08b6554f40ecec401ffe0a6e489977db74dac319e15338d18d
+Author: Untrusted bypass fixture
+Date:   1792000000000
+
+    unchecked safe-a
+
+commit 0f2dfbac0ecc3940c96c71c1a54a17dcec79117d5debdc995265a3b06d6c0492
+Author: MoonVCS User
+Date:   1792497944488
+
+    safe initial
+
+Measured published objects: initial=3 final=9; rejected candidate=14cd81c1459ae84331f82eca9780ced4d390bf650fd3c9f505f57883c2394020 never published
+MoonVCS phase-6 remote policy receive tests passed
+Phase-7 requested verification stages passed. Reports: /home/runner/work/MoonBitCVS/MoonBitCVS/target/reports

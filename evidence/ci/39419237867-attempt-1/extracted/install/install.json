@@ -1,0 +1,29 @@
+{
+  "status": "installed_not_tested",
+  "version": "0.10.15+943464bfa",
+  "directory": "/home/runner/work/_temp/published-consumer-tools",
+  "archives": {
+    "moon": {
+      "kind": "official-version-url",
+      "url": "https://cli.moonbitlang.com/binaries/0.10.15%2B943464bfa/moonbit-linux-x86_64.tar.gz",
+      "sha256": "24b93a5409d2a4fb8e3d1b84b473f27b63476cef4418094764df96cb26b03c09",
+      "bytes": 100080035,
+      "pinned_checksum_checked": true,
+      "publisher_signature_verified": false
+    },
+    "core": {
+      "kind": "official-version-url",
+      "url": "https://cli.moonbitlang.com/cores/core-0.10.15%2B943464bfa.tar.gz",
+      "sha256": "96d30f4dbcc6a9e1736ef26fbdd0e8fb0e97cb01d50e55d2a0072208b8061ae5",
+      "bytes": 1880333,
+      "pinned_checksum_checked": true,
+      "publisher_signature_verified": false
+    }
+  },
+  "pinned_checksums_checked": true,
+  "publisher_signature_verified": false,
+  "registry_bootstrapped": false,
+  "full_verification_passed": false,
+  "github_actions_verified": false,
+  "cold_install_verified": false
+}

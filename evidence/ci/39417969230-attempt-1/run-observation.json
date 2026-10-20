@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "source": "Semantic fields observed on official public GitHub HTML; not a REST API response.",
+  "observed_utc": "2026-10-20T12:07:01.583542+00:00",
+  "commit": "597e260287f7c9b6937a1bb1fdcd53dbeae5021e",
+  "url": "https://github.com/any07557-wq/MoonBitCVS/actions/runs/39417969230",
+  "attempt": 1,
+  "trigger": "push",
+  "branch": "main",
+  "run": {
+    "id": "39417969230",
+    "name": "MoonVCS CI",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "commit_url": "/any07557-wq/MoonBitCVS/commit/597e260287f7c9b6937a1bb1fdcd53dbeae5021e",
+    "created": "2026-10-20T11:51:37Z",
+    "commit_links": [
+      "597e260287f7c9b6937a1bb1fdcd53dbeae5021e"
+    ],
+    "job_paths": [
+      "/any07557-wq/MoonBitCVS/actions/runs/39417969230/job/118611551585"
+    ],
+    "official_artifact_digests": [
+      "sha256:e51f354ed97692704b87ce55d4853c8e7b8f5ec20c4c2a27fda479d3f35edf64"
+    ],
+    "artifact_ids": [
+      "12262777158"
+    ],
+    "suite_ids": [],
+    "artifact_names": [
+      "moonvcs-ci-39417969230-1"
+    ],
+    "jobs": [
+      {
+        "path": "/any07557-wq/MoonBitCVS/actions/runs/39417969230/job/118611551585",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success",
+            "started": "2026-10-20T11:51:45Z",
+            "completed": "2026-10-20T11:51:46Z"
+          },
+          {
+            "name": "Check out source without stored credentials",
+            "conclusion": "success",
+            "started": "2026-10-20T11:51:46Z",
+            "completed": "2026-10-20T11:51:47Z"
+          },
+          {
+            "name": "Install system prerequisites",
+            "conclusion": "success",
+            "started": "2026-10-20T11:51:47Z",
+            "completed": "2026-10-20T11:51:56Z"
+          },
+          {
+            "name": "Install checksum-pinned MoonBit",
+            "conclusion": "success",
+            "started": "2026-10-20T11:51:56Z",
+            "completed": "2026-10-20T11:51:59Z"
+          },
+          {
+            "name": "Install pinned Rust and Wasm tools",
+            "conclusion": "success",
+            "started": "2026-10-20T11:51:59Z",
+            "completed": "2026-10-20T11:57:42Z"
+          },
+          {
+            "name": "Prepare core bundles and Mooncakes registry",
+            "conclusion": "success",
+            "started": "2026-10-20T11:57:42Z",
+            "completed": "2026-10-20T11:57:48Z"
+          },
+          {
+            "name": "Run checks, builds, full tests and repeat smoke",
+            "conclusion": "success",
+            "started": "2026-10-20T11:57:48Z",
+            "completed": "2026-10-20T12:05:57Z"
+          },
+          {
+            "name": "Preserve selected reports, including failures",
+            "conclusion": "success",
+            "started": "2026-10-20T12:05:57Z",
+            "completed": "2026-10-20T12:05:58Z"
+          },
+          {
+            "name": "Post Check out source without stored credentials",
+            "conclusion": "success",
+            "started": "2026-10-20T12:05:58Z",
+            "completed": "2026-10-20T12:05:58Z"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success",
+            "started": "2026-10-20T12:05:58Z",
+            "completed": "2026-10-20T12:05:58Z"
+          }
+        ]
+      }
+    ]
+  }
+}

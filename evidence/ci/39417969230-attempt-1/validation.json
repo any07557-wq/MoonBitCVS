@@ -1,0 +1,52 @@
+{
+  "run_id": 39417969230,
+  "artifact_id": 12262777158,
+  "official_artifact_sha256": "e51f354ed97692704b87ce55d4853c8e7b8f5ec20c4c2a27fda479d3f35edf64",
+  "downloaded_bytes": 34898,
+  "zip_members": 8,
+  "verify_exit": 0,
+  "stages": [
+    {
+      "stage": "regression",
+      "seconds": 463,
+      "exit": 0,
+      "log": "phase7-regression.log"
+    },
+    {
+      "stage": "environment",
+      "seconds": 0,
+      "exit": 0,
+      "log": "phase7-environment.log"
+    },
+    {
+      "stage": "repeat-smoke",
+      "seconds": 26,
+      "exit": 0,
+      "log": "phase7-repeat-smoke.log"
+    }
+  ],
+  "test_counts": {
+    "native": 86,
+    "rust": 26,
+    "wasm": 19,
+    "python": 133,
+    "total": 264
+  },
+  "python_suites": [
+    9,
+    6,
+    4,
+    7,
+    1,
+    7,
+    20,
+    40,
+    19,
+    6,
+    14
+  ],
+  "double_plugin_build_outputs_deduplicated": true,
+  "benchmark_or_clean_build_requested": false,
+  "download_service": "nightly.link; bytes matched independent official GitHub digest before parsing",
+  "credential_accessed": false
+}

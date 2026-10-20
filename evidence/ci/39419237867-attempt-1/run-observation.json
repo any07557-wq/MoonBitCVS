@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "source": "Semantic fields observed on official public GitHub HTML; not a REST API response.",
+  "observed_utc": "2026-10-20T12:07:01.583542+00:00",
+  "commit": "597e260287f7c9b6937a1bb1fdcd53dbeae5021e",
+  "url": "https://github.com/any07557-wq/MoonBitCVS/actions/runs/39419237867",
+  "attempt": 1,
+  "trigger": "workflow_dispatch",
+  "branch": "main",
+  "run": {
+    "id": "39419237867",
+    "name": "Published Mooncakes consumer (0.1.0)",
+    "state": {
+      "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+      "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+    },
+    "commit_url": null,
+    "created": "2026-10-20T12:02:09Z",
+    "commit_links": [
+      "597e260287f7c9b6937a1bb1fdcd53dbeae5021e"
+    ],
+    "job_paths": [
+      "/any07557-wq/MoonBitCVS/actions/runs/39419237867/job/118615758685"
+    ],
+    "official_artifact_digests": [
+      "sha256:36d7d4404328f91d596b11ad1deea4c7edeb2321777b84d6deec76497f3043f6"
+    ],
+    "artifact_ids": [
+      "12262552042"
+    ],
+    "suite_ids": [],
+    "artifact_names": [
+      "mooncakes-consumer-0.1.0-39419237867-1"
+    ],
+    "jobs": [
+      {
+        "path": "/any07557-wq/MoonBitCVS/actions/runs/39419237867/job/118615758685",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success",
+            "started": "2026-10-20T12:02:13Z",
+            "completed": "2026-10-20T12:02:14Z"
+          },
+          {
+            "name": "Check out verification tools without stored credentials",
+            "conclusion": "success",
+            "started": "2026-10-20T12:02:14Z",
+            "completed": "2026-10-20T12:02:15Z"
+          },
+          {
+            "name": "Install native consumer prerequisites",
+            "conclusion": "success",
+            "started": "2026-10-20T12:02:15Z",
+            "completed": "2026-10-20T12:02:23Z"
+          },
+          {
+            "name": "Install the existing checksum-pinned MoonBit compiler and core",
+            "conclusion": "success",
+            "started": "2026-10-20T12:02:23Z",
+            "completed": "2026-10-20T12:02:27Z"
+          },
+          {
+            "name": "Download fixed registry package and run consumer tests and README",
+            "conclusion": "success",
+            "started": "2026-10-20T12:02:27Z",
+            "completed": "2026-10-20T12:02:36Z"
+          },
+          {
+            "name": "Preserve selected consumer reports on success or failure",
+            "conclusion": "success",
+            "started": "2026-10-20T12:02:36Z",
+            "completed": "2026-10-20T12:02:37Z"
+          },
+          {
+            "name": "Post Check out verification tools without stored credentials",
+            "conclusion": "success",
+            "started": "2026-10-20T12:02:37Z",
+            "completed": "2026-10-20T12:02:37Z"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success",
+            "started": "2026-10-20T12:02:37Z",
+            "completed": "2026-10-20T12:02:38Z"
+          }
+        ]
+      }
+    ]
+  }
+}

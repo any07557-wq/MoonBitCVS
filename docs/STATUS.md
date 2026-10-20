@@ -1,5 +1,19 @@
 # MoonVCS Status
 
+Latest remote evidence: full [CI #4](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39417969230)
+and [published-consumer CI](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39419237867)
+both completed successfully on exact implementation commit `597e260287f7c9b6937a1bb1fdcd53dbeae5021e`.
+The former passed 264 unique tests and three verify stages; the latter independently
+downloaded fixed public 0.1.0 into an empty registry and passed 2 tests + README.
+Both original ZIPs, official-page semantic metadata, digests and independent checks
+are now durable under `evidence/ci/`, not only ignored target reports.
+The new documentation/evidence freeze has its own clean commit and package-side
+reproduction result; never rebind the implementation CI to that later commit.
+The `ec287d1` package remains historical and unchanged. Personal proposal/official
+submission are still maintainer tasks; a [worksheet](PROPOSAL_WORKSHEET.md) is provided.
+
+## Historical local and CI milestones
+
 Local follow-up: commit `4527af5` rejects hard-linked evidence/manifests and passed
 250 tests in a separate rebuild; the `ec287d1` delivery remains immutable.
 The next independent change automates fixed public Mooncakes 0.1.0 consumption,
@@ -11,7 +25,7 @@ from truncated Wasmtime/Cranelift build archives and package-scoped cache cleanu
 the resumed full 264-test entry passed with source unchanged; 173 executable/config
 files match the worktree. This reused the same source/build directory with a
 physical-host-disk guard, not a new cold install. See [consumer validation](PUBLISHED_CONSUMER.md).
-No new public Actions run, push, publication or new final delivery is implied.
+That earlier local acceptance did not itself imply a public Actions result or new final delivery.
 
 Verified implementation CI: run [#3](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39378888384)
 on exact commit `b361ed475dc0a6699d7116c405f0a79051a59f9a` passed 245 unique tests

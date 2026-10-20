@@ -53,7 +53,20 @@ python3 scripts/verify-published-consumer.py --moon /actual/toolchain/bin/moon \
 [GitHub 手动运行文档](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)。
 不需要仓库 secrets。checkout/upload-artifact 均固定完整 SHA，contents 权限只读。
 成功/失败都上传选定的 JSON/log，保留 14 天；不上传 registry、凭据、全部工作区或工具。
-请及时独立检查并归档附件；本轮没有推送或远程触发，配置/本机通过不代表该 workflow 在 GitHub 已通过。
+请及时独立检查并归档附件；配置/本机通过不代表该 workflow 在 GitHub 已通过。
+接入后的真实手动运行现已成功，见下节；本机验收记录与实际远端结果不混用。
+
+## 实际远端消费验收与持久归档
+
+[运行 39419237867](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39419237867)
+由维护者手动触发，在 `597e260` 上 completed / success。
+空 registry、匿名下载固定 0.1.0，八条命令全部退出 0，2 项测试与 README 通过；
+原 ZIP 为 9,416 字节，SHA-256 为
+`36d7d4404328f91d596b11ad1deea4c7edeb2321777b84d6deec76497f3043f6`，匹配 GitHub 官方页面。
+21 份报告及元数据/核验/隐私检查已存入
+[evidence/ci/39419237867-attempt-1/](../evidence/ci/39419237867-attempt-1/)，
+不依赖 target/reports 或 GitHub 14 天附件保留期；获取路径与限制见 [CI 验证记录](CI_VALIDATION.md)。
+这是已发布 native 核心库消费证明；完整源码的 264 项由 CI #4 另行报告。
 
 ## 无网络脚本回归与真实公开包结果分开
 
@@ -61,7 +74,7 @@ python3 scripts/verify-published-consumer.py --moon /actual/toolchain/bin/moon \
 覆盖空缓存编排、命令失败、CLI 非零、摘要/安装差异、错误计数/输出、超时、目录保护、匿名要求、
 模块声明防漂移与手动 CI 边界。它们接入 `scripts/test.sh`，但不证明公开 registry 可访问或真实库可编译。
 
-## 2026-10-20 恢复后的真实验收
+## 历史：2026-10-20 恢复后的本机验收
 
 WSL 磁盘空间故障恢复后，先核对 HEAD 仍为 `4527af5`、9 次提交，未提交代码及原冻结包保持不变。
 中断前完整回归只有 `running` 报告与截断日志，不能算通过；当时 consumer 的成功终端记录仍在，
@@ -117,5 +130,6 @@ environment/regression 均退出 0：**264 项通过 = native 86 + Rust 26 + Was
 本轮实测最低 **14,848,331,776 字节（约 13.83 GiB）**，未触发停止；不能用 WSL 虚拟盘显示的
 数百 GiB 空闲代替 Windows 宿主盘剩余空间。旧最终交付外层包及内部清单再次核对通过。
 
-本轮未推送、远程触发工作流或重新发布；旧 `ec287d1` 包保留不变。
-新的源码/证据统一冻结及解包交付验收仍需以后单独执行，不能把中断前的验证包称为最终参赛包。
+上述本机验收当时未推送或远程触发；后续同步及手动工作流结果由前节独立记录，没有重新发布 0.1.0。
+旧 `ec287d1` 包保留不变。新版统一冻结按 [契约](FINAL_DELIVERY.md) 执行，
+真实通过与否以新包旁报告为准，不能把中断前验证包称为新的最终参赛包。

@@ -17,8 +17,9 @@ switch 要求 index/跟踪文件干净，无未跟踪碰撞，且目标对象已
 [竞品差异](docs/COMPARISON.md) · [安全边界](SECURITY.md) · [路线图](ROADMAP.md)
 
 [GitHub Actions 配置](.github/workflows/ci.yml)已接入固定工具、构建和完整验证，说明见 [CI.md](docs/CI.md)。
-GitHub [运行 #3](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39378888384) 对提交 `b361ed4` 实际成功，
-245 项及重复演示通过；三轮附件分别校验归档，见 [CI 验证记录](docs/CI_VALIDATION.md)。
+GitHub [完整 CI #4](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39417969230) 对提交 `597e260` 实际成功，
+264 项及重复演示通过；[独立消费工作流](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39419237867)
+另有 2 项与 README 通过。两份原始附件、元数据与核验结果均已持久归档，见 [CI 验证记录](docs/CI_VALIDATION.md)。
 成功只绑定各自被测提交，不替代后续修改或新 rootfs 冷安装验收。
 
 本地交付包与验包方式见 [SUBMISSION.md](docs/SUBMISSION.md)，最终工程冻结与包旁报告契约见
@@ -30,8 +31,8 @@ Mooncakes 已发布 [any07557-wq/moonvcs@0.1.0](https://mooncakes.io/docs/any075
 Mooncakes 发布验收与后续源码同步/CI 分开记录，不把库模块描述成完整 CLI 发行包。
 现可用 [独立消费脚本及手动 CI](docs/PUBLISHED_CONSUMER.md) 从空 registry 验证固定 0.1.0；
 其 2 项消费测试和 README 示例不代表当前源码、Host 或插件的完整回归。
-后续源码完整本机回归已通过 264 项，见 [本轮验收](docs/PUBLISHED_CONSUMER.md)；
-它不替代旧 CI 的提交绑定，也未重新冻结或替换 `ec287d1` 最终工程包。
+新版交付覆盖硬链接输入拒绝和公开库消费自动化，按 [冻结契约](docs/FINAL_DELIVERY.md) 从干净提交制作。
+确切包的实际复现结果在包旁记录；旧 `ec287d1` 包保持不变，不用旧包或实现 CI 替代新版验包。
 
 后续工程的实际结果见 [路线图执行记录](docs/ROADMAP_PROGRESS.md)：并发暂存已修复，
 宽 Tree 已取得指令/IO 证据，并新增只读恢复检查；完整掉电恢复和 GC 仍未实现。
@@ -102,7 +103,7 @@ Git Hook 也可以调用沙箱程序；我们没有证明这种组合只能在 M
 | Lazy History | 文件系统 partial clone，只取 HEAD checkout；旧 Commit 按需获取、校验、缓存、离线错误分类 |
 | Remote Policy | 本地文件系统/stdio receive、required policies、Quarantine、图校验和 Ref CAS；经 receive 入口的未扫描候选仍被拒绝，不防同账户直接改服务器文件 |
 | 暂存与恢复检查 | 跨进程 add 事务锁、关键目录同步；recover --check 只读检查锁/临时对象/Quarantine，不自动清理或重放 |
-| 测试 | CI #3 在 b361ed4 上 245 项通过；同实现验证包本机另目录重建亦通过；定稿工程包以其包旁复现报告为准，149 项冷安装仍是历史版本 |
+| 测试 | CI #4 在 597e260 上 264 项通过，独立 registry consumer 另有 2 项与 README 通过；新版包以包旁复现报告为准，149 项冷安装仍是历史版本 |
 
 安全模型和规模上限不是无限的，见下方限制及 [SECURITY.md](SECURITY.md)。
 

@@ -1,0 +1,5 @@
+publication-smoke/registry-consumer@0.0.0 (local /home/runner/work/_temp/published-consumer-acceptance/consumer):
+└─ any07557-wq/moonvcs -> any07557-wq/moonvcs@0.1.0
+   ├─ gmlewis/sha256 -> gmlewis/sha256@0.18.0
+   │  └─ gmlewis/base64 -> gmlewis/base64@0.16.13
+   └─ moonbitlang/async -> moonbitlang/async@0.20.2

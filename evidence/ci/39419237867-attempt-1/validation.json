@@ -1,0 +1,32 @@
+{
+  "run_id": 39419237867,
+  "artifact_id": 12262552042,
+  "official_artifact_sha256": "36d7d4404328f91d596b11ad1deea4c7edeb2321777b84d6deec76497f3043f6",
+  "downloaded_bytes": 9416,
+  "zip_members": 21,
+  "report_status": "passed",
+  "module": "any07557-wq/moonvcs",
+  "version": "0.1.0",
+  "empty_registry": true,
+  "anonymous": true,
+  "consumer_tests": 2,
+  "readme_example": true,
+  "package_sha256": "5006035f75de4f963213a92257bafa3a5d2f751bb117c803c49d9c09f21867d3",
+  "package_bytes": 75212,
+  "installed_files": 33,
+  "stage_exits": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "started_utc": "2026-10-20T12:02:27.956260+00:00",
+  "finished_utc": "2026-10-20T12:02:36.621978+00:00",
+  "current_source_test_count_not_affected": true,
+  "credential_accessed": false,
+  "download_service": "nightly.link; bytes matched independent official GitHub digest before parsing"
+}

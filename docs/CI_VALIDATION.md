@@ -1,6 +1,53 @@
 # CI 验证记录
 
-## 实现基线最新验证：运行 #3 已核验归档（2026-10-20）
+## 最新：597e260 的完整 CI #4 与独立消费验证已持久归档（2026-10-20）
+
+两项远端运行都为 completed / success，官方运行页完整提交均为
+**`597e260287f7c9b6937a1bb1fdcd53dbeae5021e`**；不是沿用本机或旧 CI 的结论。
+维护者完成 main 同步并手动触发消费工作流；本轮只归档，不再次触发、推送或发布。
+
+| 项目 | 完整源码 CI | 公开库独立消费 |
+|---|---|---|
+| 运行 | [MoonVCS CI #4](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39417969230) | [Published Mooncakes consumer](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39419237867) |
+| 触发 | push / main，11:51:37 UTC | workflow_dispatch / main，12:02:09 UTC |
+| 附件 ID | `12262777158` | `12262552042` |
+| 原 ZIP 字节 | 34,898，8 份报告 | 9,416，21 份报告 |
+| ZIP SHA-256 | `e51f354ed97692704b87ce55d4853c8e7b8f5ec20c4c2a27fda479d3f35edf64` | `36d7d4404328f91d596b11ad1deea4c7edeb2321777b84d6deec76497f3043f6` |
+| 实际结果 | **264 项**：86 native + 26 Rust + 19 Wasm + 133 Python | 空 registry、匿名下载固定 **0.1.0**；**2 项测试 + README** 通过 |
+| 范围 | 当前 Core、Host、Wasm、CLI、审计与演示 | 已发布 native 核心库；不等于完整工程或预编译 CLI 安装 |
+
+完整 CI 的 regression / environment / repeat-smoke 均退出 0，分别记录 463 / 0 / 26 秒；
+11 组 Python 为 `9,6,4,7,1,7,20,40,19,6,14`。重复构建的第二批 19 项 Wasm 不重复计数，
+双轮四场景与额外 receive smoke 另列。消费的 2 项不并入 264。
+消费报告的实际八条命令均退出 0，下载 75,212 字节、包摘要与冻结 0.1.0 相同，33 个安装文件一致。
+环境报告的 Cargo.lock/WIT/moon.mod 摘要已与 `597e260` Git blob 核对；消费脚本摘要也匹配该提交。
+
+原始 ZIP、原字节解包报告、官方网页语义元数据、摘要、原核验结果及新的隐私检查分别保存于：
+
+- [完整 CI 归档](../evidence/ci/39417969230-attempt-1/)
+- [消费验证归档](../evidence/ci/39419237867-attempt-1/)
+
+GitHub 元数据来自官方公开 HTML 的运行/附件字段，不伪装成 REST API 原响应。
+原附件通过公开 nightly.link 转发下载，先匹配独立观察的 GitHub 摘要再使用；
+本次持久归档直接复制已经保留的原 ZIP，不重打包、不重复下载、不保存临时签名 URL。
+新扫描覆盖全部 29 份文本成员及旁文件，未发现规则覆盖的凭据、私钥、签名 URL 或完整模拟密钥。
+首次入包预检拒绝消费附件原始目录里的 `target` 路径组件；没有放宽白名单，
+派生解包文件改存 `extracted/install/`、`extracted/consumer/`，原成员路径映射保存在 artifact-metadata.json。
+原 ZIP 和所有成员字节不变，旧派生目录保留于本轮 target 报告目录，不作为成功入包证据。
+保留 GitHub runner、Linux 自有工作区/临时路径及工具/对象摘要；不是完整 DLP 或作者签名验证。
+工作流配置保留 14 天，未取得精确 expires_at；现在证据已不依赖 target/reports 或附件保留期。
+
+```bash
+(cd evidence/ci/39417969230-attempt-1 && sha256sum -c SHA256SUMS)
+(cd evidence/ci/39419237867-attempt-1 && sha256sum -c SHA256SUMS)
+```
+
+安装器的 `installed_not_tested`、consumer 自身的 `github_actions_verified: false` 等原值保留：
+脚本不独立认证 GitHub 状态，远端完成依据是官方运行记录与真实后续测试报告，不能篡改原报告来表示通过。
+本次归档/冻结提交不是 `597e260`，其完整源码/文档/证据包是否复现成功，必须另看包旁新报告。
+旧 `ec287d1` 包保留；没有新 rootfs、性能基准、重复 Mooncakes 发布或正式赛事提交。
+
+## 历史：运行 #3 已核验归档（2026-10-20）
 
 [MoonVCS CI #3 / attempt 1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39378888384)
 在完整提交 **`b361ed475dc0a6699d7116c405f0a79051a59f9a`** 上实际成功，覆盖本轮打包证据遗漏修复。

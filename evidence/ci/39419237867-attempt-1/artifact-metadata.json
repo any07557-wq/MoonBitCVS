@@ -1,0 +1,36 @@
+{
+  "source": "Independent official GitHub run HTML artifact row.",
+  "id": 12262552042,
+  "name": "mooncakes-consumer-0.1.0-39419237867-1",
+  "github_digest": "sha256:36d7d4404328f91d596b11ad1deea4c7edeb2321777b84d6deec76497f3043f6",
+  "downloaded_bytes": 9416,
+  "zip_members": 21,
+  "retention_days_from_workflow": 14,
+  "exact_expires_at_obtained": false,
+  "derived_extraction": {
+    "reason": "Normalize report storage paths to avoid forbidden target/build-state path components; original ZIP and member bytes unchanged.",
+    "member_mapping": {
+      "MoonBitCVS/MoonBitCVS/target/published-consumer/acceptance.log": "extracted/install/acceptance.log",
+      "MoonBitCVS/MoonBitCVS/target/published-consumer/core-bundle.log": "extracted/install/core-bundle.log",
+      "MoonBitCVS/MoonBitCVS/target/published-consumer/install.json": "extracted/install/install.json",
+      "MoonBitCVS/MoonBitCVS/target/published-consumer/install.log": "extracted/install/install.log",
+      "_temp/published-consumer-acceptance/anonymous.stderr.log": "extracted/consumer/anonymous.stderr.log",
+      "_temp/published-consumer-acceptance/anonymous.stdout.log": "extracted/consumer/anonymous.stdout.log",
+      "_temp/published-consumer-acceptance/cc-version.stderr.log": "extracted/consumer/cc-version.stderr.log",
+      "_temp/published-consumer-acceptance/cc-version.stdout.log": "extracted/consumer/cc-version.stdout.log",
+      "_temp/published-consumer-acceptance/check.stderr.log": "extracted/consumer/check.stderr.log",
+      "_temp/published-consumer-acceptance/check.stdout.log": "extracted/consumer/check.stdout.log",
+      "_temp/published-consumer-acceptance/moon-version.stderr.log": "extracted/consumer/moon-version.stderr.log",
+      "_temp/published-consumer-acceptance/moon-version.stdout.log": "extracted/consumer/moon-version.stdout.log",
+      "_temp/published-consumer-acceptance/readme.stderr.log": "extracted/consumer/readme.stderr.log",
+      "_temp/published-consumer-acceptance/readme.stdout.log": "extracted/consumer/readme.stdout.log",
+      "_temp/published-consumer-acceptance/test.stderr.log": "extracted/consumer/test.stderr.log",
+      "_temp/published-consumer-acceptance/report.json": "extracted/consumer/report.json",
+      "_temp/published-consumer-acceptance/test.stdout.log": "extracted/consumer/test.stdout.log",
+      "_temp/published-consumer-acceptance/tree.stderr.log": "extracted/consumer/tree.stderr.log",
+      "_temp/published-consumer-acceptance/tree.stdout.log": "extracted/consumer/tree.stdout.log",
+      "_temp/published-consumer-acceptance/update.stderr.log": "extracted/consumer/update.stderr.log",
+      "_temp/published-consumer-acceptance/update.stdout.log": "extracted/consumer/update.stdout.log"
+    }
+  }
+}

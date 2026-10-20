@@ -1,8 +1,8 @@
 # GitHub Actions：检查、构建与完整验证
 
 配置：[.github/workflows/ci.yml](../.github/workflows/ci.yml)，名称 MoonVCS CI。
-实现基线运行 #3 在 `b361ed4` 上实际成功，245 项和重复演示通过，新附件已独立核对归档。
-它覆盖打包修复，不覆盖后续定稿文档提交；摘要、下载路径和命令记录见 [CI_VALIDATION.md](CI_VALIDATION.md)。
+实现基线运行 #4 在 `597e260` 上实际成功，264 项和重复演示通过；独立消费工作流另有 2 项及 README 通过。
+两份新附件已独立核对并持久归档。它们不覆盖后续归档/冻结文档提交；摘要、范围和命令见 [CI_VALIDATION.md](CI_VALIDATION.md)。
 **配置存在不等于 GitHub 已通过。** 接入时按维护者要求仅本地提交，不推送；
 后续已核对运行 #1 为 success，并将维护者下载的原始附件归档：ZIP 摘要匹配，237 项通过，三阶段退出码均为 0。
 实际运行链接、提交、到期时间及历史本地结果见 [CI_VALIDATION.md](CI_VALIDATION.md)。
@@ -18,7 +18,7 @@
 - 运行现有 scripts/verify.sh：regression（scripts/test.sh，含 fmt/check/build）、environment、
   repeat-smoke（两次 receive）；完整测试已包含双轮四场景演示。CI 接入时为 237 项；
   后续打包修复增加 8 项，CI #3 入口为 245，不能改写 #2 的 237 项被测结果。
-  再后续硬链接修复 +5、公开包消费脚本防护 +14，当前源码入口 264；尚无覆盖这些新改动的公开运行。
+  再后续硬链接修复 +5、公开包消费脚本防护 +14，当前源码入口 264，CI #4 已实际覆盖这些改动。
 
 依赖服务、固定归档或 registry 不可用会失败，不通过删 pin、替换版本或跳过测试使状态变绿。
 第一版不启用 CI 缓存，避免用缓存命中掩盖准备步骤；这不是完全锁定 OS/系统包的可重现镜像。
@@ -78,7 +78,7 @@ verify.sh 会写入 target/reports/phase7-*；保留旧验收的工作区应在�
 独立公开库验收另有仅 `workflow_dispatch` 的
 [published-consumer.yml](../.github/workflows/published-consumer.yml)。它从空 registry 验证已发布
 0.1.0 的 2 项 consumer 测试及 README，不构建当前 Host/插件、不代替上述完整源码回归。
-本机验证不等于手动 workflow 已在 GitHub 成功，见 [范围与操作步骤](PUBLISHED_CONSUMER.md)。
+本机验证不等于远端通过；此次手动 workflow 的成功另有实际运行与附件证明，见 [范围与操作步骤](PUBLISHED_CONSUMER.md)。
 
 安装器可使用已独立保留的归档做本地验证：
 

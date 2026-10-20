@@ -1,0 +1,11 @@
+{
+  "source_archive_copied_from": "target/reports/remote-ci-597e260.8fMwlc/moonvcs-ci-39417969230-1.zip",
+  "original_zip_repacked": false,
+  "original_archive_sha256": "e51f354ed97692704b87ce55d4853c8e7b8f5ec20c4c2a27fda479d3f35edf64",
+  "service": "nightly.link public redirect; not GitHub-operated.",
+  "url": "https://nightly.link/any07557-wq/MoonBitCVS/actions/runs/39417969230/moonvcs-ci-39417969230-1.zip",
+  "download_http_status_previously_observed": 200,
+  "github_digest_matched_before_parsing": true,
+  "credentials_accessed_or_temporary_signed_urls_saved": false,
+  "this_archive_step_used_retained_original_bytes_not_a_new_download": true
+}

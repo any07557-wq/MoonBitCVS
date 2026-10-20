@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "utc": "2026-10-20T12:05:31.822594+00:00",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "logical_cpus": 4,
+  "tools": {
+    "moon": {
+      "exit": 0,
+      "text": "moon 0.1.20261012 (748b63c 2026-10-12) ~/work/_temp/moonvcs-moon/bin/moon\nmoonc v0.10.15+943464bfa (2026-10-12) ~/work/_temp/moonvcs-moon/bin/moonc\nmoonrun 0.1.20261012 (748b63c 2026-10-12) ~/work/_temp/moonvcs-moon/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg"
+    },
+    "rustc": {
+      "exit": 0,
+      "text": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+    },
+    "cargo": {
+      "exit": 0,
+      "text": "cargo 1.99.1 (5f94df478 2026-08-27)"
+    },
+    "wasm_tools": {
+      "exit": 0,
+      "text": "wasm-tools 1.262.0"
+    },
+    "wit_bindgen": {
+      "exit": 0,
+      "text": "wit-bindgen-cli 0.63.0"
+    },
+    "cc": {
+      "exit": 0,
+      "text": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    },
+    "python": {
+      "exit": 0,
+      "text": "Python 3.12.3"
+    }
+  },
+  "files": {
+    "host/Cargo.lock": "2400b9925b2f223fa1efe0b5d44ea665a19df07f27aee013eff301af0f146caf",
+    "wit/policy.wit": "4b3ff703ed44a679ea8b689e0977867505ec602d159d2f57f9c4773bccc8725d",
+    "vcs/moon.mod": "71d31f217ef23658672faa472487fd3477a4067712540c766c4bd7589789f11a",
+    "target/components/adversarial-fixture.component.wasm": "d12bcf043b33e1ec15a0c98630c7819761d6ff8bad18d0bab8b02a1ff36698c6",
+    "target/components/hello-policy.component.wasm": "8b6eb6b86ee378033088a252d856e6e902f5ff256c0d6dd7e608fca9c2fe6d4a",
+    "target/components/infinite-start.component.wasm": "5f228e12bf342d6f253be2d5deebc1b23a119a681d998ada87913ff66f1a6144",
+    "target/components/invalid-result.component.wasm": "f3393224ed48b72925fd57f6ea5baa70ff6b34af0392d77be41d9ed115935ec6",
+    "target/components/license-check.component.wasm": "444639aeeac8c19b143dc438dc36c27e45f98881d3b9f0e2555c5ce45ff7375a",
+    "target/components/restricted-plugin.component.wasm": "3d83dd0450ceb8a3bd4abf108f1760cc224349916025f2d0689b411f834f0df0",
+    "target/components/secret-scanner.component.wasm": "3743537dad366b6af66d0b36d27eb77f47bee2b4669475e2d4a7b0fca5023cf2"
+  },
+  "dependency_advisory_scan": "not performed: no advisory database was consulted; not a no-CVE claim"
+}

@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "exit": 0,
+  "scope": "published_native_library_only",
+  "module": "any07557-wq/moonvcs",
+  "version": "0.1.0",
+  "python_version": "3.12.3",
+  "registry_url": "https://download.mooncakes.io/user/any07557-wq/moonvcs/0.1.0.zip",
+  "expected_package_sha256": "5006035f75de4f963213a92257bafa3a5d2f751bb117c803c49d9c09f21867d3",
+  "stages": [
+    {
+      "name": "moon-version",
+      "argv": [
+        "/home/runner/work/_temp/published-consumer-tools/bin/moon",
+        "version",
+        "--all"
+      ],
+      "cwd": "/home/runner/work/_temp/published-consumer-acceptance",
+      "exit": 0,
+      "stdout": "moon-version.stdout.log",
+      "stderr": "moon-version.stderr.log",
+      "seconds": 0.01616758400000151
+    },
+    {
+      "name": "cc-version",
+      "argv": [
+        "cc",
+        "--version"
+      ],
+      "cwd": "/home/runner/work/_temp/published-consumer-acceptance",
+      "exit": 0,
+      "stdout": "cc-version.stdout.log",
+      "stderr": "cc-version.stderr.log",
+      "seconds": 0.00857010100000366
+    },
+    {
+      "name": "anonymous",
+      "argv": [
+        "/home/runner/work/_temp/published-consumer-tools/bin/moon",
+        "whoami"
+      ],
+      "cwd": "/home/runner/work/_temp/published-consumer-acceptance",
+      "exit": 0,
+      "stdout": "anonymous.stdout.log",
+      "stderr": "anonymous.stderr.log",
+      "seconds": 0.00379180400000223
+    },
+    {
+      "name": "update",
+      "argv": [
+        "/home/runner/work/_temp/published-consumer-tools/bin/moon",
+        "-C",
+        "/home/runner/work/_temp/published-consumer-acceptance/consumer",
+        "update"
+      ],
+      "cwd": "/home/runner/work/_temp/published-consumer-acceptance",
+      "exit": 0,
+      "stdout": "update.stdout.log",
+      "stderr": "update.stderr.log",
+      "seconds": 2.0193095740000047
+    },
+    {
+      "name": "check",
+      "argv": [
+        "/home/runner/work/_temp/published-consumer-tools/bin/moon",
+        "-C",
+        "/home/runner/work/_temp/published-consumer-acceptance/consumer",
+        "check",
+        "--target",
+        "native",
+        "--deny-warn"
+      ],
+      "cwd": "/home/runner/work/_temp/published-consumer-acceptance",
+      "exit": 0,
+      "stdout": "check.stdout.log",
+      "stderr": "check.stderr.log",
+      "seconds": 2.1212080479999997
+    },
+    {
+      "name": "tree",
+      "argv": [
+        "/home/runner/work/_temp/published-consumer-tools/bin/moon",
+        "-C",
+        "/home/runner/work/_temp/published-consumer-acceptance/consumer",
+        "tree"
+      ],
+      "cwd": "/home/runner/work/_temp/published-consumer-acceptance",
+      "exit": 0,
+      "stdout": "tree.stdout.log",
+      "stderr": "tree.stderr.log",
+      "seconds": 0.007732044999997356
+    },
+    {
+      "name": "test",
+      "argv": [
+        "/home/runner/work/_temp/published-consumer-tools/bin/moon",
+        "-C",
+        "/home/runner/work/_temp/published-consumer-acceptance/consumer",
+        "test",
+        "--target",
+        "native",
+        "--deny-warn",
+        "--frozen"
+      ],
+      "cwd": "/home/runner/work/_temp/published-consumer-acceptance",
+      "exit": 0,
+      "stdout": "test.stdout.log",
+      "stderr": "test.stderr.log",
+      "seconds": 2.3742339490000006
+    },
+    {
+      "name": "readme",
+      "argv": [
+        "/home/runner/work/_temp/published-consumer-tools/bin/moon",
+        "-C",
+        "/home/runner/work/_temp/published-consumer-acceptance/consumer",
+        "run",
+        "cmd/readme",
+        "--target",
+        "native",
+        "--deny-warn",
+        "--frozen"
+      ],
+      "cwd": "/home/runner/work/_temp/published-consumer-acceptance",
+      "exit": 0,
+      "stdout": "readme.stdout.log",
+      "stderr": "readme.stderr.log",
+      "seconds": 1.3200241620000028
+    }
+  ],
+  "started_utc": "2026-10-20T12:02:27.956260+00:00",
+  "current_source_regression_verified": false,
+  "github_actions_verified": false,
+  "cold_os_install_verified": false,
+  "shared_compiler_and_stdlib": true,
+  "moon": "/home/runner/work/_temp/published-consumer-tools/bin/moon",
+  "toolchain_home": "/home/runner/work/_temp/published-consumer-tools",
+  "isolated_moon_home": "/home/runner/work/_temp/published-consumer-acceptance/moon-home",
+  "registry_initially_absent": true,
+  "consumer_inputs": {
+    "moon.mod": "ed063c3fcb8505d492c0274cf857fa37705dbec23124077340ec5980c84d1279",
+    "moon.pkg": "90e28a5ca58b2904a2ed12526e2528e49198f4490d7d9a77db12da78a875ea99",
+    "consumer_test.mbt": "4710551652c61122911493af5f51780459f12854d06088f61fb4126a943d98f0",
+    "cmd/readme/moon.pkg": "f1d18c3794bce4c1d739df25934a1d29f4d8bd17638f274ee24838f2be1457cd",
+    "cmd/readme/main.mbt": "d85efb01a97e1aabe1e8551c831330916f3ff3f603de0c2e4d72b21a0bd6e886"
+  },
+  "verifier_sha256": "eb4939a1d12ce2a33c8621530ad5688947170010735b5739cad7487760555890",
+  "versions": "moon 0.1.20261012 (748b63c 2026-10-12) ~/work/_temp/published-consumer-tools/bin/moon\nmoonc v0.10.15+943464bfa (2026-10-12) ~/work/_temp/published-consumer-tools/bin/moonc\nmoonrun 0.1.20261012 (748b63c 2026-10-12) ~/work/_temp/published-consumer-tools/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg\n",
+  "c_compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "anonymous_registry_consumer": true,
+  "package": {
+    "sha256": "5006035f75de4f963213a92257bafa3a5d2f751bb117c803c49d9c09f21867d3",
+    "bytes": 75212,
+    "files": {
+      "policy_integration_wbtest.mbt": "0f4d7ff2e26d894c2fbb4979b803d5a5ed79ce5ebd372376637fa345a0dfd614",
+      "repository.mbt": "43689ba6591ce220b4c80e9de6a21f817a9cc595f1d90b0318a494e45b1952c7",
+      "diff_wbtest.mbt": "4c116edf5c1ce7ba83093badf6066765da56c43a70b08cbcb9ac2bd384ed4b27",
+      "lazy_store.mbt": "16c1557ee4258efa8af71cf24f03054b1ce657f17e57b3a2b182959054a214f0",
+      "core_wbtest.mbt": "211f908144eea02dd556aad759fcf210d5ef84788997dfff398d6d9e01424c15",
+      "clone.mbt": "38385de973486da7fceeb156d6d82370bc93ab353fe0777d62b27672ff464036",
+      "store.mbt": "292fb841b781d108c5e0437b783952cb0c1e3777972acee6fae661d5f6127615",
+      "recovery.mbt": "84da2d2b41c6e6053d0f74edf808e5276a52a4e7ad08be1b5572fb03473a28d7",
+      "policy_engine.mbt": "fb53cb503cc93a1dd35b3bc56cc34960dd008d18e0685240abb4d6f3e8b85475",
+      "moon.pkg": "6f6d32b0d61b7cced17b22cf12b88297911114346531b68be9c2fca29404a68d",
+      "staging_wbtest.mbt": "36fbaf9ed2b6766841b977fd5a1d81d03dc312fbbdf3db8a384836393ec317f7",
+      "receive_wbtest.mbt": "d743a96c6cb8f5b4073ebe76bc0a17555b12ca78066ad85c2e071286a8dd20ca",
+      "checkout_wbtest.mbt": "a959a9e1199db9691120a7ebc306d53e39e4de8567d3adabfad2e2bf92c0da5f",
+      "model.mbt": "7b568eff43fb1428baf70e411b56ada97ee3d9ddb2ffa24a7a71ca007a5c8a36",
+      "cmd/main/moon.pkg": "002470e760ae9e90b3cdf58618564402fceff3ff76abd060af3f80a5d9d19a08",
+      "cmd/main/main.mbt": "d78e31496f7a176540154551cc2cebfa212df463cddc1571092b1fae2d67780c",
+      "diff.mbt": "fcb568530fea65f7fe7a55e3c13444557b021449ff2822262d767e930bd618e7",
+      "test_helpers_wbtest.mbt": "2e046c225e3dc0f8db755467b1359f3ef6a148d861ae57b8550ace79a1924071",
+      "checkout.mbt": "af22eb891f5827f4f7c4df0d9ff468bc53dd400dab091af21db585d6fbeb171a",
+      "lazy_validation_wbtest.mbt": "4ec21af86b843413fc3a8d651c9850e45527600d18916593d109e1cf65cb1762",
+      "receive.mbt": "2a2c78ae421d22ff609fc4d6d09eb9caa13d54024009de03ca804d515e84bbc1",
+      "security_integration_wbtest.mbt": "f6647962fa4778880e829b5f0687775fbd3477289d41f578a1605a6589d3c864",
+      ".moonignore": "174b5768ebb9ea6897b05212b232a8d31be05434f758b492db4280c8b2e738c9",
+      "boundary_wbtest.mbt": "e7aa72b7370d955886b716459e8fe2357d07a7e0d5af62d83f336c8363b196e6",
+      "audit_wbtest.mbt": "eb09a43025b2393107ce61c676313a631abc080f92bd041e246aae8dd3a2e555",
+      "LICENSE": "c1cd606cf644f507776eaa0ad762a3037d32782f28b3756d4384f483f798f45b",
+      "README.md": "9a45a5601b8b81579af3d990f5ebb2210d1a3732752fc654b3bdb79bc4e6aa87",
+      "moon.mod": "71d31f217ef23658672faa472487fd3477a4067712540c766c4bd7589789f11a",
+      "receive_protocol.mbt": "fd633f0c235f954975999ca5988829fcb86e0e3cab89fd07cbdf21bc985fc0a8",
+      "encoding.mbt": "96e06941cdaa2ee326c115c5efe0d7bd6cb358b29ca3fd06e9270c5eae99b7b0",
+      "lazy_store_wbtest.mbt": "7dc797fb18a136bbba148c3ab790ca56ef6c6a5ff9ffd5824e52b3b143a7b02c",
+      "extensions.mbt": "ae8f5b96b967a8bf9e0f19f8b34ea1fddb31d00c21b61636e795adcfaa7feef8",
+      "cli.mbt": "54303641ec079d095bfa715f6a343daf880e51771834cc8fae086356f12e3f7f"
+    },
+    "registry_cache": "/home/runner/work/_temp/published-consumer-acceptance/moon-home/registry/cache/any07557-wq/moonvcs/0.1.0.zip"
+  },
+  "resolved_dependencies": "publication-smoke/registry-consumer@0.0.0 (local /home/runner/work/_temp/published-consumer-acceptance/consumer):\n\u2514\u2500 any07557-wq/moonvcs -> any07557-wq/moonvcs@0.1.0\n   \u251c\u2500 gmlewis/sha256 -> gmlewis/sha256@0.18.0\n   \u2502  \u2514\u2500 gmlewis/base64 -> gmlewis/base64@0.16.13\n   \u2514\u2500 moonbitlang/async -> moonbitlang/async@0.20.2\n",
+  "consumer_tests_passed": 2,
+  "readme_example_passed": true,
+  "finished_utc": "2026-10-20T12:02:36.621978+00:00"
+}

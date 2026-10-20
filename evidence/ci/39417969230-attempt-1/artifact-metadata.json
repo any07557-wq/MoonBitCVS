@@ -1,0 +1,10 @@
+{
+  "source": "Independent official GitHub run HTML artifact row.",
+  "id": 12262777158,
+  "name": "moonvcs-ci-39417969230-1",
+  "github_digest": "sha256:e51f354ed97692704b87ce55d4853c8e7b8f5ec20c4c2a27fda479d3f35edf64",
+  "downloaded_bytes": 34898,
+  "zip_members": 8,
+  "retention_days_from_workflow": 14,
+  "exact_expires_at_obtained": false
+}

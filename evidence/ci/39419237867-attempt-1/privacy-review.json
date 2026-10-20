@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "checked_utc": "2026-10-20T12:28:35.696558+00:00",
+  "source_zip_members_and_metadata_checked": 25,
+  "rules": [
+    "github-token",
+    "cloud-access-id",
+    "private-key",
+    "authorization-value",
+    "url-credentials",
+    "signed-or-token-url",
+    "jwt",
+    "personal-windows-path",
+    "unredacted-demo-secret"
+  ],
+  "findings": [],
+  "all_extracted_bytes_equal_original_zip_members": true,
+  "reviewed_retained_paths": "GitHub runner, owned Linux workspace and temporary paths; tool/object hashes retained.",
+  "limits": "Rule scan plus contextual review of generated fields; not complete DLP or identity/signature verification."
+}

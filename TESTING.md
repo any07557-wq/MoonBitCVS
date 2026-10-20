@@ -1,7 +1,9 @@
 # 测试、性能与证据
 
-GitHub 实现验证 [CI #3](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39378888384)
-在 `b361ed4` 上 245 项通过，三阶段退出 0；新增附件另行独立核验归档。
+GitHub 实现验证 [CI #4](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39417969230)
+在 `597e260` 上 264 项通过，三阶段退出 0；原附件已单独核验并持久归档。
+该提交的 [公开库消费 CI](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39419237867)
+另有 2 项测试与 README 通过，不并入源码总数。
 证据见 [CI_VALIDATION.md](docs/CI_VALIDATION.md)。随后定稿工程文档不回写到这个 CI 提交，
 最终归档的全部源码/文档是否重建通过以包旁报告为准，见 [冻结契约](docs/FINAL_DELIVERY.md)。
 
@@ -34,7 +36,7 @@ MOONVCS_MOON="$HOME/.moon/bin/moon" ./scripts/test.sh
 | 交付包/复现输入及持久化证据防护 | 19 | tests/submission_audit.py |
 | CI 配置/归档安装防护 | 6 | tests/ci_audit.py |
 | 公开包消费脚本/手动 CI 防护（无网络夹具） | 14 | tests/published_consumer_audit.py |
-| 合计 | 264 | 不含另列 CLI smoke / 演示或真实 registry consumer 的 2 项；CI #3 仍为旧 245 项 |
+| 合计 | 264 | CI #4 实际通过；不含另列 CLI smoke / 演示或真实 registry consumer 的 2 项；CI #3 仍为旧 245 项 |
 
 另外，scripts/test-hackathon.sh 会准备 8 次真实策略提交，并连续运行两轮四个最终场景，
 测试状态不残留、不把第二次运行当首次 clone。它已接入统一入口，但不把这 8 次场景执行加入单元/审计总数。

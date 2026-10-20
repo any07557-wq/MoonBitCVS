@@ -1,0 +1,5 @@
+moon 0.1.20261012 (748b63c 2026-10-12) ~/work/_temp/published-consumer-tools/bin/moon
+moonc v0.10.15+943464bfa (2026-10-12) ~/work/_temp/published-consumer-tools/bin/moonc
+moonrun 0.1.20261012 (748b63c 2026-10-12) ~/work/_temp/published-consumer-tools/bin/moonrun
+
+Feature flags enabled: rr_moon_mod,rr_moon_pkg
