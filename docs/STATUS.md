@@ -1,10 +1,11 @@
 # MoonVCS Status
 
-Latest GitHub CI: run [#2](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39373597127)
-on exact commit `58bade3725f17e71e47ae4eee1d765ed730e762f` passed 237 unique tests
+Verified implementation CI: run [#3](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39378888384)
+on exact commit `b361ed475dc0a6699d7116c405f0a79051a59f9a` passed 245 unique tests
 and all three verify stages. Its new ZIP and reports are independently checked
-and archived in `evidence/ci/39373597127-attempt-1/`. Later packaging changes
-are not covered by that run. See [CI_VALIDATION.md](CI_VALIDATION.md).
+and archived in `evidence/ci/39378888384-attempt-1/`. The later documentation
+freeze is verified separately by its exact package-side reproduction report;
+see [FINAL_DELIVERY.md](FINAL_DELIVERY.md) and [CI_VALIDATION.md](CI_VALIDATION.md).
 
 Mooncakes `any07557-wq/moonvcs@0.1.0` was published on 2026-10-19
 13:19:34 UTC (server 200 / CLI 0). Frozen source commit `d5d8242` passed
@@ -30,7 +31,8 @@ have been checked and preserved locally. This evidence update does not rerun
 tests, push changes or claim a new rootfs acceptance. See [CI.md](CI.md) and
 [CI_VALIDATION.md](CI_VALIDATION.md).
 
-Last full host regression: 237 tests on frozen publication commit `d5d8242`, 2026-10-19.
+Historical host regression: 245 tests on the packaging implementation archive, 2026-10-20.
+Final engineering source/document archives use their own package-side reproduction status.
 Historical branch/switch closeout regression: 225 tests, 2026-10-18 (Asia/Shanghai).
 Branch/switch status: local prototype acceptance passed, not production acceptance.
 The 2026-10-19 delivery entry adds 6 archive/reproduction guards (231 total).

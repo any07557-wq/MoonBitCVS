@@ -1,6 +1,44 @@
 # CI 验证记录
 
-## 最新：运行 #2 与附件已核验归档（2026-10-20）
+## 实现基线最新验证：运行 #3 已核验归档（2026-10-20）
+
+[MoonVCS CI #3 / attempt 1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39378888384)
+在完整提交 **`b361ed475dc0a6699d7116c405f0a79051a59f9a`** 上实际成功，覆盖本轮打包证据遗漏修复。
+远端 main 已通过 git ls-remote 独立核对，触发为 push / main。
+GitHub 公开运行页显示触发时间 2026-10-20 06:10:36 UTC（北京时间 14:10:36），
+总耗时 13 分 42 秒，job 13 分 39 秒，唯一附件 ID `12245371256`。
+
+| 项目 | 实际结果 |
+|---|---|
+| 原始附件 | moonvcs-ci-39378888384-1.zip，33,100 字节（网页显示 32.3 KB） |
+| ZIP SHA-256 | `935d9312b2e6bddfa07262bbd555503d1731cc86ce3f115e8b01b5637a75d030`，与 GitHub 页面独立公布摘要一致 |
+| 完整性 | 8 个 UTF-8 报告，147,613 字节；CRC、路径/类型/预算与成员字节均核对 |
+| 测试 | **245 项通过**：86 native + 26 Rust + 19 Wasm + 114 Python |
+| verify | 06:16:20 UTC 开始；regression 448 秒、environment 0 秒、repeat-smoke 25 秒，全部退出 0 |
+| 演示 | 双轮四场景与额外两轮 receive smoke 均通过，不增加测试计数 |
+| 版本绑定 | 工具查询退出 0；安装归档与锁文件相符；Cargo.lock/WIT/moon.mod 与 b361ed4 的 Git 对象相符 |
+
+10 组 Python suite 分别为 9、6、4、7、1、7、20、40、14、6；重复构建的第二批 19 项 Wasm 不重复计算。
+匿名 REST API 实际仍为 403 限流；公开 job-groups 诊断请求为 400，未作为完成依据。
+最终成功结论来自 GitHub 公开运行页及原始报告，不假装取得完整 API 响应或 job 控制台日志。
+官方匿名附件地址实际 404；沿用 #2 已说明的公开 nightly.link 转发方式，下载后先核对 GitHub 固定摘要，
+通过后才解包使用。没有登录、安装/授权 GitHub App、读取浏览器凭据或保存临时签名跳转 URL。
+该第三方服务不构成发布者身份/签名验证；获取方式、失败尝试、摘要与边界均另存。
+
+证据：[evidence/ci/39378888384-attempt-1/](../evidence/ci/39378888384-attempt-1/)。
+本次独立检查新增全部报告及语义元数据，原始 ZIP 不重打包，解包内容与 ZIP 字节一致。
+规则未发现其覆盖的凭据、签名 URL、私钥或完整模拟密钥；runner/临时路径与工具/对象摘要保留。
+这不是完整 DLP、CVE 审计、新 rootfs 或性能基准；精确附件到期字段未取得，工作流仍配置 14 天保留。
+
+~~~bash
+(cd evidence/ci/39378888384-attempt-1 && sha256sum -c SHA256SUMS)
+~~~
+
+后续工程文档定稿与新证据索引属于另一个冻结提交，不把它标成已经跑过本轮 GitHub CI。
+其最终源码包应按 [FINAL_DELIVERY.md](FINAL_DELIVERY.md) 冻结，并以包旁实际 REPRODUCTION/FINAL_VALIDATION
+记录完整文档与实现的解包重建结果；不要为补写通过结论而改写已冻结文档。
+
+## 历史：运行 #2 与附件已核验归档（2026-10-20）
 
 [MoonVCS CI #2 / attempt 1](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39373597127)
 在提交 **`58bade3725f17e71e47ae4eee1d765ed730e762f`** 上实际成功，触发为 push / main。

@@ -1,8 +1,8 @@
 # GitHub Actions：检查、构建与完整验证
 
 配置：[.github/workflows/ci.yml](../.github/workflows/ci.yml)，名称 MoonVCS CI。
-最新运行 #2 在提交 `58bade3` 实际成功，237 项和重复演示通过，新附件已独立核对归档。
-其范围不包含随后打包修复；实际摘要、下载路径与命令记录见 [CI_VALIDATION.md](CI_VALIDATION.md)。
+实现基线运行 #3 在 `b361ed4` 上实际成功，245 项和重复演示通过，新附件已独立核对归档。
+它覆盖打包修复，不覆盖后续定稿文档提交；摘要、下载路径和命令记录见 [CI_VALIDATION.md](CI_VALIDATION.md)。
 **配置存在不等于 GitHub 已通过。** 接入时按维护者要求仅本地提交，不推送；
 后续已核对运行 #1 为 success，并将维护者下载的原始附件归档：ZIP 摘要匹配，237 项通过，三阶段退出码均为 0。
 实际运行链接、提交、到期时间及历史本地结果见 [CI_VALIDATION.md](CI_VALIDATION.md)。

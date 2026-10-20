@@ -1,8 +1,9 @@
 # 测试、性能与证据
 
-最新 GitHub [CI #2](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39373597127)
-在 `58bade3` 上 237 项通过，三阶段退出 0；本轮只对新附件进行独立核验，未为归档重跑测试。
-证据见 [CI_VALIDATION.md](docs/CI_VALIDATION.md)；不将随后代码修改纳入这个成功结论。
+GitHub 实现验证 [CI #3](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39378888384)
+在 `b361ed4` 上 245 项通过，三阶段退出 0；新增附件另行独立核验归档。
+证据见 [CI_VALIDATION.md](docs/CI_VALIDATION.md)。随后定稿工程文档不回写到这个 CI 提交，
+最终归档的全部源码/文档是否重建通过以包旁报告为准，见 [冻结契约](docs/FINAL_DELIVERY.md)。
 
 ## 一条命令回归
 
@@ -32,7 +33,7 @@ MOONVCS_MOON="$HOME/.moon/bin/moon" ./scripts/test.sh
 | Branch/Switch CLI 保护、故障、帮助与人工恢复演练 | 40 | tests/branch_switch_audit.py |
 | 交付包/复现输入及持久化证据防护 | 14 | tests/submission_audit.py |
 | CI 配置/归档安装防护 | 6 | tests/ci_audit.py |
-| 合计 | 245 | 不含另列 CLI smoke / 演示；后加 8 项不属于 CI #2 |
+| 合计 | 245 | 不含另列 CLI smoke / 演示；后加 8 项已由 CI #3 验证，不属于 CI #2 |
 
 另外，scripts/test-hackathon.sh 会准备 8 次真实策略提交，并连续运行两轮四个最终场景，
 测试状态不残留、不把第二次运行当首次 clone。它已接入统一入口，但不把这 8 次场景执行加到 237 中。

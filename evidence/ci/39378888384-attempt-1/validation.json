@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "status": "verified_and_preserved_locally",
+  "verified_at_utc": "2026-10-20T06:25:34.242388+00:00",
+  "run_id": 39378888384,
+  "run_attempt": 1,
+  "run_url": "https://github.com/any07557-wq/MoonBitCVS/actions/runs/39378888384",
+  "commit": "b361ed475dc0a6699d7116c405f0a79051a59f9a",
+  "github_conclusion": "success",
+  "archive": {
+    "file": "moonvcs-ci-39378888384-1.zip",
+    "artifact_id": 12245371256,
+    "bytes": 33100,
+    "sha256": "935d9312b2e6bddfa07262bbd555503d1731cc86ce3f115e8b01b5637a75d030",
+    "github_public_page_digest_matched": true,
+    "crc_paths_types_and_expansion_checked": true,
+    "report_files": 8,
+    "expanded_bytes": 147613,
+    "extracted_bytes_matched_archive": true
+  },
+  "verification": {
+    "started_utc": "2026-10-20T06:16:20Z",
+    "exit": 0,
+    "stages": [
+      {
+        "stage": "regression",
+        "seconds": 448,
+        "exit": 0,
+        "log": "phase7-regression.log"
+      },
+      {
+        "stage": "environment",
+        "seconds": 0,
+        "exit": 0,
+        "log": "phase7-environment.log"
+      },
+      {
+        "stage": "repeat-smoke",
+        "seconds": 25,
+        "exit": 0,
+        "log": "phase7-repeat-smoke.log"
+      }
+    ],
+    "unique_tests": 245,
+    "native": 86,
+    "rust": 26,
+    "wasm": 19,
+    "python_suite_counts": [
+      9,
+      6,
+      4,
+      7,
+      1,
+      7,
+      20,
+      40,
+      14,
+      6
+    ],
+    "duplicate_wasm_runs_excluded": true,
+    "four_demo_rounds_passed": 2,
+    "extra_receive_smoke_runs_passed": 2,
+    "demos_counted_as_tests": false,
+    "source_digests_matched_run_commit": [
+      "host/Cargo.lock",
+      "wit/policy.wit",
+      "vcs/moon.mod"
+    ],
+    "moon_archive_digests_matched_lock": true,
+    "tool_version_queries_passed": true,
+    "test_execution_repeated_locally_for_archival": false
+  },
+  "limitations": {
+    "full_job_console_logs_saved": false,
+    "raw_rest_run_response_obtained": false,
+    "new_rootfs_acceptance": false,
+    "new_benchmark_run": false,
+    "signature_or_third_party_service_trust_verified": false,
+    "packaging_fix_b361ed4_covered_by_this_ci": true,
+    "later_documentation_freeze_covered_by_this_ci": false,
+    "evidence_committed_or_pushed_as_of_verification": false
+  }
+}

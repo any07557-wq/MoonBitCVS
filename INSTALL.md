@@ -22,9 +22,10 @@
 当前交付入口新增 6 项归档/复现防护，共 231 项；在另一目录解包后使用已安装工具和全局缓存重建，
 仍不等于冷安装。具体包的完整运行结果见包旁 REPRODUCTION.json，方法见 [SUBMISSION.md](docs/SUBMISSION.md)。
 
-公开源码见 [GitHub 仓库](https://github.com/any07557-wq/MoonBit_Program)，尚未发布预编译安装包或容器镜像。
-GitHub Actions 的固定工具准备与边界见 [CI.md](docs/CI.md)；提交 `6d96157` 的运行 #1 已成功，
-237 项报告已校验归档，见 [CI_VALIDATION.md](docs/CI_VALIDATION.md)，不扩大历史 rootfs 验收结论。
+公开源码见 [GitHub 仓库](https://github.com/any07557-wq/MoonBitCVS)，尚未发布预编译安装包或容器镜像。
+GitHub Actions 的固定工具准备与边界见 [CI.md](docs/CI.md)；实现提交 `b361ed4` 的运行 #3 已成功，
+245 项报告已校验归档，旧两轮结果也保留，见 [CI_VALIDATION.md](docs/CI_VALIDATION.md)。
+定稿文档工程包另以包旁完整复现报告放行，不扩大历史 rootfs 验收结论。
 CI 轮在 231 项交付快照基础上增加 6 项防护，当时入口为 237 项；旧归档和冷安装结论不自动扩大。
 后续打包证据遗漏修复再增加 8 项，入口为 245；[其本地解包验证](docs/PACKAGING_EVIDENCE_VALIDATION.md)
 与 CI #2 的 237 项、新 rootfs 安装结论分开，不复用旧报告背书新修改。

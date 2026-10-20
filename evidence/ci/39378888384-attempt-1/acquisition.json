@@ -1,0 +1,26 @@
+{
+  "original_archive_sha256": "935d9312b2e6bddfa07262bbd555503d1731cc86ce3f115e8b01b5637a75d030",
+  "original_zip_repacked": false,
+  "public_github_api_attempt": {
+    "http_status": 403,
+    "reason": "Anonymous API rate limit exceeded."
+  },
+  "official_anonymous_artifact_link_attempt": {
+    "http_status": 404,
+    "cli_exit": 22
+  },
+  "diagnostic_public_job_groups_request": {
+    "http_status": 400,
+    "not_used_as_success_evidence": true
+  },
+  "download": {
+    "service": "nightly.link public artifact redirect; not GitHub-operated.",
+    "url": "https://nightly.link/any07557-wq/MoonBitCVS/suites/106708927945/artifacts/12245371256",
+    "http_status": 200,
+    "cli_exit": 0,
+    "bytes": 33100,
+    "github_page_digest_matched_before_use": true
+  },
+  "login_app_install_or_credentials_accessed": false,
+  "temporary_signed_redirect_urls_not_saved_in_public_archive": true
+}

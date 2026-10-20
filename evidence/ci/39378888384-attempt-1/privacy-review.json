@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "reviewed_at_utc": "2026-10-20T06:25:34.242388+00:00",
+  "new_artifact_review_not_inherited_from_earlier_ci": true,
+  "scope": {
+    "all_utf8_zip_members": 8,
+    "raw_job_console_not_available": true,
+    "extracted_copies_equal_zip": true,
+    "sidecars_semantic_public_metadata_only": true
+  },
+  "findings": {
+    "github_tokens": 0,
+    "cloud_keys": 0,
+    "private_key_blocks": 0,
+    "authorization_values": 0,
+    "credential_assignments": 0,
+    "url_credentials": 0,
+    "signed_url_query": 0,
+    "jwt_literals": 0,
+    "personal_paths": 0,
+    "ssh_credentials_paths": 0,
+    "complete_demo_key": 0
+  },
+  "url_hosts": [
+    "cli.moonbitlang.com"
+  ],
+  "retained_metadata": "Runner and /tmp paths, tool versions, hashes, public repository and harmless diagnostic metadata.",
+  "credentials_tokens_or_browser_state_read": false,
+  "limits": "Pattern/context review is not complete DLP or proof that all sensitive information is absent."
+}

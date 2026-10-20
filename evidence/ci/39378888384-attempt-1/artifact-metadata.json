@@ -1,0 +1,10 @@
+{
+  "source": "Name, ID, approximate size and digest from official public GitHub run HTML.",
+  "id": 12245371256,
+  "name": "moonvcs-ci-39378888384-1",
+  "github_size_display": "32.3 KB",
+  "downloaded_bytes": 33100,
+  "github_digest": "sha256:935d9312b2e6bddfa07262bbd555503d1731cc86ce3f115e8b01b5637a75d030",
+  "retention_days_from_workflow": 14,
+  "exact_expires_at_not_obtained": true
+}
