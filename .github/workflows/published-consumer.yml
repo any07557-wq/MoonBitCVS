@@ -1,0 +1,51 @@
+name: Published Mooncakes consumer (0.1.0)
+
+"on":
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  released-library:
+    name: Registry 0.1.0 / independent native consumer (not source regression)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Check out verification tools without stored credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install native consumer prerequisites
+        run: |
+          mkdir -p target/published-consumer
+          printf 'MOON_HOME=%s\n' "$RUNNER_TEMP/published-consumer-tools" >> "$GITHUB_ENV"
+          printf 'MOONVCS_MOON=%s\n' "$RUNNER_TEMP/published-consumer-tools/bin/moon" >> "$GITHUB_ENV"
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends build-essential ca-certificates python3
+
+      - name: Install the existing checksum-pinned MoonBit compiler and core
+        run: |
+          python3 scripts/ci_install_moon.py --directory "$MOON_HOME" --report target/published-consumer/install.json 2>&1 | tee target/published-consumer/install.log
+          "$MOONVCS_MOON" -C "$MOON_HOME/lib/core" bundle --warn-list -a --target native --quiet 2>&1 | tee target/published-consumer/core-bundle.log
+
+      - name: Download fixed registry package and run consumer tests and README
+        run: |
+          python3 scripts/verify-published-consumer.py --moon "$MOONVCS_MOON" --workdir "$RUNNER_TEMP/published-consumer-acceptance" 2>&1 | tee target/published-consumer/acceptance.log
+
+      - name: Preserve selected consumer reports on success or failure
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: mooncakes-consumer-0.1.0-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            target/published-consumer/*.json
+            target/published-consumer/*.log
+            ${{ runner.temp }}/published-consumer-acceptance/report.json
+            ${{ runner.temp }}/published-consumer-acceptance/*.log

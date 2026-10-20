@@ -1,0 +1,5 @@
+import {
+  "any07557-wq/moonvcs" @vcs,
+}
+
+pkgtype(kind: "executable")

@@ -1,0 +1,3 @@
+import {
+  "any07557-wq/moonvcs" @vcs,
+} for "test"

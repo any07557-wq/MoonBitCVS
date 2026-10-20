@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "scope": "local published-consumer automation and separately resumed source regression",
+  "status": "passed",
+  "baseline_commit": "4527af50952ae0a349ebee746a7fb5a607f996fc",
+  "source_regression": {
+    "started_utc": "2026-10-20T11:14:45.521343+00:00",
+    "finished_utc": "2026-10-20T11:20:16.936066+00:00",
+    "stages": [
+      {
+        "name": "environment",
+        "argv": [
+          "python3",
+          "scripts/environment.py",
+          "--output",
+          "/home/user/MoonBit_Program/target/reports/published-consumer.9L7qNw/resume.aFNEb0/attempt-03/environment.json"
+        ],
+        "cwd": "/home/user/MoonBit_Program/target/reports/published-consumer.9L7qNw/reproduction/source",
+        "exit": 0,
+        "log": "environment.log",
+        "e_free_bytes_before": 15989182464,
+        "seconds": 0.21622096400000146
+      },
+      {
+        "name": "regression",
+        "argv": [
+          "bash",
+          "scripts/test.sh"
+        ],
+        "cwd": "/home/user/MoonBit_Program/target/reports/published-consumer.9L7qNw/reproduction/source",
+        "exit": 0,
+        "log": "regression.log",
+        "e_free_bytes_before": 15989182464,
+        "seconds": 330.60153461
+      }
+    ],
+    "test_counts": {
+      "native": 86,
+      "rust": 26,
+      "wasm": 19,
+      "python": 133,
+      "total": 264
+    },
+    "python_suites": [
+      9,
+      6,
+      4,
+      7,
+      1,
+      7,
+      20,
+      40,
+      19,
+      6,
+      14
+    ],
+    "source_files": 236,
+    "source_unchanged_after_run": true,
+    "source_archive": "3ca4f35a69e9f945c9a5053ad154e1614f8e90bdf53b635e8cca00c7cbd775b4",
+    "executable_configuration_files_matching_worktree": 173,
+    "matching_file_set_sha256": "e001654d7b9b955c5f80e40210f06f6e6ba583a638d93b9a30ac0531666f8512",
+    "new_source_copies_after_recovery": 0,
+    "existing_project_and_global_build_caches_reused": true,
+    "cargo_offline": true,
+    "original_interrupted_run": "not_passed",
+    "original_interrupted_report": "target/reports/published-consumer.9L7qNw/reproduction/report.json",
+    "raw_report": "target/reports/published-consumer.9L7qNw/resume.aFNEb0/attempt-03/validation.json",
+    "raw_report_sha256": "8afa902f2b78f738590f524a2a4fb7017ee34788b329e95741bf880056306239",
+    "raw_log_sha256": "71d3b79ce1d464aa991c61c4cde94ef36514b6b7ee4cb2f58b5870c16f1dbf1f",
+    "failed_resumed_attempts": [
+      {
+        "package": "wasmtime",
+        "report": "target/reports/published-consumer.9L7qNw/resume.aFNEb0/validation.json",
+        "report_sha256": "a3e6dd500958fea0384844865be269a560e0932a544c5f205f97c5d5516d1518",
+        "regression_log_sha256": "4be1ac93502d4ccf2eadb92f3540c39e54a00de5abfd161c7c8433da91a3d195"
+      },
+      {
+        "package": "cranelift-codegen",
+        "report": "target/reports/published-consumer.9L7qNw/resume.aFNEb0/attempt-02/validation.json",
+        "report_sha256": "935e6d4412b9d7995ef9a6dd65cf4718972fbcb1544e21ceb3333fe60650bd8f",
+        "regression_log_sha256": "38b4963deb0f5787a5a38eb9dc8f109b4e026503ae980005550da55838a643f5"
+      }
+    ],
+    "e_free_bytes_minimum_observed": 14848331776,
+    "space_guard_before_stage_bytes": 6442450944,
+    "space_guard_terminate_below_bytes": 4294967296,
+    "space_guard_triggered": false
+  },
+  "public_registry_consumer": {
+    "module": "any07557-wq/moonvcs",
+    "version": "0.1.0",
+    "started_utc": "2026-10-20T11:11:49.538057+00:00",
+    "finished_utc": "2026-10-20T11:12:03.679043+00:00",
+    "exit": 0,
+    "consumer_tests_passed": 2,
+    "readme_example_passed": true,
+    "initially_empty_registry": true,
+    "anonymous": true,
+    "zip_sha256": "5006035f75de4f963213a92257bafa3a5d2f751bb117c803c49d9c09f21867d3",
+    "zip_bytes": 75212,
+    "installed_files_verified": 33,
+    "report": "evidence/mooncakes/0.1.0/consumer-automation-20261020/report.json",
+    "report_sha256": "3b0577d95fc39b13293d9d2090139b00262c7bfacb8d229ccec18902f54d3312",
+    "not_added_to_current_source_test_count": true
+  },
+  "current_code_files": {
+    "scripts/verify-published-consumer.py": "eb4939a1d12ce2a33c8621530ad5688947170010735b5739cad7487760555890",
+    "tests/published_consumer_audit.py": "9c9d2a535145bdf47eef7449d078fea2f7b29bac5d2a4fb03e75aea7ec172f88",
+    "tests/fixtures/published_moon.py": "904855d39b7b713d1fdfefe33ca4cce731701db2dd75b03b529973b50fcc3a46",
+    ".github/workflows/published-consumer.yml": "485dd91b9911d90bebb83247446167434fc8bb18257865a2e69d3ce56ccc8801",
+    "scripts/test.sh": "5b9542fd59d669ba8daba9b58e19ec4cbf7c88b6259b56269aeddb5a9fdd7c27"
+  },
+  "local_actionlint_exit": 0,
+  "local_guard_tests": 14,
+  "durable_files_including_manifest": 105,
+  "new_reports_privacy_rule_findings": 0,
+  "ec287d1_delivery_retained": true,
+  "new_final_delivery_frozen": false,
+  "acceptance_documents_written_after_test_snapshot": true,
+  "github_actions_verified": false,
+  "cold_install_verified": false,
+  "push_performed": false,
+  "publication_performed": false
+}

@@ -28,6 +28,10 @@ Mooncakes 已发布 [any07557-wq/moonvcs@0.1.0](https://mooncakes.io/docs/any075
 冻结源码 `d5d8242` 完整验证 237 项通过；新 registry consumer 的 2 项测试和示例运行另列，
 下载 ZIP 与冻结包逐字节一致。见 [发布记录与证据](docs/MOONCAKES_RELEASE.md)；
 Mooncakes 发布验收与后续源码同步/CI 分开记录，不把库模块描述成完整 CLI 发行包。
+现可用 [独立消费脚本及手动 CI](docs/PUBLISHED_CONSUMER.md) 从空 registry 验证固定 0.1.0；
+其 2 项消费测试和 README 示例不代表当前源码、Host 或插件的完整回归。
+后续源码完整本机回归已通过 264 项，见 [本轮验收](docs/PUBLISHED_CONSUMER.md)；
+它不替代旧 CI 的提交绑定，也未重新冻结或替换 `ec287d1` 最终工程包。
 
 后续工程的实际结果见 [路线图执行记录](docs/ROADMAP_PROGRESS.md)：并发暂存已修复，
 宽 Tree 已取得指令/IO 证据，并新增只读恢复检查；完整掉电恢复和 GC 仍未实现。

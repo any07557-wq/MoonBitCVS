@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "checked_utc": "2026-10-20T11:13:43.641740+00:00",
+  "files_checked": 19,
+  "rules": [
+    "github-token",
+    "aws-access-id",
+    "private-key",
+    "authorization",
+    "windows-personal-path"
+  ],
+  "findings": [],
+  "full_dlp_or_identity_proof": false,
+  "scope": "allowlisted generated argv/version/result logs; own Linux tool/tmp paths retained",
+  "credentials_registry_caches_sources_and_binaries_copied": false
+}

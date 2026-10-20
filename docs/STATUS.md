@@ -1,5 +1,18 @@
 # MoonVCS Status
 
+Local follow-up: commit `4527af5` rejects hard-linked evidence/manifests and passed
+250 tests in a separate rebuild; the `ec287d1` delivery remains immutable.
+The next independent change automates fixed public Mooncakes 0.1.0 consumption,
+adds 14 no-network verifier guards (264 source tests total), and a manual-only
+workflow. After WSL disk recovery, the registry consumer was rerun successfully:
+2 tests + README, anonymous empty registry, ZIP and 33 installed files verified.
+The interrupted source regression is not a pass. After two retained failures
+from truncated Wasmtime/Cranelift build archives and package-scoped cache cleanup,
+the resumed full 264-test entry passed with source unchanged; 173 executable/config
+files match the worktree. This reused the same source/build directory with a
+physical-host-disk guard, not a new cold install. See [consumer validation](PUBLISHED_CONSUMER.md).
+No new public Actions run, push, publication or new final delivery is implied.
+
 Verified implementation CI: run [#3](https://github.com/any07557-wq/MoonBitCVS/actions/runs/39378888384)
 on exact commit `b361ed475dc0a6699d7116c405f0a79051a59f9a` passed 245 unique tests
 and all three verify stages. Its new ZIP and reports are independently checked

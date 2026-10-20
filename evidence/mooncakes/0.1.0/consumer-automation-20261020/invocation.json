@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "/home/user/MoonBit_Program/scripts/verify-published-consumer.py",
+    "--moon",
+    "/home/user/.moon/bin/moon",
+    "--workdir",
+    "/tmp/moonvcs-consumer-resumed.MVGiTA/acceptance"
+  ],
+  "started_utc": "2026-10-20T11:11:49.454225+00:00",
+  "exit": 0,
+  "files": {
+    "anonymous.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "anonymous.stdout.log": "a06d5ca8261150a5175e866fc3dc401070fb4ea30e849a1b9394b7e252fa1677",
+    "cc-version.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cc-version.stdout.log": "f6ab9d76ae8dcab3e133254944fbc77f41e0ba766287e289345c1ab77df09c45",
+    "check.stderr.log": "67f76c9883ddd66a526f5bd72f9f14bee53a799ed92a0d4a0f2ee742190a0b84",
+    "check.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "invocation.log": "78eb527f492f876e5907e890301d669f15c13f748586c481bf68d768ef867ade",
+    "moon-version.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "moon-version.stdout.log": "686b48fe33edac7e022c507642384df8e844b97f67019ff99f4cdb6d112bf829",
+    "readme.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "readme.stdout.log": "b3914be5728c649cf9b890d60f09bca2a098635391f2ce712da941ff264a29df",
+    "report.json": "3b0577d95fc39b13293d9d2090139b00262c7bfacb8d229ccec18902f54d3312",
+    "test.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "test.stdout.log": "ddd0722f90fd133207ca9e423fc1faa05c3608f3be5c5eb4fdbea4259682b120",
+    "tree.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tree.stdout.log": "443ca50be99c491d9f46c9f8e7b04fad9c38ec7ae7c097b75a1f369c83d1f426",
+    "update.stderr.log": "b4e20e791dc615b9e94069248d03dcc115a854d84273efdd30c65f1db6c44a4d",
+    "update.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "finished_utc": "2026-10-20T11:12:03.707987+00:00"
+}

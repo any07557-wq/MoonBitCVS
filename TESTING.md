@@ -33,7 +33,8 @@ MOONVCS_MOON="$HOME/.moon/bin/moon" ./scripts/test.sh
 | Branch/Switch CLI 保护、故障、帮助与人工恢复演练 | 40 | tests/branch_switch_audit.py |
 | 交付包/复现输入及持久化证据防护 | 19 | tests/submission_audit.py |
 | CI 配置/归档安装防护 | 6 | tests/ci_audit.py |
-| 合计 | 250 | 不含另列 CLI smoke / 演示；最新 5 项硬链接回归不属于 CI #3 的 245 项 |
+| 公开包消费脚本/手动 CI 防护（无网络夹具） | 14 | tests/published_consumer_audit.py |
+| 合计 | 264 | 不含另列 CLI smoke / 演示或真实 registry consumer 的 2 项；CI #3 仍为旧 245 项 |
 
 另外，scripts/test-hackathon.sh 会准备 8 次真实策略提交，并连续运行两轮四个最终场景，
 测试状态不残留、不把第二次运行当首次 clone。它已接入统一入口，但不把这 8 次场景执行加入单元/审计总数。
@@ -62,6 +63,16 @@ CLI 全量检查后输出、分离解包和旧 target-only 兼容；实际复现
 覆盖普通文件、等内容独立文件、硬链接附件/清单/历史报告的早期拒绝；
 本轮实际命令、完整回归及旧冻结包保留情况见 [硬链接验收](docs/HARDLINK_PACKAGING.md)。
 
+公开包消费自动化再加 14 项无网络脚本防护，当前源码入口为 264 项。
+真实 `any07557-wq/moonvcs@0.1.0` 的 **2 项消费测试 + README 示例**由独立脚本/手动 CI 另报，
+不与当前源码完整回归混算；本机命令、失败尝试和摘要见 [消费验收](docs/PUBLISHED_CONSUMER.md)。
+原 `MoonVCS CI` 仍负责源码；新增 `Published Mooncakes consumer (0.1.0)` 只手动触发且不发布。
+2026-10-20 WSL 恢复后，先保留被中断的 running 报告及两次截断 Cargo 缓存的失败，
+定点重建依赖后，在同一验收源码目录重跑完整入口，**264 项、environment/regression 均退出 0**，
+另有空 registry 的真实 2 项消费测试和 README 通过。复用工具/缓存，不是新 GitHub CI 或冷安装；
+恢复后源码未变，173 个执行源码/配置文件与最终工作区一致，摘要和命令见
+[独立记录](docs/PUBLISHED_CONSUMER_VALIDATION.json)。
+
 ## 分项执行
 
 ~~~bash
@@ -81,6 +92,7 @@ python3 tests/diff_audit.py
 python3 tests/branch_switch_audit.py
 python3 tests/submission_audit.py
 python3 tests/ci_audit.py
+python3 tests/published_consumer_audit.py
 ~~~
 
 单独调用 build-vcs.sh 前仍需设置 MOONVCS_MOON；--built 仅在产物已构建且 pin 一致时使用。

@@ -17,7 +17,8 @@
 - 显式生成 core bundles，并执行 moon -C vcs update 初始化新 runner 的 Mooncakes registry。
 - 运行现有 scripts/verify.sh：regression（scripts/test.sh，含 fmt/check/build）、environment、
   repeat-smoke（两次 receive）；完整测试已包含双轮四场景演示。CI 接入时为 237 项；
-  后续打包修复增加 8 项，当前入口 245，不能改写 #2 的 237 项被测结果。
+  后续打包修复增加 8 项，CI #3 入口为 245，不能改写 #2 的 237 项被测结果。
+  再后续硬链接修复 +5、公开包消费脚本防护 +14，当前源码入口 264；尚无覆盖这些新改动的公开运行。
 
 依赖服务、固定归档或 registry 不可用会失败，不通过删 pin、替换版本或跳过测试使状态变绿。
 第一版不启用 CI 缓存，避免用缓存命中掩盖准备步骤；这不是完全锁定 OS/系统包的可重现镜像。
@@ -73,6 +74,11 @@ MOONVCS_MOON=/actual/path/to/moon ./scripts/verify.sh
 
 verify.sh 会写入 target/reports/phase7-*；保留旧验收的工作区应在独立源码副本中执行，
 不能覆盖旧日志后宣称旧版本已重新通过。本轮本地验证采用单独副本和单独原始日志。
+
+独立公开库验收另有仅 `workflow_dispatch` 的
+[published-consumer.yml](../.github/workflows/published-consumer.yml)。它从空 registry 验证已发布
+0.1.0 的 2 项 consumer 测试及 README，不构建当前 Host/插件、不代替上述完整源码回归。
+本机验证不等于手动 workflow 已在 GitHub 成功，见 [范围与操作步骤](PUBLISHED_CONSUMER.md)。
 
 安装器可使用已独立保留的归档做本地验证：
 
