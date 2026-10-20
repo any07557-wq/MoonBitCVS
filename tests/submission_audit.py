@@ -5,11 +5,15 @@ import importlib.util
 import io
 import json
 from pathlib import Path
+import subprocess
+import sys
 import tarfile
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
 SPEC = importlib.util.spec_from_file_location('moonvcs_reproduction', ROOT / 'scripts/reproduce-submission.py')
 reproduction = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(reproduction)
@@ -98,6 +102,116 @@ class SubmissionAudit(unittest.TestCase):
         self.assertEqual(manifest['scripts/test.sh']['sha256'], hashlib.sha256(b'x').hexdigest())
         self.assertFalse((self.root / 'source/target').exists())
         self.assertEqual((self.root / 'evidence/target/reports/safe.log').read_bytes(), b'x')
+
+    def durable(self):
+        import submission_evidence
+        records = {'evidence/ci/run/report.json': b'public CI fixture',
+                   'evidence/mooncakes/0.1.0/core.zip': b'public module fixture'}
+        for name, data in records.items():
+            path = self.root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
+        manifest = self.root / submission_evidence.MANIFEST
+        manifest.write_text(''.join(hashlib.sha256(data).hexdigest() + '  ' + name + '\n'
+                                    for name, data in sorted(records.items())))
+        return submission_evidence, manifest, records
+
+    def test_durable_selection_includes_reviewed_ci_and_mooncakes_not_neighbor_files(self):
+        helper, _, records = self.durable()
+        (self.root / 'evidence/ci/unreviewed-mock.txt').write_text('do not include')
+        self.assertEqual(set(helper.selected_files(self.root)), set(records) | {helper.MANIFEST})
+
+    def test_durable_corrupt_and_missing_files_fail_closed(self):
+        helper, _, records = self.durable()
+        path = self.root / next(iter(records))
+        path.write_bytes(b'corrupted fixture')
+        with self.assertRaises(ValueError):
+            helper.selected_files(self.root)
+        path.unlink()
+        with self.assertRaises(ValueError):
+            helper.selected_files(self.root)
+
+    def test_durable_manifest_rejects_duplicates_escapes_unreviewed_namespaces_and_missing_categories(self):
+        helper, manifest, records = self.durable()
+        original = manifest.read_text()
+        digest = '0' * 64
+        for value in (original + original, '', 'invalid\n',
+                      digest + '  ../escape\n', digest + '  /absolute\n',
+                      digest + '  evidence/ci/../escape\n', digest + '  evidence/ci//alias\n',
+                      digest + '  evidence/ci/.moonvcs/private\n',
+                      digest + '  evidence/personal/private\n',
+                      original.splitlines()[0] + '\n'):
+            manifest.write_text(value)
+            with self.assertRaises(ValueError):
+                helper.selected_files(self.root)
+
+    def test_durable_symlink_file_ancestor_and_manifest_are_rejected(self):
+        helper, manifest, records = self.durable()
+        path = self.root / next(iter(records))
+        saved = self.root / 'retained-fixture'
+        path.rename(saved)
+        path.symlink_to(saved)
+        with self.assertRaises(ValueError):
+            helper.selected_files(self.root)
+        path.unlink()
+        saved.rename(path)
+        parent = path.parent
+        moved = self.root / 'retained-directory'
+        parent.rename(moved)
+        parent.symlink_to(moved, target_is_directory=True)
+        with self.assertRaises(ValueError):
+            helper.selected_files(self.root)
+        parent.unlink()
+        moved.rename(parent)
+        content = manifest.read_bytes()
+        manifest.unlink()
+        saved.write_bytes(content)
+        manifest.symlink_to(saved)
+        with self.assertRaises(ValueError):
+            helper.selected_files(self.root)
+
+    def test_durable_budgets_bound_manifest_and_file_reads(self):
+        helper, _, _ = self.durable()
+        for key, value in [('MAX_ENTRIES', 1), ('MAX_FILE_BYTES', 1), ('MAX_TOTAL_BYTES', 1)]:
+            with patch.object(helper, key, value), self.assertRaises(ValueError):
+                helper.selected_files(self.root)
+
+    def test_durable_evidence_extracts_separately_and_verifies_its_manifest(self):
+        helper, manifest, records = self.durable()
+        archive = self.root / 'durable.tar.gz'
+        with tarfile.open(archive, 'w:gz') as stream:
+            for name in [helper.MANIFEST, *records]:
+                stream.add(self.root / name, arcname=name, recursive=False)
+        dest = self.root / 'separate-evidence'
+        reproduction.extract_archive(archive, dest)
+        self.assertEqual((dest / helper.MANIFEST).read_bytes(), manifest.read_bytes())
+        for name, data in records.items():
+            self.assertEqual((dest / name).read_bytes(), data)
+
+    def test_durable_extraction_rejects_extra_files_and_missing_manifest(self):
+        helper, _, records = self.durable()
+        for index, names in enumerate((list(records), [helper.MANIFEST, *records, 'evidence/ci/extra.txt'])):
+            archive = self.root / ('bad-' + str(index) + '.tar.gz')
+            with tarfile.open(archive, 'w:gz') as stream:
+                for name in names:
+                    payload = (self.root / name).read_bytes() if (self.root / name).exists() else b'unreviewed mock'
+                    info = tarfile.TarInfo(name)
+                    info.size = len(payload)
+                    stream.addfile(info, io.BytesIO(payload))
+            with self.assertRaises(ValueError):
+                reproduction.extract_archive(archive, self.root / ('bad-output-' + str(index)))
+
+    def test_durable_cli_is_wired_into_the_real_packager_and_errors_do_not_emit_partial_lists(self):
+        helper, manifest, records = self.durable()
+        self.assertIn('submission_evidence.py', (ROOT / 'scripts/package-submission.sh').read_text())
+        command = [sys.executable, str(ROOT / 'scripts/submission_evidence.py'), '--root', str(self.root)]
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(set(result.stdout.splitlines()), set(records) | {helper.MANIFEST})
+        manifest.write_text(manifest.read_text() + 'invalid\n')
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(result.stdout, '')
 
 
 if __name__ == '__main__':

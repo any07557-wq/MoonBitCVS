@@ -30,9 +30,9 @@ MOONVCS_MOON="$HOME/.moon/bin/moon" ./scripts/test.sh
 | 工具归档来源/完整性及 Registry 续期 | 7 | tests/toolchain_archive_audit.py |
 | Diff 独立 CLI | 20 | tests/diff_audit.py |
 | Branch/Switch CLI 保护、故障、帮助与人工恢复演练 | 40 | tests/branch_switch_audit.py |
-| 交付包/复现输入防护 | 6 | tests/submission_audit.py |
+| 交付包/复现输入及持久化证据防护 | 14 | tests/submission_audit.py |
 | CI 配置/归档安装防护 | 6 | tests/ci_audit.py |
-| 合计 | 237 | 不含另列 CLI smoke / 演示 |
+| 合计 | 245 | 不含另列 CLI smoke / 演示；后加 8 项不属于 CI #2 |
 
 另外，scripts/test-hackathon.sh 会准备 8 次真实策略提交，并连续运行两轮四个最终场景，
 测试状态不残留、不把第二次运行当首次 clone。它已接入统一入口，但不把这 8 次场景执行加到 237 中。
@@ -41,7 +41,7 @@ MOONVCS_MOON="$HOME/.moon/bin/moon" ./scripts/test.sh
 [独立验收](docs/BRANCH_SWITCH_ACCEPTANCE.md)。177 项本机、149 项冷安装与此前 223 项各保留原版本边界。
 2026-10-19 交付复现另加入 6 项防护回归，当时入口共 231 项，不把旧 225 项当作此版本的验证。
 每份源码包的实际完整结果和摘要由包旁 REPRODUCTION.json/REPRODUCTION.md 给出；只有 status=passed 才算通过。
-CI 轮另加 6 项归档安装/工作流防护，当前入口共 237 项；本地与 GitHub 运行结论必须分开，
+CI 接入轮另加 6 项归档安装/工作流防护，当时入口共 237 项；本地与 GitHub 运行结论必须分开，
 见 [CI 说明](docs/CI.md)与[CI 验证记录](docs/CI_VALIDATION.md)。提交 `6d96157` 的 GitHub 运行 #1 实际成功，
 原始附件摘要与 GitHub 元数据一致，独立核对 237 项及三阶段退出 0；本次只核验归档，未在本机重跑完整测试。
 
@@ -51,6 +51,11 @@ CI 轮另加 6 项归档安装/工作流防护，当前入口共 237 项；本�
 2026-10-20 新 registry consumer 实际下载 0.1.0，另有 **2 项**外部导入测试和 README 示例通过，
 不并入 237 项，也不替代完整仓库集成测试；main 包测试布局的未来兼容性警告保留在日志中。
 源码提交、包/安装内容摘要和全部日志见 [发布验收](docs/MOONCAKES_RELEASE.md)。
+
+CI #2 归档后，打包遗漏修复增加 8 项持久化证据防护，submission suite 从 6 增至 14，
+入口合计 245。新增范围包括显式清单选择、损坏/缺失、路径/命名空间、链接、预算、
+CLI 全量检查后输出、分离解包和旧 target-only 兼容；实际复现结果另见
+[打包修复验证](docs/PACKAGING_EVIDENCE_VALIDATION.md)，不改写历史 CI 的 237 项。
 
 ## 分项执行
 

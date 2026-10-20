@@ -16,8 +16,15 @@ the frozen candidate. This is **native core library source only**, not the full
 Rust Host, Wasm plugin or precompiled CLI distribution. No GitHub push, new CI
 run or new rootfs acceptance was performed. See [release evidence](MOONCAKES_RELEASE.md).
 
-CI configuration: pinned tools + existing full verify.sh entry, 6 new guards
-(237 tests in the current entry). GitHub run #1 on commit `6d96157` succeeded;
+CI configuration: pinned tools + existing full verify.sh entry, 6 original guards
+(237 tests in the archived CI entry). The later packaging extension adds 8 guards
+(245 total); its local validation is tracked separately in
+[PACKAGING_EVIDENCE_VALIDATION.md](PACKAGING_EVIDENCE_VALIDATION.md).
+The implementation package was separately unpacked/rebuilt: 245 tests passed,
+69 durable evidence members match, and 166 current executable-source/configuration
+files match the tested snapshot. This is local installed-tool/cache reuse, not
+a new GitHub run or rootfs acceptance; final result documents were written later.
+GitHub run #1 on commit `6d96157` succeeded;
 the original artifact digest, all three exit-zero stages and 237 unique tests
 have been checked and preserved locally. This evidence update does not rerun
 tests, push changes or claim a new rootfs acceptance. See [CI.md](CI.md) and

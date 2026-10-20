@@ -104,6 +104,12 @@ for MOONVCS_NAME in \
   [[ -f "$MOONVCS_ROOT/$MOONVCS_ITEM" ]] || { echo "Missing closeout evidence: $MOONVCS_ITEM" >&2; exit 1; }
   MOONVCS_EVIDENCE_ITEMS+=("$MOONVCS_ITEM")
 done
+# Reviewed durable records are selected file-by-file and hash checked. Do not
+# replace this with tar evidence/ or a recursive directory glob.
+MOONVCS_DURABLE_LIST="$(python3 "$MOONVCS_ROOT/scripts/submission_evidence.py" --root "$MOONVCS_ROOT")"
+while IFS= read -r MOONVCS_ITEM; do
+  MOONVCS_EVIDENCE_ITEMS+=("$MOONVCS_ITEM")
+done <<< "$MOONVCS_DURABLE_LIST"
 mkdir -p "$MOONVCS_ROOT/target/releases"
 MOONVCS_SUBMISSION_DIR="$(mktemp -d "$MOONVCS_ROOT/target/releases/submission.XXXXXX")"
 tar -C "$MOONVCS_ROOT" --sort=name \

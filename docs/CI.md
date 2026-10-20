@@ -16,7 +16,8 @@
 - 固定 Rust 1.99.1 + rustfmt、wit-bindgen-cli 0.63.0、wasm-tools 1.262.0；两个 Cargo 工具均 --locked 安装。
 - 显式生成 core bundles，并执行 moon -C vcs update 初始化新 runner 的 Mooncakes registry。
 - 运行现有 scripts/verify.sh：regression（scripts/test.sh，含 fmt/check/build）、environment、
-  repeat-smoke（两次 receive）；完整测试已包含双轮四场景演示。新 CI 6 项防护加入后入口共 237 项。
+  repeat-smoke（两次 receive）；完整测试已包含双轮四场景演示。CI 接入时为 237 项；
+  后续打包修复增加 8 项，当前入口 245，不能改写 #2 的 237 项被测结果。
 
 依赖服务、固定归档或 registry 不可用会失败，不通过删 pin、替换版本或跳过测试使状态变绿。
 第一版不启用 CI 缓存，避免用缓存命中掩盖准备步骤；这不是完全锁定 OS/系统包的可重现镜像。

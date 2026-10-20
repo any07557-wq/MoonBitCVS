@@ -4,11 +4,15 @@ branch/switch 已通过 **本机原型验收**：2026-10-18 的 225 项完整回
 见 [独立记录](BRANCH_SWITCH_ACCEPTANCE.md)。这不是生产远端或新版本冷安装放行。
 
 2026-10-19 的交付工作增加 6 项归档/复现输入防护并接入统一入口，当时完整入口共 231 项。
-后续 CI 轮又增加 6 项，当前为 237 项，并将 .github 纳入所有源码复制白名单；
+后续 CI 轮又增加 6 项，当时为 237 项，并将 .github 纳入所有源码复制白名单；
 旧 231 项归档不改写，CI 本地验证与远端状态另见 [CI.md](CI.md)。
 每次包都是不可变快照；**打包本身不代表测试通过**。具体源码包是否完成另一目录重建，
 以包旁 `REPRODUCTION.json` 的 status、stages、源码包摘要及 `REPRODUCTION.md` 为准。
 报告缺失、failed 或没有完整 regression 退出 0，均不能称为通过。
+
+CI #2 的 `58bade3` 已通过 237 项并独立归档。之后打包遗漏修复新增 8 项防护，
+当前测试入口计数为 245；它不属于 #2 的 CI 成功范围，本地验证见
+[PACKAGING_EVIDENCE_VALIDATION.md](PACKAGING_EVIDENCE_VALIDATION.md)。
 
 ## 生成与边界
 
@@ -24,12 +28,32 @@ branch/switch 已通过 **本机原型验收**：2026-10-18 的 225 项完整回
 | 文件 | 内容 |
 |---|---|
 | MoonVCS-source.tar.gz | 白名单文档、MoonBit/Wasm/Host 源码、WIT、锁文件、脚本、测试、示例 |
-| MoonVCS-evidence.tar.gz | 历史阶段与安装/性能记录、diff/branch/switch 的失败及通过日志、225 项收尾清单和恢复演练摘要 |
+| MoonVCS-evidence.tar.gz | 历史报告、恢复演练摘要，以及经显式 SHA-256 清单选择的 CI/Mooncakes 持久化证据 |
 | SHA256SUMS | 上述两个不可变归档的实际 SHA-256，用于传输核对，不是身份签名 |
 
 证据中的 225 项及更早的报告各自只覆盖原版本，不能按文件名直接与新源码认同。
 旧 delivered-source/tested-source 摘要中的脚本/文档可能与后续版本不同；保留原清单，不为新包回写旧摘要。
 当前包的新证据必须通过其实际源码归档重新获得，并绑定归档摘要。
+
+## 持久化 CI / Mooncakes 证据
+
+`evidence/SUBMISSION_MANIFEST.sha256` 是本轮审核后的精确文件白名单：68 个附件，
+加清单自身共 69 个文件进入证据包。它覆盖两轮 CI 和 0.1.0 发布证据，
+不修改这些目录既有的原始 ZIP 或内部 SHA256SUMS，也不自动递归收集新文件。
+这些附件按原字节核对；不要对历史日志/JSON 做换行转换或自动格式化，否则应当校验失败。
+
+`scripts/submission_evidence.py` 在创建交付输出前校验全部路径、SHA-256、文件类型和预算。
+只允许 evidence/ci 与 evidence/mooncakes；缺少任一类、重复/越界/别名路径、链接、特殊文件、
+损坏或缺失条目均失败。不列入清单的相邻文件不进入包。
+清单上限 4096 条、1 MiB；单附件 16 MiB、附件合计 64 MiB。
+未来新增 CI 或发布证据时，先审核日志隐私，再明确更新清单；不要用递归 glob 自动批准整个目录。
+该清单是完整性/选择机制，不是签名、DLP、作者身份认证或对同账户并发恶意改文件的隔离。
+
+复现解包器同步允许 target/ 与上述两个持久化命名空间，以及清单自身。
+带持久化证据的包必须包含清单并与实际成员集合、每项摘要相符；旧 target-only 包保持兼容。
+证据仍单独解到 workdir/evidence/，不会填入 source/ 的缓存或作为代码执行。
+源包的文档相对证据链接以完整 GitHub 仓库为主要浏览入口；在分离解包目录中需到
+workdir/evidence/evidence/ 查阅对应附件，不能因链接位置而把证据复制成旧构建输入。
 
 源码包不带 `.toolchains`、`target`、`_build`、`.mooncakes`、`__pycache__`、`.moonvcs`、`.git`
 或本机二进制。证据只枚举选择的报告；恢复演练只包含 commands/result/manifest/check 报告，

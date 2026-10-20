@@ -25,7 +25,9 @@
 公开源码见 [GitHub 仓库](https://github.com/any07557-wq/MoonBit_Program)，尚未发布预编译安装包或容器镜像。
 GitHub Actions 的固定工具准备与边界见 [CI.md](docs/CI.md)；提交 `6d96157` 的运行 #1 已成功，
 237 项报告已校验归档，见 [CI_VALIDATION.md](docs/CI_VALIDATION.md)，不扩大历史 rootfs 验收结论。
-CI 轮在 231 项交付快照基础上增加 6 项防护，当前完整入口为 237 项；旧归档和冷安装结论不自动扩大。
+CI 轮在 231 项交付快照基础上增加 6 项防护，当时入口为 237 项；旧归档和冷安装结论不自动扩大。
+后续打包证据遗漏修复再增加 8 项，入口为 245；[其本地解包验证](docs/PACKAGING_EVIDENCE_VALIDATION.md)
+与 CI #2 的 237 项、新 rootfs 安装结论分开，不复用旧报告背书新修改。
 当前机器的版本、系统和插件摘要见 target/reports/phase7-environment.json；
 源码侧固定要求见 scripts/build-component.sh、host/Cargo.lock 和各插件 plugin.toml。
 

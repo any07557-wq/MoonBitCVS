@@ -13,8 +13,12 @@ from pathlib import Path, PurePosixPath
 import re
 import shutil
 import subprocess
+import sys
 import tarfile
 import time
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from submission_evidence import durable_path, verify_extracted
 
 ARCHIVES = ('MoonVCS-source.tar.gz', 'MoonVCS-evidence.tar.gz')
 EXCLUDED = {'target', '_build', '.mooncakes', '.toolchains', '__pycache__', '.moonvcs', '.git'}
@@ -57,14 +61,17 @@ def extract_archive(archive, destination, source=False):
                 raise ValueError('unsafe/duplicate archive member: ' + member.name)
             if source and any(part in EXCLUDED for part in path.parts):
                 raise ValueError('source archive contains excluded build/state path: ' + name)
-            if not source and not name.startswith('target/'):
-                raise ValueError('evidence outside its expected target namespace')
+            if not source and not (name.startswith('target/') or (name == 'target' and member.isdir())
+                                   or durable_path(name, directory=member.isdir())):
+                raise ValueError('evidence outside its expected target/durable namespaces')
             total += member.size
             if len(seen) >= 20000 or total > 268435456 or member.size > 134217728:
                 raise ValueError('archive exceeds reproduction budget')
             seen.add(name)
         destination.mkdir(mode=0o700)
         stream.extractall(destination, members=members, filter='data')
+    if not source:
+        verify_extracted(destination)
     return file_manifest(destination)
 
 
